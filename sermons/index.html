@@ -1,0 +1,23 @@
+---
+layout: sermons
+title: Sermons
+---
+
+<script>
+  var SERMON_FIXTURES = [
+  {% for post in site.posts %}
+    {% if post.date <= site.time %}
+    {
+      date: "{{ post.date | date: '%Y.%m.%d' }}",
+      sermon: "{{ post.sermon }}", 
+      scripture: "{{ post.scripture }}", 
+      speaker: "{{ post.speaker }}", 
+      mp3: "/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.mp3",
+      pdf: "/files/programs/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.pdf"
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+  ];
+</script>
+
+<p><a href="/sermons/archive.html?sorts[date]=-1">Sermons before 2014 &raquo;</a></p>

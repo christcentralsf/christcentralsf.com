@@ -1,0 +1,2 @@
+MAILTO=basile.kuo@gmail.com
+0 11 * * 0 jekyll build

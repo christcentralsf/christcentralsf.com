@@ -1,0 +1,42 @@
+---
+layout: default
+title: Home
+---
+
+{% assign isFirstPostDisplayed = true %}
+{% for post in site.posts %}
+  {% if post.date <= site.time and isFirstPostDisplayed %}
+    <div class="row">
+      <div class="col-sm-12 attached-content" id="sermon">
+        <h3>We invite you to listen to this week's sermon:</h3>
+        <h2><a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.mp3" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
+        <h3>{{ post.date | date: '%B %-d, %Y' }}</h3>
+      </div>
+    </div>
+    {% assign isFirstPostDisplayed = false %}
+  {% endif %}
+{% endfor %}
+<div class="row" id="visitors">
+  <div class="col-lg-4 col-md-3">
+    <h1>Visitors</h1>
+    <p>Welcome! Thank you for visiting our website; we hope you visit our church soon. Here's a quick guide to our church to get you started:</p>
+    <p><i class="fa fa-clock-o"></i> Sunday Service begins at 9:50am</p>
+    <p><i class="fa fa-map-marker"></i> <a href="/directions">50 Northridge Drive, Daly City, CA</a></p>
+    <p>The best way to get to know us is through:</p>
+    <ul>
+      <li>Our community groups</li>
+      <li>Our newcomer lunches after service</li>
+    </ul>
+    <p>Learn more:</p>
+    <ul>
+      <li><a href="/ministry">Who we are</a></li>
+      <li><a href="/history">Where we've been</a></li>
+      <li><a href="/vision">Where we're going</a></li>
+    </ul>
+    <p>Questions? <a href="/faq">FAQ</a> or <a data-toggle="modal" data-target="#contact">contact us</a></p>
+  </div>
+  <div class="col-lg-8 col-md-9 table-responsive">
+    <h1>Community Groups</h1>
+    {% include community-groups.html classNames="table table-condensed table-hover" %}
+  </div>
+</div>

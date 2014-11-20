@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Christ Central Presbyterian Church (CCPC) | {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/assets/js/jquery.dynatable.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"> 
+  </head>
+  <body id="page-{{ page.title }}">
+    <div class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-inner">
+          <h1 class="hidden-xs hidden-sm">
+            <a href="/" title="Christ Central Presbyterian (CCPC)">Christ Central<br/><span class="hidden-md">Presbyterian Church</span></a>
+          </h1>
+          <h1 class="visible-xs visible-sm">
+            <a href="/" title="Christ Central Presbyterian (CCPC)">CCPC</a>
+          </h1>
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav pull-left">
+              <li class="pipe hidden-sm hidden-md"><a href="/" class="navbar-brand {% if page.title == "Home" %}active{% endif %}">Home</a></li>
+              <li><a href="/vision" {% if page.title == "Vision" %}class="active"{% endif %}>Vision</a></li>
+              <li><a href="/ministry" {% if page.title == "Ministry" %}class="active"{% endif %}>Ministry</a></li>
+              <li><a href="/history" {% if page.title == "History" %}class="active"{% endif %}>History</a></li>
+              <li><a href="/directions/" {% if page.title == "Directions" %}class="active"{% endif %}>Directions</a></li>
+              <li class="pipe"><a href="/faq" {% if page.title == "FAQ" %}class="active"{% endif %}>FAQ</a></li>
+              <li><a href="/news" {% if page.title == "News" %}class="active"{% endif %}>News</a></li>
+              <li><a href="/sermons?sorts[date]=-1" {% if page.title == "Sermons" %}class="active"{% endif %}>Sermons</a></li>
+              <li class="pipe"><a href="/applications" {% if page.title == "Applications" %}class="active"{% endif %}>Applications</a></li>
+              <li class="give"><a href="http://give.christcentralsf.com/" target="_blank">Give</a></li>
+              <li><a data-toggle="modal" data-target="#contact"><span class="hidden-sm hidden-md">Contact Us</span><i class="fa fa-envelope visible-sm visible-md"></i></a></li>
+            </ul>
+          </nav>
+          <!-- <p class="alert"><strong>Important notice</strong>Sunday Service will move from 10am to 9:50am beginning June 2014.</p> -->
+        </div>
+      </div>
+    </div>
