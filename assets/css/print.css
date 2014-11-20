@@ -179,3 +179,15 @@ p.announcement,
 .hide {
   display: none;
 }
+
+.poem {
+  font-size: 8pt;
+}
+
+.break {
+  margin-bottom: 10px;
+}
+
+.tab {
+  margin-left: 15px;
+}
