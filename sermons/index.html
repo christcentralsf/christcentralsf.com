@@ -8,7 +8,7 @@ title: Sermons
   {% for post in site.posts %}
     {% if post.date <= site.time %}
     {
-      date: "{{ post.date | date: '%Y.%m.%d' }}",
+      date: "{{ post.date | date: '%Y.%m.%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}",
       sermon: "{{ post.sermon }}", 
       scripture: "{{ post.scripture }}", 
       speaker: "{{ post.speaker }}", 
