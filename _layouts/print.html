@@ -119,119 +119,19 @@
           <h2>Benediction</h2>
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
-          <h2 class="name hide">Lunch</h2>
-          <p class="value hide">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
+          <h2 class="name">Lunch</h2>
+          <p class="value">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
-          <div class="push-down hide">
+          <div class="push-down">
             <h1>Growing Together:</h1>
             <h2 class="name">Community Group Questionnaire</h2>
             <p class="value">The week of {{ page.date | date: '%B %-d, %Y'}}</p>
             <h2 class="name">&ldquo;{{ page.sermon }}&rdquo;</h2>
             <p class="value">{{ page.scripture }}</p>
             {{ content }}
-          </div>
-          <div class="alternate-content push-down">
-            <h1>The Lamb is My Shepherd</h1>
-            <p class="value">Tin Ling Harrell</p>
-            <p class="poem">
-              The Shepherd is my Lamb,
-            </p>
-            <p class="poem">
-              He tasted my want.
-            </p>
-            <p class="poem">  
-              He lay down in the wilderness;
-            </p>
-            <p class="poem">
-              He endured the judgment storm waters.
-            </p>
-            <p class="poem">
-              He relinquished his soul;
-            </p>
-            <p class="poem">
-              He was nailed to a cursed cross for my sinful names' sake.
-            </p>
-            <p class="poem">
-              Yea, though he walked through the valley of the shadow of death,
-            </p>
-            <p class="poem tab">
-                     He took upon my sin,
-            </p>
-            <p class="poem tab">
-                     Alone under wrath.
-            </p>
-            <p class="poem">
-              With the rod and the scourge, they beat him.
-            </p>
-            <p class="poem">
-              And he was made to hunger and thirst in the presence of his enemies;
-            </p>
-            <p class="poem">
-              His head mocked and crowned with cruel thorns;
-            </p>
-            <p class="poem">
-              His cup to be drained.
-            </p>
-            <p class="poem">
-              Surely grief and suffering followed him,
-            </p>
-            <p class="poem">
-              For he gave up his life,
-            </p>
-            <p class="poem break">
-              In flesh dwelling that in Him I might dwell in glory.
-            </p>
-            <p class="poem">   
-              The Lamb is my Shepherd,
-            </p>
-            <p class="poem">
-              I am his sheep.
-            </p>
-            <p class="poem">
-              He feeds me with the bread of life;
-            </p>
-            <p class="poem">
-              He leads me beside living waters.
-            </p>
-            <p class="poem">
-              He redeems my soul;
-            </p>
-            <p class="poem">
-              He guides me in his holy steps for his righteous name's sake. 
-            </p>
-            <p class="poem">
-              Yea, though I walk through the valley of the shadow of sin,
-            </p>
-            <p class="poem tab">
-                     I will fear no death,
-            </p>
-            <p class="poem tab">
-                     For you are with me.
-            </p>
-            <p class="poem">
-              Your voice and your Word, they comfort me.
-            </p>
-            <p class="poem">
-              You spread your banqueting table before me in your beloved presence;
-            </p>
-            <p class="poem">
-              You crown my head with love and peace;
-            </p>
-            <p class="poem">
-              My joy is made full.
-            </p>
-            <p class="poem">
-              Surely your grace upon grace pursues me,
-            </p>
-            <p class="poem">
-              For in you I have life,
-            </p>
-            <p class="poem">
-              And I will dwell in the house of the Lamb forever.
-            </p>
           </div>
           <h2 class="name">Community Groups</h2>
           {% include community-groups.html %}
