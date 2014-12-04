@@ -24,7 +24,7 @@
           <div class="offering">
             <h2>Offering</h2>
             <table>
-              {% if page.offeringAdditionalLineItem != undefined %}
+              {% if page.offeringAdditionalLineItem %}
               <tr>
                 <td>{{ page.offeringAdditionalLineItem }}</td>
                 <td>..........................................</td>
@@ -38,7 +38,7 @@
                 <td>{{ page.offeringLastSunday }}</td>
               </tr>
               
-              {% if page.offeringOnline != undefined %}
+              {% if page.offeringOnline %}
               <tr>
                 <td>Total online offering</td>
                 <td>..........................................</td>
@@ -97,17 +97,7 @@
           <p class="value">{{ page.assurance }}</p>
           <h2>Song of Gratitude/Offering</h2>
           <h2 class="name hide">Offering Prayer</h2>
-          <p class="value hide">{{ page.prayer }}</p>          
-          {% if page.hasNewMembers %}
-            <h2>Installation of New Members</h2>
-          {% endif %}
-          {% if page.hasBaptism and page.hasCommunion %}
-            <h2>Baptism &amp; Communion</h2>
-          {% elsif page.hasBaptism %}
-            <h2>Baptism</h2>
-          {% elsif page.hasCommunion %}
-            <h2>Communion</h2>
-          {% endif %}
+          <p class="value hide">{{ page.prayer }}</p>
           <h2 class="name">Scripture Reading</h2>
           <p class="value scripture">{{ page.scripture }}</p>
           {{ content }}
@@ -116,6 +106,19 @@
             &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
             <em class="theme">{{ page.theme }}, {{ page.date | date: '%Y' }}</em>
           </p>
+          {% if page.hasNewMembers %}
+            <h2>Installation of New Members</h2>
+          {% endif %}
+          {% if page.hasBaptism %}
+            <h2>Baptism</h2>
+          {% endif %}
+          {% if page.hasConfirmation %}
+            <h2 class="name">Confirmation</h2>
+            <p class="value">{{ page.confirmationNames }}</p>
+          {% endif %}          
+          {% if page.hasCommunion %}
+            <h2>Communion</h2>
+          {% endif %}
           <h2>Song of Commitment</h2>
           <h2>Benediction</h2>
           <h2 class="name">Announcements</h2>
