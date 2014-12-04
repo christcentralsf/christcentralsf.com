@@ -8,7 +8,8 @@ title: Sermons
   {% for post in site.posts %}
     {% if post.date <= site.time %}
     {
-      date: "{{ post.date | date: '%Y.%m.%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}",
+      date: "{{ post.date | date: '%Y.%m.%d' }}",
+      sortDate: "{{ post.date | date: '%Y.%m.%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}",
       sermon: "{{ post.sermon }}", 
       scripture: "{{ post.scripture }}", 
       speaker: "{{ post.speaker }}", 
@@ -20,4 +21,4 @@ title: Sermons
   ];
 </script>
 
-<p><a href="/sermons/archive.html?sorts[date]=-1">Sermons before 2014 &raquo;</a></p>
+<p><a href="/sermons/archive.html?sorts[sortDate]=-1">Sermons before 2014 &raquo;</a></p>
