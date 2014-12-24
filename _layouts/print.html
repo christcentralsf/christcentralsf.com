@@ -123,19 +123,107 @@
           <h2>Benediction</h2>
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
-          <h2 class="name">Lunch</h2>
-          <p class="value">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
+          <h2 class="name hide">Lunch</h2>
+          <p class="value hide">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
-          <div class="push-down">
+          <div class="push-down hide">
             <h1>Growing Together:</h1>
             <h2 class="name">Community Group Questionnaire</h2>
             <p class="value">The week of {{ page.date | date: '%B %-d, %Y'}}</p>
             <h2 class="name">&ldquo;{{ page.sermon }}&rdquo;</h2>
             <p class="value">{{ page.scripture }}</p>
             {{ content }}
+          </div>
+          <div class="alternate-content push-down">
+            <h1>Thou Didst Leave Thy Throne</h1>
+            <p class="value">Emily E. Elliott</p>
+            <p class="poem">
+              Thou didst leave Thy throne and Thy kingly crown,
+            </p>
+            <p class="poem">
+              When Thou camest to earth for me;
+            </p>
+            <p class="poem">
+              But in Bethlehem’s home was there found no room
+              </p>
+            <p class="poem break">  
+              For Thy holy nativity.
+            </p>
+            <p class="poem" style="font-style: italic;">  
+              Refrain
+            </p>
+            <p class="poem">
+              O come to my heart, Lord Jesus,
+            </p>
+            <p class="poem break">
+              There is room in my heart for Thee.
+            </p>
+            <p class="poem">
+              Heaven’s arches rang when the angels sang,
+            </p>
+            <p class="poem">
+              Proclaiming Thy royal degree;
+            </p>
+            <p class="poem">
+              But of lowly birth didst Thou come to earth,
+            </p>
+            <p class="poem break">
+              And in great humility.
+            </p>
+            <p class="poem break">
+              Refrain
+            </p>
+            <p class="poem">
+              The foxes found rest, and the birds their nest
+            </p>
+            <p class="poem">
+              In the shade of the forest tree;
+            </p>
+            <p class="poem">
+              But Thy couch was the sod, O Thou Son of God,
+            </p>
+            <p class="poem break">
+              In the deserts of Galilee.
+            </p>            
+            <p class="poem break">
+              Refrain
+            </p>
+            <p class="poem">
+              Thou camest, O Lord, with the living Word,
+            </p>
+            <p class="poem">
+              That should set Thy people free;
+            </p>
+            <p class="poem">   
+              But with mocking scorn and with crown of thorn,
+            </p>
+            <p class="poem break">
+              They bore Thee to Calvary.
+            </p>            
+            <p class="poem break">
+              Refrain
+            </p>
+            <p class="poem">
+              When the heav’ns shall ring, and her choirs shall sing,
+            </p>
+            <p class="poem">
+              At Thy coming to victory,
+            </p>
+            <p class="poem">
+              Let Thy voice call me home, saying “Yet there is room,
+            </p>
+            <p class="poem break">
+              There is room at My side for thee."
+            </p>
+            <p class="poem">
+              My heart shall rejoice, Lord Jesus,
+            </p>
+            <p class="poem">
+              When Thou comest and callest for me.
+            </p>
           </div>
           <h2 class="name">Community Groups</h2>
           {% include community-groups.html %}
