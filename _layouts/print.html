@@ -123,13 +123,13 @@
           <h2>Benediction</h2>
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
-          <h2 class="name hide">Lunch</h2>
-          <p class="value hide">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
+          <h2 class="name">Lunch</h2>
+          <p class="value">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
-          <div class="push-down hide">
+          <div class="push-down">
             <h1>Growing Together:</h1>
             <h2 class="name">Community Group Questionnaire</h2>
             <p class="value">The week of {{ page.date | date: '%B %-d, %Y'}}</p>
@@ -137,7 +137,7 @@
             <p class="value">{{ page.scripture }}</p>
             {{ content }}
           </div>
-          <div class="alternate-content push-down">
+          <div class="alternate-content push-down hide">
             <h1>Thou Didst Leave Thy Throne</h1>
             <p class="value">Emily E. Elliott</p>
             <p class="poem">
