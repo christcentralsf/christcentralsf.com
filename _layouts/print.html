@@ -24,6 +24,12 @@
           <div class="offering">
             <h2>Offering</h2>
             <table>
+              <tr>
+                <td>Total offering for last Sunday (12/28/14)</td>
+                <td>..........................................</td>
+                <td>{{ page.offeringLastSunday }}</td>
+              </tr>
+
               {% if page.offeringAdditionalLineItem %}
               <tr>
                 <td>{{ page.offeringAdditionalLineItem }}</td>
@@ -31,23 +37,17 @@
                 <td>{{ page.offeringAdditionalLineItemInflow }}</td>
               </tr>
               {% endif %}
-
-              <tr>
-                <td>Total offering last Sunday</td>
-                <td>..........................................</td>
-                <td>{{ page.offeringLastSunday }}</td>
-              </tr>
               
               {% if page.offeringOnline %}
               <tr>
-                <td>Total online offering</td>
+                <td>Total online giving reconciled (12/29/14)</td>
                 <td>..........................................</td>
                 <td>{{ page.offeringOnline }}</td>
               </tr>
               {% endif %}
               
               <tr>
-                <td>Total offering YTD</td>
+                <td>Total offering end of 2014 </td>
                 <td>..........................................</td>
                 <td>{{ page.offeringYTD }}</td>
               </tr>

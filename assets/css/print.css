@@ -147,7 +147,7 @@ p.announcement,
 }
 
 .offering {
-  margin: 20px 40pt;
+  margin: 15px 10pt;
 }
 
 .offering h2 {
@@ -155,7 +155,7 @@ p.announcement,
 }
 
 .offering table {
-  margin-left: 0;
+  margin-left: 5px;
 }
 
 .offering td {
