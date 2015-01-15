@@ -195,3 +195,7 @@ p.announcement,
 .alternate-content {
   margin-left: 0.15in;
 }
+
+.invisible {
+  visibility: hidden;
+}
