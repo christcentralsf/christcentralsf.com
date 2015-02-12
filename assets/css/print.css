@@ -35,7 +35,7 @@ p {
 
 table {
   margin-left: 15pt;
-  margin-bottom: 10pt;
+  margin-bottom: 5pt;
 }
 
 tr {
@@ -131,7 +131,7 @@ p.announcement,
 }
 
 .community .push-down {
-  height: 6.25in;
+  height: 6in;
   overflow: hidden;
 }
 
@@ -142,12 +142,12 @@ p.announcement,
 }
 
 .announcements .push-down {
-  height: 5.78in; 
+  height: 5.9in; 
   overflow: hidden;
 }
 
 .offering {
-  margin: 15px 10pt;
+  margin: 20px 40pt;
 }
 
 .offering h2 {
@@ -155,7 +155,7 @@ p.announcement,
 }
 
 .offering table {
-  margin-left: 5px;
+  margin-left: 0;
 }
 
 .offering td {
