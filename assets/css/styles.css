@@ -363,6 +363,18 @@ footer .col-md-12 {
   background-size: 100%;
 }
 
+.event {
+  background: white;
+  box-shadow: 1px 1px 15px #777;
+  margin: 0 0 -213px;
+  padding: 10px;
+  width: 220px;
+}
+
+.event img {
+  width: auto;
+}
+
 @media (max-width: 1200px) {
   .navbar-collapse {
     padding-left: 0;
