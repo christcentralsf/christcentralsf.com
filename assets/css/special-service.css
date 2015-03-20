@@ -1,10 +1,13 @@
 pre {	  
+	background-color: transparent;
+	border: none;
 	color: #333;
 	font-family: 'GothamLight', arial, sans-serif;
 	font-size: 13px;
 	line-height: 1.42857143;
 	margin: 0 0 10px;
 	padding: 9.5px;
+
 }
 
 .corp {
