@@ -88,16 +88,44 @@
         <div class="container">
           <h1>Order of Worship</h1>
           <p class="date">{{ page.date | date: '%B %-d, %Y'}} / Volume {{ page.volume }}, Issue {{ page.issue }}</p>
+
           <h2 class="name">Christ Central Call to Worship</h2>
           <p class="value">{{ page.call }}</p>
           <h2>Songs of Wonder &amp; Praise</h2>
+
           <h2 class="name">Prayer of Repentance</h2>
-          <p class="value">{{ page.repentance }}</p>
+          <p class="value header">Apostles' Creed</p>
+          <p class="value">
+            I believe in God the Father Almighty, Maker of heaven and earth.
+          </p>
+          <p class="value">
+            And in Jesus Christ his only Son our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, dead, and buried; he descended into hell; the third day he rose again from the dead; he ascended into heaven, and sitteth on the right hand of God the Father Almighty; from thence he shall come to judge the quick and the dead.
+          </p>
+          <p class="value">
+            I believe in the Holy Ghost; the holy catholic Church; the communion of saints; the forgiveness of sins; the resurrection of the body; and the life everlasting. Amen.
+          </p>
           <h2 class="name">Assurance of Pardon</h2>
           <p class="value">{{ page.assurance }}</p>
+
           <h2>Song of Gratitude/Offering</h2>
           <h2 class="name">Offering Prayer</h2>
           <p class="value">{{ page.prayer }}</p>
+
+          {% if page.hasConfirmation %}
+            <h2 class="name">Confirmation</h2>
+            <p class="value">{{ page.confirmationNames }}</p>
+          {% endif %}
+          {% if page.hasTestimony %}
+            <h2 class="name">Testimony</h2>
+            <p class="value">{{ page.testimonyNames }}</p>
+          {% endif %}            
+          {% if page.hasNewMembers %}
+            <h2>Installation of New Members</h2>
+          {% endif %}
+          {% if page.hasBaptism %}
+            <h2>Baptism</h2>
+          {% endif %}
+
           <h2 class="name">Scripture Reading</h2>
           <p class="value scripture">{{ page.scripture }}</p>
           {{ content }}
@@ -105,22 +133,15 @@
           <p class="value">
             &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
             <em class="theme">{{ page.theme }}</em>
-          </p>
-          {% if page.hasNewMembers %}
-            <h2>Installation of New Members</h2>
-          {% endif %}
-          {% if page.hasBaptism %}
-            <h2>Baptism</h2>
-          {% endif %}
-          {% if page.hasConfirmation %}
-            <h2 class="name">Confirmation</h2>
-            <p class="value">{{ page.confirmationNames }}</p>
-          {% endif %}          
+          </p>       
+
           {% if page.hasCommunion %}
             <h2>Communion</h2>
           {% endif %}
+
           <h2>Song of Commitment</h2>
           <h2>Benediction</h2>
+
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
           <h2 class="name">Lunch</h2>
