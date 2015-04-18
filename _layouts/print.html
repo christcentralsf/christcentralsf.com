@@ -52,7 +52,7 @@
                 <td>{{ page.offeringYTD }}</td>
               </tr>
               <tr>
-                <td>2015 (3 month) Offering Budget</td>
+                <td>2016 Offering Budget</td>
                 <td>..........................................</td>
                 <td>{{ page.offeringBudget }}</td>
               </tr>
@@ -111,19 +111,22 @@
           <h2 class="name">Offering Prayer</h2>
           <p class="value">{{ page.prayer }}</p>
 
-          {% if page.hasConfirmation %}
-            <h2 class="name">Confirmation</h2>
-            <p class="value">{{ page.confirmationNames }}</p>
+          {% if page.hasNewMembers %}
+            <h2>Installation of New Members</h2>
+            <p class="value">{{ page.newMembersNames }}</p>
           {% endif %}
           {% if page.hasTestimony %}
             <h2 class="name">Testimony</h2>
             <p class="value">{{ page.testimonyNames }}</p>
-          {% endif %}            
-          {% if page.hasNewMembers %}
-            <h2>Installation of New Members</h2>
           {% endif %}
+          
           {% if page.hasBaptism %}
             <h2>Baptism</h2>
+            <p class="value">{{ page.baptismNames }}</p>
+          {% endif %}
+          {% if page.hasConfirmation %}
+            <h2 class="name">Confirmation</h2>
+            <p class="value">{{ page.confirmationNames }}</p>
           {% endif %}
 
           <h2 class="name">Scripture Reading</h2>
