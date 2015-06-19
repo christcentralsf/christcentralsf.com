@@ -102,6 +102,15 @@
           <h2 class="name">Offering Prayer</h2>
           <p class="value">{{ page.prayer }}</p>
 
+          <h2 class="name">Scripture Reading</h2>
+          <p class="value scripture">{{ page.scripture }}</p>
+          {{ content }}
+          <h2 class="name">Sermon</h2>
+          <p class="value">
+            &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
+            <em class="theme">{{ page.theme }}</em>
+          </p> 
+
           {% if page.hasNewMembers %}
             <h2>Installation of New Members</h2>
             <p class="value">{{ page.newMembersNames }}</p>
@@ -122,16 +131,7 @@
           {% if page.hasConfirmation %}
             <h2 class="name">Confirmation</h2>
             <p class="value">{{ page.confirmationNames }}</p>
-          {% endif %}
-
-          <h2 class="name">Scripture Reading</h2>
-          <p class="value scripture">{{ page.scripture }}</p>
-          {{ content }}
-          <h2 class="name">Sermon</h2>
-          <p class="value">
-            &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
-            <em class="theme">{{ page.theme }}</em>
-          </p>       
+          {% endif %}      
 
           {% if page.hasCommunion %}
             <h2>Communion</h2>
