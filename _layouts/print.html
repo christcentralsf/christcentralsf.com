@@ -115,10 +115,12 @@
             <h2>Installation of New Members</h2>
             <p class="value">{{ page.newMembersNames }}</p>
           {% endif %}
+
           {% if page.hasTestimony %}
             <h2 class="name">Testimony</h2>
             <p class="value">{{ page.testimonyNames }}</p>
-          {% endif %}            
+          {% endif %} 
+                     
           {% if page.hasNewMembers %}
             <h2 class="name">Installation of New Members</h2>
             <p class="value">{{ page.newMemberNames }}</p>
@@ -128,6 +130,12 @@
             <h2 class="name">Baptism</h2>
             <p class="value">{{ page.baptismNames }}</p>
           {% endif %}
+
+          {% if page.hasInfantBaptism %}
+            <h2 class="name">Infant Baptism</h2>
+            <p class="value">{{ page.infantBaptismNames }}</p>
+          {% endif %}
+
           {% if page.hasConfirmation %}
             <h2 class="name">Confirmation</h2>
             <p class="value">{{ page.confirmationNames }}</p>
