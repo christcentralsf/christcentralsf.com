@@ -1,9 +1,5 @@
 /* http://colorschemedesigner.com/#3s31TuK--w0w0 */
 
-#page-Home [title="Christ Central Presbyterian (CCPC)"] {
-  visibility: hidden;
-}
-
 @font-face {
   font-family: 'GothamLight';
   src: url('/assets/fonts/Gotham-Light.otf');
@@ -76,7 +72,7 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 .navbar-static-top {
-  background-image: url(../images/Womens_Retreat_Banner.jpg);
+  background-image: url(https://farm4.staticflickr.com/3858/14815524705_1e44388063_b.jpg);
   background-position-y: 60%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -377,6 +373,18 @@ footer .col-md-12 {
 
 .event img {
   width: auto;
+}
+
+#registration img {
+  padding-top: 20px;
+}
+
+#registration a {
+  background-color: #EC0436;
+  color: white;
+  display: block;
+  font-size: 25px;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
