@@ -142,12 +142,12 @@ p.announcement,
 }
 
 .announcements .push-down {
-  height: 5.9in; 
+  height: 5.6in; 
   overflow: hidden;
 }
 
 .offering {
-  margin: 20px 40pt;
+  margin: 20px 20pt;
 }
 
 .offering h2 {
@@ -158,9 +158,13 @@ p.announcement,
   margin-left: 0;
 }
 
-.offering td {
-  padding-right: 5pt;
+.offering td:first-child {
+    width: 230px;
 }
+
+/*.offering td {
+  padding-right: 5pt;
+}*/
 
 .announcements img {
   margin: 2pt 0 0 10pt;
