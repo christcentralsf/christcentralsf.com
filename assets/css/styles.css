@@ -375,18 +375,6 @@ footer .col-md-12 {
   width: auto;
 }
 
-#registration img {
-  padding-top: 20px;
-}
-
-#registration a {
-  background-color: #EC0436;
-  color: white;
-  display: block;
-  font-size: 25px;
-  text-align: center;
-}
-
 @media (max-width: 1200px) {
   .navbar-collapse {
     padding-left: 0;
