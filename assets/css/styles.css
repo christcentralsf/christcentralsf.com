@@ -209,6 +209,19 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
   text-align: center;
 }
 
+.scholarship a {
+  color: #FFF;
+}
+
+.scholarship {
+  background-image: url("/assets/images/pen.png");
+  background-size: 100%;
+  border-top: 1px solid white;
+  margin-top: 15px;
+  padding: 55px;
+  text-align: center;
+}
+
 #sermon:hover {
   opacity: .9;
 }
