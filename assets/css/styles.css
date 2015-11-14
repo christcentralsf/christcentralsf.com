@@ -209,29 +209,6 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
   text-align: center;
 }
 
-.scholarship h1 {
-  margin-top: 80px;
-}
-
-.scholarship a {
-  color: #FFF;
-}
-
-.scholarship {
-  background-image: url("/assets/images/pen.png");
-}
-
-.hallelujah {
-  background-image: url("/assets/images/hall_night_banner.jpg");
-}
-
-.ad {  
-  background-size: 100%;
-  height: 190px;
-  margin-top: 15px;
-  text-align: center;
-}
-
 #sermon:hover {
   opacity: .9;
 }
