@@ -8,7 +8,7 @@
     <title>ccpc_{{ page.date | date: '%Y-%m-%d' }}.pdf</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto|Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/assets/css/print2.css"/>
   </head>
   <body>
@@ -17,53 +17,81 @@
         <div class="container">
           <div class="push-down">
             <h1>Announcements</h1>
+            <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
+            <h2 class="name">Connect</h2>
+            <p class="value">Learn more about our church, join a community group, find a ride, or subscribe to the Christ Central email distribution list via info@christcentralsf.com or by visiting http://christcentralsf.com.</p>
             {{ content }}
           </div>
-          <h2 class="name">Connect</h2>
-          <p class="value">Learn more about our church, join a community group, find a ride, or subscribe to the Christ Central email distribution list via info@christcentralsf.com or by visiting http://christcentralsf.com.</p>
-          <div class="offering">
+          <div class="offering push-down">
+            <h2>Lunch Duty</h2>
+            <table class="lunch-duty">
+              <thead>
+                <tr>
+                  <th class="lunch-duty-col-1"></th>
+                  <th class="lunch-duty-col-2">Service</th>
+                  <th>Cleanup</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Today</td>
+                  <td>{{ page.service }}</td>
+                  <td>{{ page.cleanup }}</td>
+                </tr>
+                {% if page.nextService %}
+                <tr>
+                  <td>Next Sunday</td>
+                  <td>{{ page.nextService }}</td>
+                  <td>{{ page.nextCleanup }}</td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+
             <h2>Offering</h2>
             <table>
               <tr>
-                <td>Total offering for last Sunday</td>
-                <td>..........................................</td>
-                <td>{{ page.offeringLastSunday }}</td>
+                <td class="offering-col-1">
+                  <span>Total offering last Sunday</span>
+                  <span class="dots">...............................................................................</span>
+                </td>
+                <td class="offering-col-2">{{ page.offeringLastSunday }}</td>
               </tr>
-
               {% if page.offeringAdditionalLineItem %}
               <tr>
-                <td>{{ page.offeringAdditionalLineItem }}</td>
-                <td>..........................................</td>
+                <td>
+                  <span>{{ page.offeringAdditionalLineItem }}</span>
+                  <span class="dots">.......................Adjust dots in print2.html for Additional Line Item</span>
+                </td>
                 <td>{{ page.offeringAdditionalLineItemInflow }}</td>
               </tr>
               {% endif %}
-              
               {% if page.offeringOnline %}
               <tr>
-                <td>Total online offering for August 2015</td>
-                <td>..........................................</td>
+                <td>
+                  <span>Total offering online last month</span>
+                  <span class="dots">...................................................................</span>
+                </td>
                 <td>{{ page.offeringOnline }}</td>
               </tr>
               {% endif %}
-              
               <tr>
-                <td>Total offering YTD 15-16 Fiscal Budget</td>
-                <td>..........................................</td>
-                <td>{{ page.offeringYTD }}</td>
+                <td>
+                  <span>Total offering YTD 2015-2016</span>
+                  <span class="dots">........................................................................</span>
+                </td>
+                <td>{{ page.offeringYTD }} of {{ page.offeringBudget }}</td>
               </tr>
               <tr>
-                <td>2015-2016 Fiscal Year Offering Budget</td>
-                <td>..........................................</td>
-                <td>{{ page.offeringBudget }}</td>
-              </tr>
-              <tr>
-                <td>Offering percent against Budget</td>
-                <td>..........................................</td>
-                <td>{{ page.offeringPercent }}</td>
+                <td>
+                  <span>Offering percent vs. target</span>
+                  <span class="dots">.............................................................................</span>
+                </td>
+                <td>{{ page.offeringPercent }} vs. {{ page.offeringPercentTarget }}</td>
               </tr>
             </table>
           </div>
-          <div class="row">
+          <div class="row footer">
             <div class="col-sm-5">
               <img class="name" src="/assets/images/Christ-Central-Presbyterian-Church.png"/>
             </div>
@@ -76,9 +104,15 @@
           </div>
         </div>
       </div>
-      <div class="page page1">
+      <div class="page page1 cover">
         <div class="container">
-          <img src="/assets/images/front-page.png"/>
+          <div class="push-down">
+            <h1>CHRIST CENTRAL</h1>
+            <h2>PRESBYTERIAN CHURCH</h2>
+            <p class="date">{{ page.date | date: '%B %-d, %Y'}} - Volume {{ page.volume }} - Issue {{ page.issue }}</p>
+            <p class="quote">"As a church we exist to proclaim the gospel<br/>of Jesus Christ, to be a Christ-centered community<br/>and to fulfill the Great Commission in the Bay Area<br/>and the world for the glory of God."</p>
+          </div>
+          <img src="/assets/images/front-page-crop.png"/>
         </div> 
       </div>
     </div>
@@ -87,9 +121,10 @@
       <div class="page page2 liturgy">
         <div class="container">
           <h1>Order of Worship</h1>
-          <p class="date">{{ page.date | date: '%B %-d, %Y'}} / Volume {{ page.volume }}, Issue {{ page.issue }}</p>
+          <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
 
-          <h2 class="name">Christ Central Call to Worship <span class="value">{{ page.call }}</span></h2>
+          <h2 class="name">Christ Central Call to Worship</h2>
+          <p class="value">{{ page.call }}</p>
           <h2>Songs of Wonder &amp; Praise</h2>
 
           <h2 class="name">Prayer of Repentance</h2>
@@ -119,11 +154,6 @@
             <h2 class="name">Testimony</h2>
             <p class="value">{{ page.testimonyNames }}</p>
           {% endif %} 
-                     
-          {% if page.hasNewMembers %}
-            <h2 class="name">Installation of New Members</h2>
-            <p class="value">{{ page.newMemberNames }}</p>
-          {% endif %}
           
           {% if page.hasBaptism %}
             <h2 class="name">Baptism</h2>
@@ -150,15 +180,13 @@
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
           <h2 class="name">Lunch</h2>
-          <p class="value">Please join us for lunch today, served by {{ page.service }}, cleaned up by {{ page.cleanup }}.</p>
+          <p class="value">Please join us for lunch in the Fellowship Hall.</p>
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
           <div class="push-down">
-            <h1>Growing Together:</h1>
-            <h2 class="name">Community Group Questionnaire</h2>
-            <p class="value">The week of {{ page.date | date: '%B %-d, %Y'}}</p>
+            <h2>Growing Together:<br/>Community Group Questionnaire</h2>
             <h2 class="name">&ldquo;{{ page.sermon }}&rdquo;</h2>
             <p class="value">{{ page.scripture }}</p>
             {{ content }}
@@ -166,8 +194,8 @@
           <div class="alternate-content push-down hide">
           </div>          
           <h2 class="name">Community Groups</h2>
+          <p class="value">Members of our church gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email office@christcentralsf.com if you have any questions.</p>
           {% include community-groups.html %}
-          <p class="value">To get involved, please email office@christcentral.com</p>
         </div>
       </div>
     </div>
