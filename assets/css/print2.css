@@ -24,10 +24,6 @@ h1 {
   margin-bottom: 0;
 }
 
-h2 {
-  /*margin-left: 10pt;*/
-}
-
 p {
   font-size: 8pt;
   margin: 0;
@@ -77,13 +73,13 @@ tr:first-child td {
 
 .page1, 
 .page3 {
-margin-left: .5in;
+margin-left: .35in;
 }
 
 .container {
 margin: 0;
 padding: 0;
-width: 5in;
+width: 5.075in;
 }
 
 td em,
@@ -117,12 +113,6 @@ td em,
   margin-bottom: 5pt;
 }
 
-.liturgy .theme {
-  font-size: 7pt;
-  line-height: 10pt;
-  margin-bottom: 10pt;
-}
-
 .name,
 .announcements .prayer {
   margin-bottom: 0;
@@ -131,7 +121,7 @@ td em,
 p.community-group-questions,
 p.announcement,
 .value {
-  font-size: 9pt;
+  font-size: 8pt;
   margin-bottom: 10pt;
   margin-left: 5pt;
   line-height: 10pt;
@@ -143,11 +133,11 @@ p.announcement,
 }
 
 .community th:first-child {
-  color: white;
+  visibility: hidden;
 }
 
 .push-down {
-  height: 5.62in;
+  height: 5.75in;
   overflow: hidden;
 }
 
@@ -249,12 +239,12 @@ p.announcement,
 }
 
 .cover h1 {
-  font-size: 39.5pt;
-  line-height: 39.5pt;
+  font-size: 40.1pt;
+  line-height: 100%;
 }
 
 .cover h2 {
-  font-size: 28pt;
+  font-size: 28.5pt;
   font-family: 'GothamLight', arial, sans-serif;
   line-height: 12pt;
   margin: 0 0 5pt 0;
@@ -265,11 +255,11 @@ p.announcement,
 }
 
 .cover .quote {
-  margin: 0 0 0 2pt;
+  margin: 0 0 10pt 2pt;
 }
 
 .cover .push-down {
-  height: 3.89in;
+  height: 3.84in;
 }
 
 .footer {

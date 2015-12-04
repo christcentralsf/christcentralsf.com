@@ -19,7 +19,7 @@
             <h1>Announcements</h1>
             <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
             <h2 class="name">Connect</h2>
-            <p class="value">Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit <u>christcentralsf.com</u>.</p>
+            <p class="value">Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
             {{ content }}
           </div>
           <div class="offering push-down">
@@ -110,7 +110,17 @@
             <h1>CHRIST CENTRAL</h1>
             <h2>PRESBYTERIAN CHURCH</h2>
             <p class="date">{{ page.date | date: '%B %-d, %Y'}} - Volume {{ page.volume }} - Issue {{ page.issue }}</p>
-            <p class="quote">"As a church we exist to proclaim the gospel<br/>of Jesus Christ, to be a Christ-centered community<br/>and to fulfill the Great Commission in the Bay Area<br/>and the world for the glory of God."</p>
+            <p class="quote">
+              OUR VISION<br/>
+              "As a church we exist to proclaim the gospel<br/>
+              of Jesus Christ, to be a Christ-centered community<br/>
+              and to fulfill the Great Commission in the Bay Area<br/>
+              and the world for the glory of God."
+            </p>
+            <p class="quote">
+              OUR {{ page.date | date: '%Y'}} THEME<br/>
+              {{ page.theme }}
+            </p>
           </div>
           <img src="/assets/images/front-page-crop.png"/>
         </div> 
@@ -142,7 +152,6 @@
           <h2 class="name">Sermon</h2>
           <p class="value">
             &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
-            <em class="theme">{{ page.theme }}</em>
           </p> 
 
           {% if page.hasNewMembers %}
@@ -194,7 +203,7 @@
           <div class="alternate-content push-down hide">
           </div>          
           <h2 class="name">Community Groups</h2>
-          <p class="value">Members of our church gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email office@christcentralsf.com if you have any questions.</p>
+          <p class="value">Our church members gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email questions to office@christcentralsf.com.</p>
           {% include community-groups.html %}
         </div>
       </div>
