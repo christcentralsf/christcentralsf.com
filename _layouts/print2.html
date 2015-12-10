@@ -18,17 +18,15 @@
           <div class="push-down">
             <h1>Announcements</h1>
             <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
-            <h2 class="name">Connect</h2>
-            <p class="value">Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
             {{ content }}
           </div>
           <div class="offering push-down">
-            <h2>Lunch Duty</h2>
+            <h2>Servants</h2>
             <table class="lunch-duty">
               <thead>
                 <tr>
                   <th class="lunch-duty-col-1"></th>
-                  <th class="lunch-duty-col-2">Service</th>
+                  <th class="lunch-duty-col-2">Lunch</th>
                   <th>Cleanup</td>
                 </tr>
               </thead>
@@ -49,6 +47,7 @@
             </table>
 
             <h2>Offering</h2>
+            <p class="value">Give donations, offering, and tithing at church or online at christcentralsf.com.</p>
             <table>
               <tr>
                 <td class="offering-col-1">
@@ -61,7 +60,7 @@
               <tr>
                 <td>
                   <span>{{ page.offeringAdditionalLineItem }}</span>
-                  <span class="dots">.......................Adjust dots in print2.html for Additional Line Item</span>
+                  <span class="dots">Adjust dots in print2.html for Additional Line Item.......................</span>
                 </td>
                 <td>{{ page.offeringAdditionalLineItemInflow }}</td>
               </tr>
@@ -148,7 +147,7 @@
 
           <h2 class="name">Scripture Reading</h2>
           <p class="value scripture">{{ page.scripture }}</p>
-          {{ content }}
+          <!-- {{ content }} -->
           <h2 class="name">Sermon</h2>
           <p class="value">
             &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
@@ -199,9 +198,9 @@
             <h2 class="name">&ldquo;{{ page.sermon }}&rdquo;</h2>
             <p class="value">{{ page.scripture }}</p>
             {{ content }}
-          </div>
-          <div class="alternate-content push-down hide">
-          </div>          
+          </div>      
+          <h2 class="name">Connect</h2>
+          <p class="value">Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
           <h2 class="name">Community Groups</h2>
           <p class="value">Our church members gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email questions to office@christcentralsf.com.</p>
           {% include community-groups.html %}
