@@ -22,11 +22,11 @@
           </div>
           <div class="offering push-down">
             <h2>Servants</h2>
-            <table class="lunch-duty">
+            <table class="servants">
               <thead>
                 <tr>
-                  <th class="lunch-duty-col-1"></th>
-                  <th class="lunch-duty-col-2">Lunch</th>
+                  <th class="servants-col-1"></th>
+                  <th class="servants-col-2">Lunch</th>
                   <th>Cleanup</td>
                 </tr>
               </thead>
@@ -105,23 +105,27 @@
       </div>
       <div class="page page1 cover">
         <div class="container">
-          <div class="push-down">
+          <div class="push-down heading">
             <h1>CHRIST CENTRAL</h1>
             <h2>PRESBYTERIAN CHURCH</h2>
-            <p class="date">{{ page.date | date: '%B %-d, %Y'}} - Volume {{ page.volume }} - Issue {{ page.issue }}</p>
-            <p class="quote">
-              OUR VISION<br/>
-              "As a church we exist to proclaim the gospel<br/>
-              of Jesus Christ, to be a Christ-centered community<br/>
-              and to fulfill the Great Commission in the Bay Area<br/>
-              and the world for the glory of God."
-            </p>
-            <p class="quote">
-              OUR {{ page.date | date: '%Y'}} THEME<br/>
-              {{ page.theme }}
-            </p>
+            <div class="front-page-image">
+              <img src="/assets/images/front-page-full-circle.png"/>
+            </div>
           </div>
-          <img src="/assets/images/front-page-crop.png"/>
+          <table class="overview">
+            <tr class="overview-row-1">
+              <td class="date"><p>{{ page.date | date: '%B %-d, %Y'}}</p></td>
+              <td class="issue">Volume {{ page.volume }}, Issue {{ page.issue }}</td>
+            </tr>
+            <tr class="overview-row-2">
+              <td><h2>Our Vision</h2></td>
+              <td>"As a church we exist to proclaim the gospel of Jesus Christ, to be a Christ-centered community and to fulfill the Great Commission in the Bay Area and the world for the glory of God."</td>
+            </tr>
+            <tr>
+              <td><h2>Our {{ page.date | date: '%Y'}} Theme</h2></td>
+              <td>{{ page.theme }}</td>
+            </tr>
+          </table>
         </div> 
       </div>
     </div>
@@ -188,7 +192,7 @@
           <h2 class="name">Announcements</h2>
           <p class="value">Please refer to the back of this program.</p>
           <h2 class="name">Lunch</h2>
-          <p class="value">Please join us for lunch in the Fellowship Hall.</p>
+          <p class="value">Please join us in the Fellowship Hall.</p>
         </div>
       </div>
       <div class="page page3 community">

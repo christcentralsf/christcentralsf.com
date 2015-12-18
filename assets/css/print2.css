@@ -187,13 +187,13 @@ p.announcement,
   width: 109pt;
 }
 
-.lunch-duty {
+.servants {
   margin-bottom: 10pt;
 }
 
-.lunch-duty-col-1, 
-.lunch-duty-col-2 {
-  width: 80pt;
+.servants-col-1, 
+.servants-col-2 {
+  width: 20%;
 }
 
 
@@ -204,11 +204,6 @@ p.announcement,
 
 .right-align {
   text-align: right;
-}
-
-.page1 img {
-  padding-top: 0.3in;
-  width: 75%;
 }
 
 .hide {
@@ -240,24 +235,51 @@ p.announcement,
   line-height: 100%;
 }
 
-.cover h2 {
+.cover .heading h2 {
   font-size: 28.5pt;
   font-family: 'GothamLight', arial, sans-serif;
   line-height: 12pt;
-  margin: 0 0 5pt 0;
-}
-
-.cover .date {
-  margin: 0 0 20pt 2pt;
-}
-
-.cover .quote {
-  margin: 0 0 10pt 2pt;
+  margin: 0 0 .87in 0;
 }
 
 .cover .push-down {
-  height: 3.84in;
+  height: 6.56in;
 }
+
+.cover .front-page-image {
+  text-align: center;
+}
+
+.cover img {
+  width: 80%;
+}
+
+.cover .date {
+  width: 30%;
+}
+
+.cover .issue {
+  padding-right: 5pt;
+  text-align: right;
+}
+
+.overview td {
+  padding: 10pt 0;
+  vertical-align: top;
+}
+
+.overview h2 {
+  margin-top: 1pt;
+}
+
+.overview-row-1 {
+  border-bottom: 2pt solid black;
+}
+
+.overview-row-2 {
+  border-bottom: 1pt solid #EEE;
+}
+
 
 .footer {
   margin-top: 15pt;
