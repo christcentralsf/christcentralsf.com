@@ -22,32 +22,26 @@
             {% if page.isSundayService %}
               <h5>Servants</h5>
               <table class="servants">
-                <thead>
-                  <tr>
-                    <th class="servants-col-1"></th>
-                    <th class="servants-col-2">Lunch</th>
-                    <th>Cleanup</td>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr>
-                    <td>Today</td>
-                    <td>{{ page.service }}</td>
-                    <td>{{ page.cleanup }}</td>
+                    <td class="servants-col-1">This Sunday</td>
+                    <td class="servants-col-2">Lunch: {{ page.service }}</td>
+                    <td class="servants-col-3">Cleanup: {{ page.cleanup }}</td>
                   </tr>
                   {% if page.nextService %}
                   <tr>
                     <td>Next Sunday</td>
-                    <td>{{ page.nextService }}</td>
-                    <td>{{ page.nextCleanup }}</td>
+                    <td>Lunch: {{ page.nextService }}</td>
+                    <td>Cleanup: {{ page.nextCleanup }}</td>
                   </tr>
                   {% endif %}
                 </tbody>
               </table>
+              
+              <div class="divider"></div>
             {% endif %}
 
             <h5>Offering</h5>
-            <p>Give donations, offering, and tithing at church or online at christcentralsf.com.</p>
             <table class="offering">
               <tr>
                 <td class="offering-col-1">
@@ -88,8 +82,9 @@
                 </td>
                 <td>{{ page.offeringPercent }} vs. {{ page.offeringPercentTarget }}</td>
               </tr>
-            </table>
-  
+            </table>   
+            <p>Give donations, offering, and tithing at church or online at christcentralsf.com.</p>
+
             <div class="row footer">
               <div class="col-sm-5">
                 <img class="name" src="/assets/images/Christ-Central-Presbyterian-Church.png"/>
@@ -199,21 +194,23 @@
             <h5>Lunch</h5>
             <p>Please join us in the Fellowship Hall.</p>
           {% endif %}
+
+          <div class="bold-divider"></div>
+          <h5>Notes</h5>
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
-          <div class="push-down">
-            {% if page.isSundayService %}
-              <h4 class="spacer">Growing Together:<br/>Community Group Questionnaire</h4>
-              <h5>&ldquo;{{ page.sermon }}&rdquo;</h5>
-              <p>{{ page.scripture }}</p>
-              {{ content }}
-            {% endif %}
-          </div>
+          {% if page.isSundayService %}
+            <h4 class="spacer">Growing Together:<br/>Community Group Questionnaire</h4>
+            <h5>&ldquo;{{ page.sermon }}&rdquo;</h5>
+            <p>{{ page.scripture }}</p>
+            {{ content }}
+          {% endif %}
           <div class="bottom-align">
             <h5>Connect</h5>
             <p>Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
+            <div class="divider"></div>
             <h5>Community Groups</h5>
             <p>Our church members gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email questions to office@christcentralsf.com.</p>
             {% include community-groups.html %}
