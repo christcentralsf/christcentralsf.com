@@ -14,23 +14,52 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'GothamMedium', arial, sans-serif;
-  font-size: 10pt;
-  line-height: 10pt;
-  margin: 0 0 10pt 0;
+  margin: 0;
   text-transform: uppercase;
 }
 
-h1 {
-  margin-bottom: 0;
+h1  {
+  font-size: 40.1pt;
+  line-height: 100%;
+}
+
+h2 {
+  font-family: 'GothamLight', arial, sans-serif;
+  font-size: 28.5pt;
+  line-height: 12pt;
+  margin-bottom: 1in;
+}
+
+h3 {
+  font-size: 18pt;
+  line-height: 16pt;
+}
+
+h4 {
+  font-size: 14pt;
+  line-height: 14pt;
+}
+
+h5 {
+  font-size: 10pt;
+  line-height: 10pt;
+}
+
+.spacer {
+  margin-bottom: 10pt;
+}
+
+.right-align {
+  text-align: right;
 }
 
 p {
   font-size: 8pt;
-  margin: 0;
+  line-height: 10pt;
+  margin: 0 0 10pt 5pt;
 }
 
 table {
-  margin-left: 5pt;
   width: 100%;
 }
 
@@ -42,8 +71,7 @@ th,
 td {
   font-size: 8pt;
   line-height: 10pt;
-  padding: 0;
-  padding-right: 10pt;
+  padding: 0 10pt 0 0;
 }
 
 th {
@@ -73,67 +101,22 @@ tr:first-child td {
 
 .page1, 
 .page3 {
-margin-left: .35in;
+  margin-left: .35in;
 }
 
-.container {
-margin: 0;
-padding: 0;
-width: 5.075in;
-}
-
-td em,
-.page3 .passage, 
-.page4 .passage,
-.liturgy .community-group-questions,
-.page4 .community-group-questions,
-.liturgy .announcement,
-.page3 .announcement {
+.page3 .announcement,
+.page4 .community-group-questions {
   display: none;
-}
-
-.liturgy h1 {
-  font-size: 18pt;
-  line-height: 16pt;
-}
-
-.liturgy .passage {
-  font-size: 7pt;
-  margin-bottom: 9pt;
-  margin-left: 5pt;
-  line-height: 10pt;
-}
-
-.liturgy .date {
-  margin-bottom: 10pt;
-  margin-left:  5pt;
-}
-
-.liturgy .scripture {
-  margin-bottom: 5pt;
-}
-
-.name,
-.announcements .prayer {
-  margin-bottom: 0;
-}
-
-p.community-group-questions,
-p.announcement,
-.value {
-  font-size: 8pt;
-  margin-bottom: 10pt;
-  margin-left: 5pt;
-  line-height: 10pt;
-}
-
-.community h1 {
-  font-family: 'GothamLight', arial, sans-serif;  
-  margin-top: 10pt;
 }
 
 .community th:first-child {
   visibility: hidden;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 5.075in;
 }
 
 .push-down {
@@ -141,15 +124,14 @@ p.announcement,
   overflow: hidden;
 }
 
-.announcements h1 {
-  font-size: 14pt;
-  line-height: 14pt;
-  margin-bottom: 0;
-}
-
 .announcements .push-down {
   height: 5.55in;
   margin-bottom: 20pt;
+}
+
+.announcements .date {
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .offering.push-down {
@@ -162,17 +144,12 @@ p.announcement,
 }
 
 .offering span {
-  background: white;
   float: left;
   padding-right: 2pt;
 }
 
 .offering .dots {
   float: right;
-}
-
-.offering h2 {
-  margin: 0;
 }
 
 .offering table {
@@ -196,50 +173,13 @@ p.announcement,
   width: 20%;
 }
 
+.footer {
+  margin-top: 15pt;
+}
 
-.announcements img {
+.footer img {
   margin: 2pt 0 0 0;
   width: 150pt;
-}
-
-.right-align {
-  text-align: right;
-}
-
-.hide {
-  display: none;
-}
-
-.poem {
-  font-size: 8pt;
-}
-
-.break {
-  margin-bottom: 10px;
-}
-
-.tab {
-  margin-left: 15px;
-}
-
-.alternate-content {
-  margin-left: 0.15in;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.cover h1 {
-  font-size: 40.1pt;
-  line-height: 100%;
-}
-
-.cover .heading h2 {
-  font-size: 28.5pt;
-  font-family: 'GothamLight', arial, sans-serif;
-  line-height: 12pt;
-  margin: 0 0 .87in 0;
 }
 
 .cover .push-down {
@@ -251,16 +191,11 @@ p.announcement,
 }
 
 .cover img {
-  width: 80%;
+  width: 70%;
 }
 
 .cover .date {
   width: 30%;
-}
-
-.cover .issue {
-  padding-right: 5pt;
-  text-align: right;
 }
 
 .overview td {
@@ -268,7 +203,7 @@ p.announcement,
   vertical-align: top;
 }
 
-.overview h2 {
+.overview h5 {
   margin-top: 1pt;
 }
 
@@ -280,7 +215,6 @@ p.announcement,
   border-bottom: 1pt solid #EEE;
 }
 
-
-.footer {
-  margin-top: 15pt;
+.overview-col-1 {
+  width: 25%;
 }

@@ -16,38 +16,40 @@
       <div class="page page4 announcements">
         <div class="container">
           <div class="push-down">
-            <h1>Announcements</h1>
-            <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
+            <h4>Announcements</h4>
+            <p>{{ page.date | date: '%B %-d, %Y'}}</p>
             {{ content }}
           </div>
           <div class="offering push-down">
-            <h2>Servants</h2>
-            <table class="servants">
-              <thead>
-                <tr>
-                  <th class="servants-col-1"></th>
-                  <th class="servants-col-2">Lunch</th>
-                  <th>Cleanup</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Today</td>
-                  <td>{{ page.service }}</td>
-                  <td>{{ page.cleanup }}</td>
-                </tr>
-                {% if page.nextService %}
-                <tr>
-                  <td>Next Sunday</td>
-                  <td>{{ page.nextService }}</td>
-                  <td>{{ page.nextCleanup }}</td>
-                </tr>
-                {% endif %}
-              </tbody>
-            </table>
+            {% if page.isSundayService %}
+              <h5>Servants</h5>
+              <table class="servants">
+                <thead>
+                  <tr>
+                    <th class="servants-col-1"></th>
+                    <th class="servants-col-2">Lunch</th>
+                    <th>Cleanup</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Today</td>
+                    <td>{{ page.service }}</td>
+                    <td>{{ page.cleanup }}</td>
+                  </tr>
+                  {% if page.nextService %}
+                  <tr>
+                    <td>Next Sunday</td>
+                    <td>{{ page.nextService }}</td>
+                    <td>{{ page.nextCleanup }}</td>
+                  </tr>
+                  {% endif %}
+                </tbody>
+              </table>
+            {% endif %}
 
-            <h2>Offering</h2>
-            <p class="value">Give donations, offering, and tithing at church or online at christcentralsf.com.</p>
+            <h5>Offering</h5>
+            <p>Give donations, offering, and tithing at church or online at christcentralsf.com.</p>
             <table>
               <tr>
                 <td class="offering-col-1">
@@ -114,16 +116,16 @@
           </div>
           <table class="overview">
             <tr class="overview-row-1">
-              <td class="date"><p>{{ page.date | date: '%B %-d, %Y'}}</p></td>
-              <td class="issue">Volume {{ page.volume }}, Issue {{ page.issue }}</td>
+              <td class="overview-col-1">{{ page.date | date: '%B %-d, %Y'}}</td>
+              <td class="right-align">Volume {{ page.volume }}, Issue {{ page.issue }}</td>
             </tr>
             <tr class="overview-row-2">
-              <td><h2>Our Vision</h2></td>
-              <td>"As a church we exist to proclaim the gospel of Jesus Christ, to be a Christ-centered community and to fulfill the Great Commission in the Bay Area and the world for the glory of God."</td>
+              <td><h5>Our Vision</h5></td>
+              <td>&ldquo;As a church we exist to proclaim the gospel of Jesus Christ, to be a Christ-centered community and to fulfill the Great Commission in the Bay Area and the world for the glory of God.&rdquo;</td>
             </tr>
             <tr>
-              <td><h2>Our {{ page.date | date: '%Y'}} Theme</h2></td>
-              <td>{{ page.theme }}</td>
+              <td><h5>Our Theme</h5></td>
+              <td>&ldquo;{{ page.theme }}&rdquo; {{ page.date | date: '%Y'}}</td>
             </tr>
           </table>
         </div> 
@@ -133,80 +135,87 @@
     <div class="print">
       <div class="page page2 liturgy">
         <div class="container">
-          <h1>Order of Worship</h1>
-          <p class="date value">{{ page.date | date: '%B %-d, %Y'}}</p>
+          <h3>Order of Worship</h3>
+          <p>{{ page.date | date: '%B %-d, %Y'}}</p>
 
-          <h2 class="name">Christ Central Call to Worship</h2>
-          <p class="value">{{ page.call }}</p>
-          <h2>Songs of Wonder &amp; Praise</h2>
+          <h5>Christ Central Call to Worship</h5>
+          <p>{{ page.call }}</p>
 
-          <h2 class="name">Prayer of Repentance</h2>
-          <p class="value">{{ page.repentance }}</p>
-          <h2 class="name">Assurance of Pardon</h2>
-          <p class="value">{{ page.assurance }}</p>
+          <h5 class="spacer">Songs of Wonder & Praise</h5>
 
-          <h2>Song of Gratitude/Offering</h2>
-          <h2 class="name">Offering Prayer</h2>
-          <p class="value">{{ page.prayer }}</p>
+          <h5>Prayer of Repentance</h5>
+          <p>{{ page.repentance }}</p>
 
-          <h2 class="name">Scripture Reading</h2>
+          <h5>Assurance of Pardon</h5>
+          <p>{{ page.assurance }}</p>
+
+          <h5 class="spacer">Song of Gratitude/Offering</h5>
+
+          <h5>Offering Prayer</h5>
+          <p>{{ page.prayer }}</p>
+
+          <h5>Scripture Reading</h5>
           <p class="value scripture">{{ page.scripture }}</p>
-          <!-- {{ content }} -->
-          <h2 class="name">Sermon</h2>
-          <p class="value">
-            &ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}<br/>
-          </p> 
+
+          <h5>Sermon</h5>
+          <p>&ldquo;{{ page.sermon }}&rdquo; &mdash; {{ page.speaker }}</p> 
 
           {% if page.hasNewMembers %}
-            <h2>Installation of New Members</h2>
-            <p class="value">{{ page.newMembersNames }}</p>
+            <h5>Installation of New Members</h5>
+            <p>{{ page.newMembersNames }}</p>
           {% endif %}
 
           {% if page.hasTestimony %}
-            <h2 class="name">Testimony</h2>
-            <p class="value">{{ page.testimonyNames }}</p>
+            <h5>Testimony</h5>
+            <p>{{ page.testimonyNames }}</p>
           {% endif %} 
           
           {% if page.hasBaptism %}
-            <h2 class="name">Baptism</h2>
-            <p class="value">{{ page.baptismNames }}</p>
+            <h5>Baptism</h5>
+            <p>{{ page.baptismNames }}</p>
           {% endif %}
 
           {% if page.hasInfantBaptism %}
-            <h2 class="name">Infant Baptism</h2>
-            <p class="value">{{ page.infantBaptismNames }}</p>
+            <h5>Infant Baptism</h5>
+            <p>{{ page.infantBaptismNames }}</p>
           {% endif %}
 
           {% if page.hasConfirmation %}
-            <h2 class="name">Confirmation</h2>
-            <p class="value">{{ page.confirmationNames }}</p>
+            <h5>Confirmation</h5>
+            <p>{{ page.confirmationNames }}</p>
           {% endif %}      
 
           {% if page.hasCommunion %}
-            <h2>Communion</h2>
+            <h5 class="spacer">Communion</h5>
           {% endif %}
 
-          <h2>Song of Commitment</h2>
-          <h2>Benediction</h2>
+          <h5 class="spacer">Song of Commitment</h5>
 
-          <h2 class="name">Announcements</h2>
-          <p class="value">Please refer to the back of this program.</p>
-          <h2 class="name">Lunch</h2>
-          <p class="value">Please join us in the Fellowship Hall.</p>
+          <h5 class="spacer">Benediction</h5>
+
+          <h5>Announcements</h5>
+          <p>Please refer to the back of this program.</p>
+
+          {% if page.isSundayService %}
+            <h5>Lunch</h5>
+            <p>Please join us in the Fellowship Hall.</p>
+          {% endif %}
         </div>
       </div>
       <div class="page page3 community">
         <div class="container">
           <div class="push-down">
-            <h2>Growing Together:<br/>Community Group Questionnaire</h2>
-            <h2 class="name">&ldquo;{{ page.sermon }}&rdquo;</h2>
-            <p class="value">{{ page.scripture }}</p>
-            {{ content }}
+            {% if page.isSundayService %}
+              <h4 class="spacer">Growing Together:<br/>Community Group Questionnaire</h4>
+              <h5>&ldquo;{{ page.sermon }}&rdquo;</h5>
+              <p>{{ page.scripture }}</p>
+              {{ content }}
+            {% endif %}
           </div>      
-          <h2 class="name">Connect</h2>
-          <p class="value">Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
-          <h2 class="name">Community Groups</h2>
-          <p class="value">Our church members gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email questions to office@christcentralsf.com.</p>
+          <h5>Connect</h5>
+          <p>Learn about our church, find a ride, join a community group, or join our email distribution list: email info@christcentralsf.com or visit christcentralsf.com.</p>
+          <h5>Community Groups</h5>
+          <p>Our church members gather during the week to study the Bible, share fellowship in Christ, prayerfully carry one another's burdens, and give thanks to our God. Register online at christcentralsf.com/applications or email questions to office@christcentralsf.com.</p>
           {% include community-groups.html %}
         </div>
       </div>
