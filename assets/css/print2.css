@@ -53,6 +53,11 @@ h5 {
   text-align: right;
 }
 
+.bottom-align {
+  bottom: 0;
+  position: absolute;
+}
+
 p {
   font-size: 8pt;
   line-height: 10pt;
@@ -114,28 +119,16 @@ tr:first-child td {
 }
 
 .container {
+  height: 8.1in;
   margin: 0;
   padding: 0;
+  position: relative;
   width: 5.075in;
-}
-
-.push-down {
-  height: 5.21in;
-  overflow: hidden;
-}
-
-.announcements .push-down {
-  height: 5.55in;
-  margin-bottom: 20pt;
 }
 
 .announcements .date {
   margin-bottom: 0;
   text-transform: uppercase;
-}
-
-.offering.push-down {
-  height: 1.68in;
 }
 
 .offering td {
@@ -182,8 +175,8 @@ tr:first-child td {
   width: 150pt;
 }
 
-.cover .push-down {
-  height: 6.56in;
+.footer .address {
+  margin-bottom: 0;
 }
 
 .cover .front-page-image {
