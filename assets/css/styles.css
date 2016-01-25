@@ -440,3 +440,12 @@ footer .col-md-12 {
     margin-left: 0;
   }
 }
+
+.cg-content {
+  margin-top: 30px;
+}
+
+.cg-content .post-content {
+  display: none;
+}
+

@@ -1,0 +1,19 @@
+---
+layout: cg
+title: Home 
+---
+<div class="row">
+  <div class="col-sm-12 cg-content">
+    <ol>
+      {% assign isFirstPostDisplayed = true %}
+      {% for post in site.posts %}
+        {% if post.date <= site.time %}
+        <li>
+          <a class="post-link">{{ post.date | date: '%B %-d, %Y' }}</a>
+          <div class="post-content">{{ post.content }}</div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</div>
