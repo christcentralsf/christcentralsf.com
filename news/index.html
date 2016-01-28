@@ -9,16 +9,17 @@ title: News
     <div class="col-sm-12">
     {% assign isFirstPostDisplayed = true %}
     {% for post in site.posts %}
-      {% if post.date <= site.time and isFirstPostDisplayed %}
+      {% comment %} if post.date <= site.time and isFirstPostDisplayed {% endcomment %}
+      {% if isFirstPostDisplayed %}
+        <p>Announcements for Sunday, {{ post.date | date: '%B %d, %Y' }}</p>
         {{ post.content }}
-        <p class="updated">Updated {{ post.date | date: '%B %d, %Y' }}</p>
         {% assign isFirstPostDisplayed = false %}
       {% endif %}
     {% endfor %}
 
     {% for post in site.posts %}
       {% if forloop.first %}
-        <p><a href="{{ post.url }}">Print version &raquo;</a></p>
+        <p class="updated"><a href="{{ post.url }}">View this Sunday's printable program &raquo;</a></p>
       {% endif %}
     {% endfor %}
     </div>

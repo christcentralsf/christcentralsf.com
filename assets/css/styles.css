@@ -305,6 +305,19 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
   display: none;
 }
 
+#news h5 {
+  font-size: 18px;
+  margin: 0;  
+}
+
+#news .date {
+  margin: 0;  
+}
+
+#news p {
+  margin: 10px 0 30px;
+}
+
 #news .updated {
   margin-top: 30px;
 }
@@ -340,7 +353,7 @@ footer li:last-child {
 .fb-like {
   height: 21px;
   margin: 0;
-  width: 80px;
+  width: 82px;
 }
 
 footer li a {
