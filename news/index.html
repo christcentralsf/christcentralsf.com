@@ -11,7 +11,7 @@ title: News
     {% for post in site.posts %}
       {% comment %} if post.date <= site.time and isFirstPostDisplayed {% endcomment %}
       {% if isFirstPostDisplayed %}
-        <p>Announcements for Sunday, {{ post.date | date: '%B %d, %Y' }}</p>
+        <p>Announcements for Sunday, {{ post.date | date: '%B %-d, %Y' }}</p>
         {{ post.content }}
         {% assign isFirstPostDisplayed = false %}
       {% endif %}

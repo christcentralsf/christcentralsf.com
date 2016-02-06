@@ -80,7 +80,7 @@ p {
 
 table {
   margin-left: 5pt;
-  width: 100%;
+  width: 361pt;
 }
 
 tr {
@@ -157,7 +157,7 @@ td:last-child {
 }
 
 .offering-col-1 {
-  width: 250pt;
+  width: 245pt;
 }
 
 .offering-col-2 {
@@ -207,6 +207,10 @@ td:last-child {
 
 .overview {
   margin: 0;
+}
+
+.overview table {
+  width: 100%;
 }
 
 .overview td {
