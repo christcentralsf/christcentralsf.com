@@ -2,6 +2,12 @@
 layout: default
 title: Home 
 ---
+<div class="row">
+  <div class="col-sm-12" style="margin: 20px 0;" title="Passion Week, Easter Sunday"/>
+    <img src="/assets/images/passion-week-banner.png"/>
+  </div>
+</div>
+
 {% assign isFirstPostDisplayed = true %}
 {% for post in site.posts %}
   {% if post.date <= site.time and isFirstPostDisplayed %}
@@ -15,6 +21,7 @@ title: Home
     {% assign isFirstPostDisplayed = false %}
   {% endif %}
 {% endfor %}
+
 <div class="row" id="visitors">
   <div class="col-lg-4 col-md-3">
     <h1>Visitors</h1>
