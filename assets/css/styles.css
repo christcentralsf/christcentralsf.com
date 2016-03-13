@@ -204,7 +204,6 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 .attached-content {
   background-image: url(https://farm4.staticflickr.com/3852/14815170272_f7afd58a76_b.jpg);
   background-size: 100%;
-  border-top: 1px solid white;
   padding: 40px;  
   text-align: center;
 }

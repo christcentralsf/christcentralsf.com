@@ -3,8 +3,8 @@ layout: default
 title: Home 
 ---
 <div class="row">
-  <div class="col-sm-12" style="margin: 20px 0;" title="Passion Week, Easter Sunday"/>
-    <img src="/assets/images/passion-week-banner.png"/>
+  <div class="col-sm-12"/>
+    <img src="/assets/images/passion-week-banner.png" title="Passion Week, Easter Sunday"/>
   </div>
 </div>
 
@@ -12,10 +12,12 @@ title: Home
 {% for post in site.posts %}
   {% if post.date <= site.time and isFirstPostDisplayed %}
     <div class="row">
-      <div class="col-sm-12 attached-content" id="sermon">
-        <h3>We invite you to listen to this week's sermon:</h3>
-        <h2><a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.mp3" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
-        <h3>{{ post.date | date: '%B %-d, %Y' }}</h3>
+      <div class="col-sm-12" id="sermon">
+        <div class="attached-content">
+          <h3>We invite you to listen to this week's sermon:</h3>
+          <h2><a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.mp3" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
+          <h3>{{ post.date | date: '%B %-d, %Y' }}</h3>
+        </div>
       </div>
     </div>
     {% assign isFirstPostDisplayed = false %}

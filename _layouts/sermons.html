@@ -1,26 +1,24 @@
 {% include header.html %}
 
 <div class="container">
-  <div class="container"> <!-- match nav padding -->
-    <div class="row">
-      <div class="col-md-12" id="content">
-        <h1>{{ page.title }}</h1>
-        <div class="table-responsive">
-          <table id="sermons" class="table table-hover">
-            <thead>
-              <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
-              <th class="hidden">SortDate</th>
-              <th class="col-md-5">Sermon</th>
-              <th class="col-md-3">Scripture</th>
-              <th class="col-md-2">Speaker</th>
-              <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
-            </thead>
-          </table>
-        </div>
+  <div class="row">
+    <div class="col-md-12" id="content">
+      <h1>{{ page.title }}</h1>
+      <div class="table-responsive">
+        <table id="sermons" class="table table-hover">
+          <thead>
+            <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
+            <th class="hidden">SortDate</th>
+            <th class="col-md-5">Sermon</th>
+            <th class="col-md-3">Scripture</th>
+            <th class="col-md-2">Speaker</th>
+            <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
+          </thead>
+        </table>
       </div>
     </div>
-    {{ content }}
-    <script src="/assets/js/sermons-json-to-table.js"></script>
   </div>
+  {{ content }}
+  <script src="/assets/js/sermons-json-to-table.js"></script>
   {% include footer.html %}
 </div>
