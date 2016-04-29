@@ -17,11 +17,13 @@ title: News
       {% endif %}
     {% endfor %}
 
+{% comment %}
     {% for post in site.posts %}
       {% if forloop.first %}
         <p class="updated"><a href="{{ post.url }}">View this Sunday's printable program &raquo;</a></p>
       {% endif %}
     {% endfor %}
+{% endcomment %}
     </div>
   </div>
 </div>
