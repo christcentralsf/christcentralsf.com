@@ -2,13 +2,6 @@
 layout: default
 title: Home 
 ---
-<!-- <div class="row">
-  <div class="col-sm-6" style="padding-right: 0;">
-    <a href="https://docs.google.com/forms/d/1I67wyBn0QjGm4M7cI0oHQ-qV2vcjXEd-cnaUTAyElPA/viewform">
-      <img src="http://i.imgur.com/lD0mytq.jpg" title="VBS 2016, Children Registration"/>
-    </a>
-  </div>
-</div> -->
 
 {% assign isFirstPostDisplayed = true %}
 {% for post in site.posts %}
@@ -25,6 +18,12 @@ title: Home
     {% assign isFirstPostDisplayed = false %}
   {% endif %}
 {% endfor %}
+
+<div class="row">
+  <div class="col-sm-12 homepage-announcement-banner">
+      <img src="summer-session-2016-banner.jpg" title="Summer Session 2016 Information"/>
+  </div>
+</div>
 
 <div class="row" id="visitors">
   <div class="col-lg-4 col-md-3">

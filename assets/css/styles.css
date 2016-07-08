@@ -234,6 +234,10 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
   text-shadow: 0 1px 1px #333;
 }
 
+.homepage-announcement-banner {
+  margin: 20px 0;
+}
+
 #visitors ul {
   padding-left: 16px;
 }
