@@ -10,7 +10,7 @@ title: Home
       <div class="col-sm-12" id="sermon">
         <div class="attached-content">
           <h3>We invite you to listen to this week's sermon:</h3>
-          <h2><a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}.mp3" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
+          <h2><a href="/sermons/?sorts[sortDate]=-1" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
           <h3>{{ post.date | date: '%B %-d, %Y' }}</h3>
         </div>
       </div>
