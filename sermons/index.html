@@ -13,7 +13,7 @@ title: Sermons
       sermon: "{{ post.sermon }}", 
       scripture: "{{ post.scripture }}", 
       speaker: "{{ post.speaker }}", 
-      sermonTheme: "{{ post.sermonTheme }}",
+      specialTheme: "{{ post.specialTheme }}",
       mp3: "/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3",
       pdf: "/files/programs/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.pdf"
     }{% unless forloop.last %},{% endunless %}
