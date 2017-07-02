@@ -10,6 +10,11 @@
   src: url('/assets/fonts/Gotham-Medium.otf');
 }
 
+@font-face {
+  font-family: 'Northwell';
+  src: url('/assets/fonts/Northwell.otf');
+}
+
 body {
   font-family: 'GothamLight', arial, sans-serif;
 }
@@ -51,8 +56,13 @@ img {
   width: 100%;
 }
 
-a, a:hover, .pagination>li>a, .pagination>li>a:hover {
-  color: #EC0436;
+a, .pagination>li>a {
+  color: #094b4b;
+  font-weight: 700;
+}
+
+a:hover, .pagination>li>a:hover {
+  color: #0e89b1; 
 }
 
 .pagination>li>span {
@@ -66,7 +76,7 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 .alert strong {
-  color: #EC0436;
+  color: #fedb48;
   margin-right: 15px;
   text-transform: uppercase;
 }
@@ -149,12 +159,12 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 .navbar nav {
-  background: #EC0436;
+  background: #fedb48; //#fedb48
   opacity: .9;
 }
 
 .navbar li a {
-  color: white;
+  color: #605e5f;
   font-family: 'GothamMedium', arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -164,7 +174,7 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 .navbar li a:hover {
-  background: #FD1547;
+  background: #fce854;
 }
 
 .navbar li .active,
@@ -186,18 +196,20 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 .btn-primary {
-  background: #EC0436;
+  background: #fedb48;
   border: 0;
+  color: #605e5f;
 }
 
 .btn-primary:hover {
-  background: #FD1547;
+  background: #fce854;
+  color: #605e5f;
 }
 
 .quote {
-  color: #EC0436;
-  font-family: 'Oleo Script', cursive;
-  font-size: 24px;
+  color: #fedb48;
+  font-family: 'Northwell', cursive;
+  font-size: 32px;
   text-transform: none;
 }
 
@@ -213,8 +225,8 @@ a, a:hover, .pagination>li>a, .pagination>li>a:hover {
 }
 
 #sermon h2 {
-  font-family: 'Oleo Script', cursive;
-  font-size: 60px;
+  font-family: 'Northwell', cursive;
+  font-size: 65px;
   margin: 0;
   text-transform: capitalize;
 }
@@ -364,7 +376,7 @@ footer li a {
 }
 
 footer li a:hover {
-  color: #EC0436;
+  color: #fedb48;
 }
 
 footer p {
@@ -420,7 +432,7 @@ footer .col-md-12 {
 
 @media (max-width: 768px) {
   .navbar-static-top {
-    background: #EC0436 !important;
+    background: #fedb48 !important;
   }
 
   .navbar-collapse {
