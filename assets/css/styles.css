@@ -57,12 +57,12 @@ img {
 }
 
 a, .pagination>li>a {
-  color: #094b4b;
+  color: #0E89B1;
   font-weight: 700;
 }
 
 a:hover, .pagination>li>a:hover {
-  color: #0e89b1; 
+  color: #3393A7; 
 }
 
 .pagination>li>span {
@@ -175,6 +175,7 @@ a:hover, .pagination>li>a:hover {
 
 .navbar li a:hover {
   background: #fce854;
+  color: #080A0A;
 }
 
 .navbar li .active,
@@ -207,15 +208,13 @@ a:hover, .pagination>li>a:hover {
 }
 
 .quote {
-  color: #fedb48;
   font-family: 'Northwell', cursive;
-  font-size: 32px;
+  font-size: 45px;
   text-transform: none;
 }
 
 .attached-content {
-  background-image: url(https://farm4.staticflickr.com/3852/14815170272_f7afd58a76_b.jpg);
-  background-size: 100%;
+  background: #605E5F;
   padding: 40px;  
   text-align: center;
 }
@@ -227,24 +226,21 @@ a:hover, .pagination>li>a:hover {
 #sermon h2 {
   font-family: 'Northwell', cursive;
   font-size: 65px;
+  line-height: normal;
   margin: 0;
   text-transform: capitalize;
 }
 
 #sermon h3 {
   color: white;
-  margin: 0;
-}
-
-#sermon h3:first-child {
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin: 0 0 20px 0;
 }
 
 #sermon a {
   color: white;
   font-weight: normal;
   text-decoration: none;
-  text-shadow: 0 1px 1px #333;
 }
 
 .homepage-announcement-banner {

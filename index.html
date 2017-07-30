@@ -8,10 +8,9 @@ title: Home
   {% if post.date <= site.time and isFirstPostDisplayed %}
     <div class="row">
       <div class="col-sm-12" id="sermon">
-        <div class="attached-content">
-          <h3>We invite you to listen to this sermon:</h3>
+        <div class="attached-content" title="&ldquo;{{ post.sermon }}&rdquo;">
+          <h3>Listen to our sermon from {{ post.date | date: '%B %-d, %Y' }}</h3>
           <h2><a href="/sermons/?sorts[sortDate]=-1" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
-          <h3>{{ post.date | date: '%B %-d, %Y' }}</h3>
         </div>
       </div>
     </div>
