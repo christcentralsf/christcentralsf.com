@@ -208,8 +208,9 @@ a:hover, .pagination>li>a:hover {
 }
 
 .quote {
+  color: #605e5f;
   font-family: 'Northwell', cursive;
-  font-size: 45px;
+  font-size: 32px;
   text-transform: none;
 }
 
