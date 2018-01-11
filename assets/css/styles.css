@@ -81,77 +81,28 @@ a:hover, .pagination>li>a:hover {
   text-transform: uppercase;
 }
 
-.navbar-static-top {
-  background-image: url(https://farm4.staticflickr.com/3858/14815524705_1e44388063_b.jpg);
-  background-position-y: 60%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border: 0;
-}
-
-#page-Vision .navbar-static-top {
-  background-image: url(https://farm4.staticflickr.com/3852/14831770784_9f6282a4d8_b.jpg);
-  background-position-y: 70%;
-}
-
-#page-Ministry .navbar-static-top {
-  background-image: url(https://farm3.staticflickr.com/2910/14815517885_62a04e55b5_b.jpg);
-  background-position-y: 55%;
-}
-
-#page-History .navbar-static-top {
-  background-image: url(https://farm3.staticflickr.com/2924/14835354443_c0b47a21a0_b.jpg);
-  background-position-y: 35%;
-}
-
-#page-Directions .navbar-static-top {
-  background-image: url(https://farm3.staticflickr.com/2937/14815164532_92ba81f48a_h.jpg);
-  background-position-y: 35%;
-  background-size: 145%;
-}
-
-#page-FAQ .navbar-static-top {
-  background-image: url(https://farm4.staticflickr.com/3864/14792513166_8903db5b11_b.jpg);
-}
-
-#page-News .navbar-static-top {
-  background-image: url(https://farm3.staticflickr.com/2927/14628982077_7854e32dd3_b.jpg);
-  background-position-y: 65%;
-}
-
-#page-Sermons .navbar-static-top {
-  background-image: url(https://farm6.staticflickr.com/5565/14815158022_665fd748b4_b.jpg);
-  background-position-y: 100%;
-}
-
-#page-Applications .navbar-static-top {
-  background-image: url(https://farm3.staticflickr.com/2921/14628851419_1726601cbd_b.jpg);
-  background-position-y: 70%;
-}
-
 .navbar {
   margin-bottom: 0;
 }
 
 .navbar h1 {
-  color: white;
-  margin-top: 275px;
+  color: black;
+  margin-top: 100px;
 }
 
 .navbar h1 a {
-  color: white;
+  color: black;
   display: block;
   font-family: 'GothamMedium', arial, sans-serif;
-  font-size: 100px;
-  line-height: 75px;
+  font-size: 70px;
+  line-height: 60px;
   margin: 0;
-  text-shadow: 0 0 100px #777;
 }
 
 .navbar h1 a span {
   font-family: 'GothamLight', arial, sans-serif;
-  font-size: 80px;
-  line-height: 60px;
+  font-size: 60px;
+  line-height: 0;
 }
 
 .navbar h1 a:hover {
