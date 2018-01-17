@@ -10,11 +10,6 @@
   src: url('/assets/fonts/Gotham-Medium.otf');
 }
 
-@font-face {
-  font-family: 'Northwell';
-  src: url('/assets/fonts/Northwell.otf');
-}
-
 body {
   font-family: 'GothamLight', arial, sans-serif;
 }
@@ -85,62 +80,62 @@ a:hover, .pagination>li>a:hover {
   margin-bottom: 0;
 }
 
-.navbar h1 {
-  color: black;
-  margin-top: 100px;
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbar h1 a {
+.navbar-inner a {
   color: black;
   display: block;
   font-family: 'GothamMedium', arial, sans-serif;
-  font-size: 70px;
-  line-height: 60px;
   margin: 0;
 }
 
-.navbar h1 a span {
-  font-family: 'GothamLight', arial, sans-serif;
-  font-size: 60px;
-  line-height: 0;
-}
-
-.navbar h1 a:hover {
-  text-decoration: none;
-}
-
-.navbar nav {
-  background: #fedb48; //#fedb48
-  opacity: .9;
-}
-
-.navbar li a {
-  color: #605e5f;
-  font-family: 'GothamMedium', arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0;
+.navbar-inner .logo {
+  min-width: 270px;
   padding: 15px;
   text-transform: uppercase;
 }
 
-.navbar li a:hover {
-  background: #fce854;
-  color: #080A0A;
+.navbar-inner img {
+  display: block;
+  height: 30px;
+  margin-right: 10px;
+  width: auto;
+}
+
+.navbar-inner a:hover {
+  text-decoration: none;
+}
+
+.navbar li a {
+  color: #000;
+  font-family: 'GothamMedium', arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  padding: 25px 15px;
+  text-transform: uppercase;
 }
 
 .navbar li .active,
-.navbar li .active:hover {
+.navbar li .active:hover,
+.navbar li a:hover {
   background: white;
-  color: #333;
+  color: #aaa;
 }
 
 .navbar .fa {
   line-height: 20px;
 }
 
+.navbar-toggle {
+  margin: 15px 5px;
+}
+
 .navbar-toggle .icon-bar {
-  border: 1px solid white;
+  border: 1px solid #fedb48;
 }
 
 .pipe {
@@ -160,7 +155,6 @@ a:hover, .pagination>li>a:hover {
 
 .quote {
   color: #605e5f;
-  font-family: 'Northwell', cursive;
   font-size: 32px;
   text-transform: none;
 }
@@ -176,7 +170,6 @@ a:hover, .pagination>li>a:hover {
 }
 
 #sermon h2 {
-  font-family: 'Northwell', cursive;
   font-size: 65px;
   line-height: normal;
   margin: 0;
@@ -356,19 +349,9 @@ footer .col-md-12 {
   .navbar-collapse {
     padding-left: 0;
   }
-
-  .navbar li a {
-    font-size: 13px;
-    padding: 14px;
-  }
 }
 
 @media (max-width: 991px) {
-  .navbar li a {
-    font-size: 12px;
-    padding: 10px;
-  }
-
   #sermon h2 {
     font-size: 50px;
   }
@@ -380,10 +363,6 @@ footer .col-md-12 {
 }
 
 @media (max-width: 768px) {
-  .navbar-static-top {
-    background: #fedb48 !important;
-  }
-
   .navbar-collapse {
     padding-left: 15px;
   }

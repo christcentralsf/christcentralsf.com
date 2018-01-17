@@ -30,12 +30,10 @@
     <div class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-inner">
-          <h1 class="hidden-xs hidden-sm">
-            <a href="/" title="Christ Central Presbyterian (CCPC)">Christ Central<br/><span class="hidden-md">Presbyterian Church</span></a>
-          </h1>
-          <h1 class="visible-xs visible-sm">
-            <a href="/" title="Christ Central Presbyterian (CCPC)">CCPC</a>
-          </h1>
+          <a class="logo" class="hidden-xs hidden-sm" href="/" title="Christ Central Presbyterian (CCPC)">
+            <img class="pull-left" src="/assets/images/header_logo.png" />
+            Christ Central <br />Presbyterian Church
+          </a>
           <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -47,16 +45,9 @@
           <nav class="collapse navbar-collapse" role="navigation">
             <ul class="nav navbar-nav pull-left">
               <li class="pipe hidden-sm hidden-md"><a href="/" class="navbar-brand {% if page.title == "Home" %}active{% endif %}">Home</a></li>
-              <li><a href="/vision" {% if page.title == "Vision" %}class="active"{% endif %}>Vision</a></li>
-              <li><a href="/ministry" {% if page.title == "Ministry" %}class="active"{% endif %}>Ministry</a></li>
               <li><a href="/history" {% if page.title == "History" %}class="active"{% endif %}>History</a></li>
-              <li><a href="/directions/" {% if page.title == "Directions" %}class="active"{% endif %}>Directions</a></li>
-              <li class="pipe"><a href="/faq" {% if page.title == "FAQ" %}class="active"{% endif %}>FAQ</a></li>
-              <li><a href="/news" {% if page.title == "News" %}class="active"{% endif %}>News</a></li>
-              <li><a href="/sermons?sorts[sortDate]=-1" {% if page.title == "Sermons" %}class="active"{% endif %}>Sermons</a></li>
-              <li class="pipe"><a href="/applications" {% if page.title == "Applications" %}class="active"{% endif %}>Applications</a></li>
+              <li><a href="/sermons?sorts[sortDate]=-1" {% if page.title == "Sermons" %}class="active"{% endif %}>Resources</a></li>
               <li class="give"><a href="http://give.christcentralsf.com/" target="_blank">Give</a></li>
-              <li><a data-toggle="modal" data-target="#contact"><span class="hidden-sm hidden-md">Contact Us</span><i class="fa fa-envelope visible-sm visible-md"></i></a></li>
             </ul>
           </nav>
           <!-- <p class="alert"><strong>Important notice</strong>Sunday Service will move from 10am to 9:50am beginning June 2014.</p> -->
