@@ -1,10 +1,41 @@
----
-layout: default
-title: Applications
----
+{% include header.html %}
 
-<h1>{{ page.title }}</h1>
-<div id="applications">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>News</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" id="family-life-ministry">
+      <p>For the latest news, email <a href="mailto:office@christcentralsf.com">office@christcentralsf.com</a> to join us on <a href="onrealm.org/christcentral" target="_blank">Realm</a>.</p>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12" id="content">
+      <h1>{{ page.title }}</h1>
+      <div class="table-responsive">
+        <table id="sermons" class="table table-hover">
+          <thead>
+            <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
+            <th class="hidden">SortDate</th>
+            <th class="col-md-4">Sermon</th>
+            <th class="col-md-2">Scripture</th>
+            <th class="col-md-2">Speaker</th>
+            <th class="col-md-2" data-dynatable-sorts="series">Series</th>
+            <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+  {{ content }}
+
+
+
   <div class="row">
     <div class="col-md-12">
       <table class="table table-hover">
@@ -23,38 +54,14 @@ title: Applications
             <td><a href="https://docs.google.com/forms/d/1PNl50onNqxzTD-rDsLxEZWBUiJ8FjDYPjsBrAGY_8PU/" target="_blank">Children's Ministry Registration</a></td>
             <td>For families enrolling their child(ren) into our 2017-18 Nursery/Children's Ministry program</td>
           </tr>
-          <!-- <tr>
-            <td><a href="https://goo.gl/forms/KFL6hxtQuV4IiF4B3" target="_blank">VBS 2017 Registration</a></td>
-            <td>Register your child(ren) for VBS 2017 "Galactic Starveyors"</td>
-          </tr> 
-          <tr>
-            <td><a href="https://goo.gl/forms/72Agd9iar19S48Pl1" target="_blank">VBS 2017 Volunteer Application</a></td>
-            <td>Volunteer for VBS to help make an unforgettable summer for our children</td>
-          </tr> -->    
           <tr>
             <td><a href="https://goo.gl/UJZvSh" target="_blank">Christ Central Network Conference</a></td>
             <td>For those interested in registering for the "Faith &amp; Work CCN conference"</td>
-          </tr>   
-          <!-- <tr>
-            <td><a href="https://goo.gl/forms/COYVz7MAxMp3b3aL2" target="_blank">Christ Central Classes</a></td>
-            <td>For those interested in taking Christ Central Classes</td>
-          </tr>   --> 
-          <!-- <tr>
-            <td><a href="https://docs.google.com/forms/d/1FP_Ry6qY3XysjGHdbbvfnSkHXNp_JQZgpFm4vgKgE9A" target="_blank">Youth Group Retreat Registration</a></td>
-            <td>For those interested in attending 2017 Summer Youth Group Retreat</td>
           </tr>
-          <tr>
-            <td><a href="http://goo.gl/forms/UtjOkC61ER" target="_blank">Youth Group Retreat Registration</a> / <a href="../assets/pdf/youth_retreat_registration.pdf" target="_blank">PDF version</a></td>
-            <td>For those interested in attending 2016 Summer Youth Group Retreat</td>
-          </tr> -->
           <tr>
             <td><a href="https://drive.google.com/file/d/0BwWvhDk-pL6rV3VCWnBqMm55bkk/view" target="_blank">Scholarship</a></td>
             <td>For high school, college and graduate students interested in applying for our annual scholarship</td>
-          </tr><!-- 
-          <tr>
-            <td><a href="https://docs.google.com/spreadsheet/viewform?formkey=dGRNeDhMTGhqQTNtZFlkYjdXMmFwMnc6MQ" target="_blank">Scholarship Recommendation</a></td>
-            <td>For those writing recommendations for those applying for our annual scholarship</td>
-          </tr> -->
+          </tr>
           <tr>
             <td><a href="https://docs.google.com/spreadsheet/viewform?formkey=dGFWdXFLM1AxckliUFI1SEc3b0NQNHc6MQ" target="_blank">Summer Missions</a></td>
             <td>For those interested in receiving congregational support for a short-term summer missions trip</td>
@@ -71,4 +78,9 @@ title: Applications
       </table>
     </div>
   </div>
+
+
+
+  <script src="/assets/js/sermons-json-to-table.js"></script>
+  {% include footer.html %}
 </div>

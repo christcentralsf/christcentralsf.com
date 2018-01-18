@@ -284,8 +284,9 @@ label {
 }
 
 footer {
+  background: #CCC;
   margin-top: 75px;
-  padding: 0 15px;
+  padding: 50px;
 }
 
 footer ul {
@@ -319,10 +320,6 @@ footer li a {
 
 footer li a:hover {
   color: #fedb48;
-}
-
-footer p {
-  float: left;
 }
 
 footer .col-md-12 {
