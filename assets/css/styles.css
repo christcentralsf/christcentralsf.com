@@ -16,6 +16,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'GothamMedium', arial, sans-serif;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
@@ -33,14 +34,13 @@ h3 {
   font-size: 18px;
 }
 
-#news h2,
 h4 {
   color: #333;
   font-size: 16px;
 }
 
 hr {
-  border-color: #DDD;
+  border: 10px solid #FEDB48;
 }
 
 strong {
@@ -62,6 +62,10 @@ a:hover, .pagination>li>a:hover {
 
 .pagination>li>span {
   color: #444;
+}
+
+.row {
+  margin: 30px 0;
 }
 
 .alert {
@@ -156,6 +160,7 @@ a:hover, .pagination>li>a:hover {
 .quote {
   color: #605e5f;
   font-size: 32px;
+  padding: 60px 0;
   text-transform: none;
 }
 
@@ -257,36 +262,21 @@ a:hover, .pagination>li>a:hover {
   margin-bottom: 10px;
 }
 
-#news .passage, 
-#news .community-group-questions {
-  display: none;
-}
-
-#news h5 {
-  font-size: 18px;
-  margin: 0;  
-}
-
-#news .date {
-  margin: 0;  
-}
-
-#news p {
-  margin: 10px 0 30px;
-}
-
-#news .updated {
-  margin-top: 30px;
-}
 
 label {
   font-weight: normal;
 }
 
 footer {
-  background: #CCC;
-  margin-top: 75px;
-  padding: 50px;
+  background: #333;
+  border-top: 5px solid #FEDB48;
+  color: #FFF;
+  margin-top: 90px;
+  padding: 60px 60px 30px;
+}
+
+footer h3 {
+  color: #FFF;
 }
 
 footer ul {
@@ -301,7 +291,7 @@ footer li {
   font-size: 21px;
   line-height: 21px;
   list-style: none;
-  margin-left: 5px;
+  margin-right: 10px;
 }
 
 footer li:last-child {
@@ -315,7 +305,7 @@ footer li:last-child {
 }
 
 footer li a {
-  color: #333;
+  color: #FFF;
 }
 
 footer li a:hover {
@@ -402,3 +392,6 @@ footer .col-md-12 {
   display: none;
 }
 
+.copyright {
+  margin-top: 90px;  
+}
