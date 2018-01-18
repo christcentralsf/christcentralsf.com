@@ -297,7 +297,7 @@ footer ul {
 }
 
 footer li {
-  float: right;
+  float: left;
   font-size: 21px;
   line-height: 21px;
   list-style: none;
