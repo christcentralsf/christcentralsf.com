@@ -15,7 +15,7 @@ var trWriter = function(rowIndex, record, columns, cellWriter) {
               <td><a href='http://www.biblegateway.com/passage/?search=record.scripture' target='_blank'>record.scripture</a></td>\
               <td>record.speaker</td>\
               <td>record.series</td>\
-              <td align='center'><a href='record.pdf' target='_blank'><i class='fa fa-file'></i></a></td>\
+              <td align='center'><a href='record.pdf' target='_blank'><i class='far fa-file-pdf'></i></a></td>\
             </tr>";
   return interpolate(tr, record);
 };

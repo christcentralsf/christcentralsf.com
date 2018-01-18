@@ -1,4 +1,9 @@
-/* http://colorschemedesigner.com/#3s31TuK--w0w0 */
+/* 
+
+Christ Central style guide:
+https://www.dropbox.com/s/8rrukcasfc5xumy/CCSF_StyleGuide_July2017.pdf?dl=0
+
+*/
 
 @font-face {
   font-family: 'GothamLight';
@@ -43,12 +48,16 @@ hr {
   border: 10px solid #FEDB48;
 }
 
-strong {
-  font-family: 'GothamMedium', arial, sans-serif;
-}
-
 img {
   width: 100%;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+strong {
+  font-family: 'GothamMedium', arial, sans-serif;
 }
 
 a, .pagination>li>a {
@@ -68,18 +77,6 @@ a:hover, .pagination>li>a:hover {
   margin: 30px 0;
 }
 
-.alert {
-  background: white;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
-.alert strong {
-  color: #fedb48;
-  margin-right: 15px;
-  text-transform: uppercase;
-}
-
 .navbar {
   margin-bottom: 0;
 }
@@ -97,6 +94,7 @@ a:hover, .pagination>li>a:hover {
 }
 
 .navbar-inner .logo {
+  line-height: 16px;
   min-width: 270px;
   padding: 15px;
   text-transform: uppercase;
@@ -130,20 +128,12 @@ a:hover, .pagination>li>a:hover {
   color: #aaa;
 }
 
-.navbar .fa {
-  line-height: 20px;
-}
-
 .navbar-toggle {
   margin: 15px 5px;
 }
 
 .navbar-toggle .icon-bar {
   border: 1px solid #fedb48;
-}
-
-.pipe {
-  border-right: 1px solid white;
 }
 
 .btn-primary {
@@ -157,53 +147,48 @@ a:hover, .pagination>li>a:hover {
   color: #605e5f;
 }
 
+.mt30 {
+  margin-top: 30px;
+}
+
 .quote {
-  color: #605e5f;
+  color: #605E5F;
+  font-family: 'GothamLight', arial, sans-serif;
   font-size: 32px;
   padding: 60px 0;
   text-transform: none;
 }
 
-.attached-content {
-  background: #605E5F;
-  padding: 40px;  
-  text-align: center;
+h2.quote {
+  padding: 0;
 }
 
-#sermon:hover {
-  opacity: .9;
+#sermon {
+  background: url('/assets/images/bible.jpg');
+  color: #FFFFFF;
+  display: block;
+  height: 600px;
+  padding: 60px;
+  text-decoration: none;
 }
 
 #sermon h2 {
-  font-size: 65px;
+  border-bottom: 15px solid #FEDB48; 
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 90px;
   line-height: normal;
   margin: 0;
   text-transform: capitalize;
 }
 
 #sermon h3 {
-  color: white;
+  color: #FFFFFF;
   font-size: 14px;
-  margin: 0 0 20px 0;
-}
-
-#sermon a {
-  color: white;
-  font-weight: normal;
-  text-decoration: none;
 }
 
 .homepage-announcement-banner {
   margin-top: 10px;
-}
-
-#visitors ul {
-  padding-left: 16px;
-}
-
-#promo iframe {
-  height: 480px;
-  width: 853px;
 }
 
 #history h2 {
@@ -222,17 +207,6 @@ a:hover, .pagination>li>a:hover {
 #history .gray {
   background: #EEE;
   height: 200px;
-}
-
-#faq .toc,
-#faq .col-md-6 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#faq .toc .col-md-6 {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .table-responsive {
@@ -262,7 +236,6 @@ a:hover, .pagination>li>a:hover {
   margin-bottom: 10px;
 }
 
-
 label {
   font-weight: normal;
 }
@@ -280,9 +253,6 @@ footer h3 {
 }
 
 footer ul {
-  float: left;
-  overflow: hidden;
-  margin-right: 10px;
   padding: 0;
 }
 
@@ -294,42 +264,8 @@ footer li {
   margin-right: 10px;
 }
 
-footer li:last-child {
-  margin-left: 0;
-}
-
-.fb-like {
-  height: 21px;
-  margin: 0;
-  width: 82px;
-}
-
 footer li a {
-  color: #FFF;
-}
-
-footer li a:hover {
-  color: #fedb48;
-}
-
-footer .col-md-12 {
-  overflow: hidden;
-}
-
-.banner {
-  background-size: 100%;
-}
-
-.event {
-  background: white;
-  box-shadow: 1px 1px 15px #777;
-  margin: 0 0 -213px;
-  padding: 10px;
-  width: 220px;
-}
-
-.event img {
-  width: auto;
+  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
@@ -341,11 +277,6 @@ footer .col-md-12 {
 @media (max-width: 991px) {
   #sermon h2 {
     font-size: 50px;
-  }
-
-  #promo iframe {
-    height: 360px;
-    width: 640px;
   }
 }
 
@@ -368,10 +299,6 @@ footer .col-md-12 {
     float: left;
   }
 
-  .pipe {
-    border: 0;
-  }
-
   #sermon h2 {
     font-size: 40px;
   }
@@ -382,16 +309,4 @@ footer .col-md-12 {
   .navbar>.container-fluid .navbar-brand {
     margin-left: 0;
   }
-}
-
-.cg-content {
-  margin-top: 30px;
-}
-
-.cg-content .post-content {
-  display: none;
-}
-
-.copyright {
-  margin-top: 90px;  
 }

@@ -7,11 +7,14 @@ title: Home
 {% for post in site.posts %}
   {% if post.date <= site.time and isFirstPostDisplayed %}
     <div class="row">
-      <div class="col-sm-12" id="sermon">
-        <div class="attached-content" title="&ldquo;{{ post.sermon }}&rdquo;">
-          <h3>Listen to our sermon from {{ post.date | date: '%B %-d, %Y' }}</h3>
-          <h2><a href="/sermons/?sorts[sortDate]=-1" target="_blank">&ldquo;{{ post.sermon }}&rdquo;</a></h2>
-        </div>
+      <div class="col-sm-12">
+        <!-- {{ post.date | date: '%Y-%m-%d'}} -->
+        <a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3" target="_blank" id="sermon">
+          <div title="&ldquo;{{ post.sermon }}&rdquo;">
+            <h2>{{ post.sermon }}</h2>
+            <h3>Listen to our latest sermon</h3>
+          </div>
+        </a>
       </div>
     </div>
     {% assign isFirstPostDisplayed = false %}
@@ -30,7 +33,7 @@ title: Home
 </div>
 <div class="row">
   <div class="col-sm-12 homepage-announcement-banner">
-      <a href='https://goo.gl/UJZvSh'>
+      <a href="/faithandwork">
         <img src="/assets/images/events/IMG_christcentral-faithandwork-1170x600px-1.png" title="Christ Central Network conference: Faith and Work"/>
       </a>
   </div>
@@ -53,35 +56,68 @@ title: Home
 </div>
 <div class="row">
   <div class="col-md-4">
-    <h3>1. God-glorifying worship</h3>
+    <h2 class="quote">I</h2>
+    <h3>God-glorifying worship</h3>
     <p>We strive to have a healthy Sunday worship that focuses on glorifying God through praise and Christ-centered preaching. Worship will provide the additional benefit of encouraging everyone with a blessing and challenge as they start the work week.</p>
   </div>
   <div class="col-md-4">
-    <h3>3. Genuine personal community</h3>
-    <p>One of the biggest strengths of our church throughout the years has been our ability to foster a community. Community groups offer small, Christ-centered gatherings for weekday reflection, fellowship and accountability, and a smaller setting for sharing Christ with seekers.</p>
+    <h2 class="quote">II</h2>
+    <h3>Gospel movement</h3>
+    <p>Our church will push its members to have an evangelistic lifestyle in order to actively fulfill the Great Commission in the Bay Area and beyond. A church that does not share the Gospel is a church that does not experience the joy and satisfaction of knowing God.</p>
   </div>
   <div class="col-md-4">
-    <h3>5. Christian service</h3>
-    <p>God's love is meant to be given to others. Loving our neighbors through loving volunteerism and social justice is an important expression of God's love by the church.</p>
+    <h2 class="quote">III</h2>
+    <h3>Genuine personal community</h3>
+    <p>One of the biggest strengths of our church throughout the years has been our ability to foster a community. Community groups offer small, Christ-centered gatherings for weekday reflection, fellowship and accountability, and a smaller setting for sharing Christ with seekers.</p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4">
-    <h3>2. Gospel movement</h3>
-    <p>Our church will push its members to have an evangelistic lifestyle in order to actively fulfill the Great Commission in the Bay Area and beyond. A church that does not share the Gospel is a church that does not experience the joy and satisfaction of knowing God.</p>
-  </div>
-  <div class="col-md-4">
-    <h3>4. Discipleship</h3>
+    <h2 class="quote">IV</h2>
+    <h3>Discipleship</h3>
     <p>The Apostle Paul describes the pursuit of holiness is similar to an athlete in training. We will strive to offer substantive spiritual training through mentorships with others. Creating disciples will also seed future disciplers, creating a pattern of healthy, organic growth in our church.</p>
   </div>
   <div class="col-md-4">
-    <h3>6. Active church planting</h3>
+    <h2 class="quote">V</h2>
+    <h3>Christian service</h3>
+    <p>God's love is meant to be given to others. Loving our neighbors through loving volunteerism and social justice is an important expression of God's love by the church.</p>
+  </div>
+  <div class="col-md-4">
+    <h2 class="quote">VI</h2>
+    <h3>Active church planting</h3>
     <p>As we grow, we want to continue to reach the Bay Area through planting churches. A particularized church with its own pastors and board of elders will be best equipped to minister to its members in that region, encouraging ministry that's more localized to where the members live and work. We also believe that having too large of a congregation can be an obstacle to the core value of having genuine community.</p>
   </div>
 </div>
 
 <hr/>
 
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="quote">We exist to proclaim the gospel of Jesus Christ</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <h3>Pastor Benjamin Kim</h3>
+    <p>Ben is happily married to Hetty, and they have two wonderful children, Kylee and Marcus, who remind them of God's amazing grace. He enjoys good books, most sports, good food, and spending time with his family.  His simple goal in life is to preach Christ and Him crucified.  He received his M.Div. from <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a> and was ordained by the <a href="http://www.kapc.org/" target="_blank">KAPC</a> in 2000.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Pastor In Kim</h3>
+    <p>In was raised in Santa Barbara, California. He graduated with a BA in English from Westmont College in 2004 and worked for Special Needs education through 2007. In pursued his internal call to pastoral ministry at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>, where he received his M.Div. in 2011. His interests include attending live concerts, playing soccer and appreciating God's common grace.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Pastor Simon Yang</h3>
+    <p>Born in Korea, raised in New Zealand, Simon considers his home Houston, where he grew up since 3rd Grade. He graduated from the UT Austin with a business degree before receiving his M.Div. at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>. His beautiful wife, Rachel is an RN, and they have two boys, Eliab and Tobias. Simon enjoys basketball and football, and is a big fan of Justin Timberlake.</p>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="quote">We exist to be a Christ-centered community</h2>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-6 table-responsive">
     <h3>Ministry Groups</h3>
@@ -97,45 +133,60 @@ title: Home
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Pastoral Staff</h2>
+    <h2 class="quote">We exist to fulfill the Great Commission</h2>
   </div>
 </div>
 <div class="row">
   <div class="col-md-4">
-    <h3>Pastor Benjamin Kim</h3>
-    <p>Pastor Ben is happily married to Hetty, and they have two wonderful children, Kylee and Marcus, who remind them of God's amazing grace. He enjoys good books, most sports, good food, and spending time with his family.  His simple goal in life is to preach Christ and Him crucified.  He received his M.Div. from <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a> and was ordained by the <a href="http://www.kapc.org/" target="_blank">KAPC</a> in 2000.</p>
+    <h3>Reaching Our Community</h3>
+    <p>Every Saturday we serve our local community by offering free tutoring.</p>
   </div>
   <div class="col-md-4">
-    <h3>Pastor In Kim</h3>
-    <p>In Kim was raised in Santa Barbara, California. He graduated with a BA in English from Westmont College in 2004 and worked for Special Needs education through 2007. In pursued his internal call to pastoral ministry at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>, where he received his M.Div. in 2011. As an ordained pastor at Christ Central, In Kim enjoys serving directly with campus ministry, "Forum" and community groups. His other interests include attending live concerts, playing soccer and appreciating God's common grace.</p>
+    <h3>Short Term Missions</h3>
+    <p>Every summer, we send a team to Cambodia for overseas missions.</p>
   </div>
   <div class="col-md-4">
-    <h3>Pastor Simon Yang</h3>
-    <p>Simon was born in Korea and was raised in New Zealand. However, he considers his home Houston, Texas which is where he grew up since 3rd Grade. He graduated from the University of Texas Austin with a business degree before receiving his M.Div. from <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>. His beautiful wife, Rachel works as an RN, and together, they have two boys, Eliab and Tobias. In his free time, Simon enjoys playing basketball and football. His favorite sports teams are the Longhorns, Rockets, and the Texans. He is also a big fan of Justin Timberlake, rare steak, and anything sweet.</p>
+    <h3>Long Term Missionaries</h3>
+    <ul>
+      <li>Mark &amp; Megumi Bocanegra in Japan</li>
+      <li>B &amp; A in Indonesia</li>
+      <li>Paul &amp; Susan Lee in Cambodia</li>
+      <li>Tim &amp; Moon Sook Lim in Cambodia</li>
+    </ul>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <h3>LifeMoves</h3>
+    <p><a href="https://lifemoves.org/" target="_blank">LifeMoves</a> is dedicated to providing interim housing and supportive services that create opportunities for homeless families and individuals to rapidly return to stable housing and long-term self-sufficiency.</p>
   </div>
-
-
-<!-- Missions content -->
+  <div class="col-md-4">
+    <h3>Freedom House</h3>
+    <p><a href="http://www.freedomhousesf.org/" target="_blank">Freedom House</a> is a non-profit organization with a mission to bring hope, restoration, and a new life to survivors of human trafficking by providing a safe home and long-term aftercare.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Open Door</h3>
+    <p><a href="http://www.opendoormission.org/" target="_blank">Open Door</a> is a Gospel Rescue Mission committed to breaking the cycle of homelessness and poverty.</p>
+  </div>
+</div>
 
 <hr/>
 
 <div class="row">
   <div class="col-md-12">
-    <h2>Parking</h2>
+    <h2>Visiting</h2>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <h3>Parking Lots</h3>
-    <p>We are located at <a href="http://maps.google.com/maps?q=50+Northridge+Drive,+Daly+City,+CA&amp;hl=en&amp;sll=37.783833,-122.43372&amp;sspn=0.007046,0.013894&amp;z=17" target="_blank">50 Northridge Drive, Daly City, CA 94015</a>. The main parking lot is no longer available for use. The side parking lot should only be used by the elderly and disabled.</p>
-  </div>
-  <div class="col-md-4">
-    <h3>Street Parking</h3>
+    <p>We are located at <a href="http://maps.google.com/maps?q=50+Northridge+Drive,+Daly+City,+CA&amp;hl=en&amp;sll=37.783833,-122.43372&amp;sspn=0.007046,0.013894&amp;z=17" target="_blank">50 Northridge Drive</a> in Daly City, CA. The main parking lot is no longer available for use, and the side parking lot should only be used by the elderly and disabled.</p>
+    <h3 class="mt30">Street Parking</h3>
     <p>We share street parking with our neighborhood, its many residents, and other local churches. Please be considerate to them by using our satellite parking shuttle service.</p>
+    <h3 class="mt30">Satellite Parking</h3>
+    <p>Offsite parking lot is located at <a href="https://goo.gl/maps/ATFWmeu1Kru" target="_blank">101 Lincoln Ave</a>. Shuttles run continuously before service, and return shuttles depart at 11:30 AM and 12 PM.</p>
   </div>
-  <div class="col-md-4">
-    <h3>Satellite Parking</h3>
-    <p>Offsite parking lot at <a href="https://goo.gl/maps/ATFWmeu1Kru" target="_blank">101 Lincoln Ave, Daly City, CA 94015</a>. Shuttles run continuously before service. Return shuttles depart at 11:30 AM and 12 PM.</p>
+  <div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3157.6408045421244!2d-122.49089018486124!3d37.68114717531404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x808f7c87a2e93961%3A0xd477dbba99d3947e!2s50+Northridge+Drive%2C+Daly+City%2C+CA!3m2!1d37.680675!2d-122.493541!4m5!1s0x808f7c790696533f%3A0xbbba374c6c3621f9!2s101+Lincoln+Ave%2C+Daly+City%2C+CA+94015!3m2!1d37.6787931!2d-122.48386199999999!5e0!3m2!1sen!2sus!4v1516310338621" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </div>
