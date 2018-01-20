@@ -345,3 +345,22 @@ footer a:hover {
   border: 1px solid #EFEFEF;
   padding: 20px;
 }
+
+.navbar li .special {
+  background: #704122;
+  border-right: 5px solid #402312;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 15px 30px 0 0;
+  padding: 10px 15px;
+  transform: skew(0deg,-15deg);
+}
+
+.navbar li .special:hover {
+  background: #FCB400;
+  color: #FFFFFF;
+}
+
+.navbar li .special sup {
+  font-weight: normal;
+}
