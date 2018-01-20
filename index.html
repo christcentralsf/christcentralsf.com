@@ -3,6 +3,14 @@ layout: default
 title: Home 
 ---
 
+<div class="row">
+  <div class="col-sm-12">
+      <a href="/faithandwork">
+        <img src="/assets/images/events/IMG_christcentral-faithandwork-1170x600px-1.png" title="Christ Central Network conference: Faith and Work"/>
+      </a>
+  </div>
+</div>
+
 {% assign isFirstPostDisplayed = true %}
 {% for post in site.posts %}
   {% if post.date <= site.time and isFirstPostDisplayed %}
@@ -22,20 +30,13 @@ title: Home
 {% endfor %}
 
 <div class="row">
-  <div class="col-sm-12 homepage-announcement-banner">
+  <div class="col-sm-12">
       <img src="/assets/images/events/IMG_christcentral-30daysofprayer-1170x600px-1.jpg" title="30 Days of Prayer"/>
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-12 homepage-announcement-banner">
+  <div class="col-sm-12">
       <img src="/assets/images/events/IMG_christcentral-teaparty-1170x600px-1.jpg" title="Women's Ministry Kickoff Tea Party"/>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12 homepage-announcement-banner">
-      <a href="/faithandwork">
-        <img src="/assets/images/events/IMG_christcentral-faithandwork-1170x600px-1.png" title="Christ Central Network conference: Faith and Work"/>
-      </a>
   </div>
 </div>
 
@@ -49,11 +50,6 @@ title: Home
 
 <hr/>
 
-<div class="row">
-  <div class="col-sm-12">
-    <h2>Core Values</h2>
-  </div>
-</div>
 <div class="row">
   <div class="col-md-4">
     <h2 class="quote">I</h2>
@@ -96,18 +92,18 @@ title: Home
     <h2 class="quote">We exist to proclaim the gospel of Jesus Christ</h2>
   </div>
 </div>
-<div class="row">
+<div class="row" id="pastors">
   <div class="col-md-4">
     <h3>Pastor Benjamin Kim</h3>
-    <p>Ben is happily married to Hetty, and they have two wonderful children, Kylee and Marcus, who remind them of God's amazing grace. He enjoys good books, most sports, good food, and spending time with his family.  His simple goal in life is to preach Christ and Him crucified.  He received his M.Div. from <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a> and was ordained by the <a href="http://www.kapc.org/" target="_blank">KAPC</a> in 2000.</p>
+    <p>Ben is happily married to Hetty, and they have two wonderful children, Kylee and Marcus, who remind them of God's amazing grace. He enjoys good books, most sports, good food, and spending time with his family. His simple goal in life is to preach Christ and Him crucified. He received his M.Div. from <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary CA</a> and was ordained by the <a href="http://www.kapc.org/" target="_blank">KAPC</a> in 2000.</p>
   </div>
   <div class="col-md-4">
     <h3>Pastor In Kim</h3>
-    <p>In was raised in Santa Barbara, California. He graduated with a BA in English from Westmont College in 2004 and worked for Special Needs education through 2007. In pursued his internal call to pastoral ministry at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>, where he received his M.Div. in 2011. His interests include attending live concerts, playing soccer and appreciating God's common grace.</p>
+    <p>In was raised in Santa Barbara, California. He graduated with a BA in English from Westmont College in 2004 and worked for Special Needs education through 2007. In pursued his internal call to pastoral ministry at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary CA</a>, where he received his M.Div. in 2011. His interests include attending live concerts, playing soccer and appreciating God's common grace.</p>
   </div>
   <div class="col-md-4">
     <h3>Pastor Simon Yang</h3>
-    <p>Born in Korea, raised in New Zealand, Simon considers his home Houston, where he grew up since 3rd Grade. He graduated from the UT Austin with a business degree before receiving his M.Div. at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary California</a>. His beautiful wife, Rachel is an RN, and they have two boys, Eliab and Tobias. Simon enjoys basketball and football, and is a big fan of Justin Timberlake.</p>
+    <p>Born in Korea, raised in New Zealand, Simon considers his home Houston, where he grew up since 3rd Grade. He graduated from the UT Austin with a business degree before receiving his M.Div. at <a href="https://www.wscal.edu/" target="_blank">Westminster Seminary CA</a>. His beautiful wife, Rachel is an RN, and they have two boys, Eliab and Tobias. Simon enjoys basketball and football, and is a big fan of Justin Timberlake.</p>
   </div>
 </div>
 
@@ -121,11 +117,11 @@ title: Home
 <div class="row">
   <div class="col-lg-6 table-responsive">
     <h3>Ministry Groups</h3>
-    {% include ministry-groups.html classNames="table table-condensed table-hover" %}
+    {% include ministry-groups.html classNames="table" %}
   </div>
   <div class="col-lg-6 table-responsive">
     <h3>Community Groups</h3>
-    {% include community-groups.html classNames="table table-condensed table-hover" %}
+    {% include community-groups.html classNames="table" %}
   </div>
 </div>
 

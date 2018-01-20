@@ -35,12 +35,12 @@ h2 {
 }
 
 h3 {
-  color: #333;
+  color: #444444;
   font-size: 18px;
 }
 
 h4 {
-  color: #333;
+  color: #444444;
   font-size: 16px;
 }
 
@@ -60,17 +60,16 @@ strong {
   font-family: 'GothamMedium', arial, sans-serif;
 }
 
-a, .pagination>li>a {
+a, 
+a:hover, 
+.pagination>li>a,
+.pagination>li>a:hover {
   color: #0E89B1;
   font-weight: 700;
 }
 
-a:hover, .pagination>li>a:hover {
-  color: #3393A7; 
-}
-
 .pagination>li>span {
-  color: #444;
+  color: #605E5F;
 }
 
 .row {
@@ -112,7 +111,7 @@ a:hover, .pagination>li>a:hover {
 }
 
 .navbar li a {
-  color: #000;
+  color: #000000;
   font-family: 'GothamMedium', arial, sans-serif;
   font-size: 12px;
   line-height: 20px;
@@ -121,11 +120,12 @@ a:hover, .pagination>li>a:hover {
   text-transform: uppercase;
 }
 
-.navbar li .active,
-.navbar li .active:hover,
-.navbar li a:hover {
+.navbar-nav li .active,
+.navbar-nav li .active:hover,
+.navbar-nav li a:focus,
+.navbar-nav li a:hover {
   background: white;
-  color: #aaa;
+  color: #AAAAAA;
 }
 
 .navbar-toggle {
@@ -133,18 +133,22 @@ a:hover, .pagination>li>a:hover {
 }
 
 .navbar-toggle .icon-bar {
-  border: 1px solid #fedb48;
+  border: 1px solid #FCE854;
 }
 
 .btn-primary {
-  background: #fedb48;
+  background: #FCE854;
   border: 0;
-  color: #605e5f;
+  color: #000000;
+  font-family: 'GothamMedium', arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 20px; 
 }
 
 .btn-primary:hover {
-  background: #fce854;
-  color: #605e5f;
+  background: #FEDB48;
+  color: #000000;
 }
 
 .mt30 {
@@ -152,7 +156,7 @@ a:hover, .pagination>li>a:hover {
 }
 
 .quote {
-  color: #605E5F;
+  color: #AAAAAA;
   font-family: 'GothamLight', arial, sans-serif;
   font-size: 32px;
   padding: 60px 0;
@@ -167,7 +171,7 @@ h2.quote {
   background: url('/assets/images/bible.jpg');
   color: #FFFFFF;
   display: block;
-  height: 600px;
+  height: 569px;
   padding: 60px;
   text-decoration: none;
 }
@@ -187,10 +191,6 @@ h2.quote {
   font-size: 14px;
 }
 
-.homepage-announcement-banner {
-  margin-top: 10px;
-}
-
 #history h2 {
   font-size: 14px;
 }
@@ -200,16 +200,20 @@ h2.quote {
 #history .col-md-6,
 #history .col-md-8,
 #history .col-md-10 {
-  border: 1px solid #DDD;
+  border: 1px solid #DEDEDE;
   border-width: 1px 0 0 1px;
 } 
 
 #history .gray {
-  background: #EEE;
+  background: #EFEFEF;
   height: 200px;
 }
 
 .table-responsive {
+  border: 0;
+}
+
+.table>tbody>tr>td {
   border: 0;
 }
 
@@ -241,15 +245,15 @@ label {
 }
 
 footer {
-  background: #333;
+  background: #444444;
   border-top: 5px solid #FEDB48;
-  color: #FFF;
+  color: #FFFFFF;
   margin-top: 90px;
   padding: 60px 60px 30px;
 }
 
 footer h3 {
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 footer ul {
@@ -264,8 +268,16 @@ footer li {
   margin-right: 10px;
 }
 
+footer a {
+  color: #FEDB48;
+}
+
 footer li a {
   color: #FFFFFF;
+}
+
+footer a:hover {
+  color: #FCE854;
 }
 
 @media (max-width: 1200px) {
@@ -309,4 +321,14 @@ footer li a {
   .navbar>.container-fluid .navbar-brand {
     margin-left: 0;
   }
+}
+
+
+#conference .navbar-nav .register {
+  padding: 5px 0;
+}
+
+#conference-sessions {
+  border: 1px solid #EFEFEF;
+  padding: 20px;
 }
