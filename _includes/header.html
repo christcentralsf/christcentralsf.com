@@ -37,7 +37,7 @@
     <div class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-inner">
-          <a class="logo" class="hidden-xs hidden-sm" href="/" title="Christ Central">
+          <a class="logo pull-left" href="/" title="Christ Central">
             <img class="pull-left" src="/assets/images/header_logo.png" />
             Christ<br/>Central
           </a>
@@ -50,8 +50,8 @@
             </button>
           </div>
           <nav class="collapse navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav pull-left">
-              <li><a class="special" href="/faithandwork">Faith<sup>&amp;</sup> Work</a></li>
+            <ul class="nav navbar-nav">
+              <li><a class="special hidden-sm hidden-xs" href="/faithandwork">Faith<sup>&amp;</sup> Work</a></li>
               <li><a href="/" {% if page.title == "Home" %}class="active"{% endif %}>About Us</a></li>
               <li><a href="/history" {% if page.title == "History" %}class="active"{% endif %}>History</a></li>
               <li><a href="/resources?sorts[sortDate]=-1" {% if page.title == "Resources" %}class="active"{% endif %}>Resources</a></li>
