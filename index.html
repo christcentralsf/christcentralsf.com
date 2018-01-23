@@ -24,7 +24,8 @@ title: Home
             {% for post in site.posts %}
               {% if post.date <= site.time and isFirstPostDisplayed %}
                 <a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3" target="_blank" id="sermon">
-                  <div title="&ldquo;{{ post.sermon }}&rdquo;">
+                  <img src="/assets/images/bible.jpg" title="&ldquo;{{ post.sermon }}&rdquo;"/>
+                  <div class="layover">
                     <h2>{{ post.sermon }}</h2>
                     <h3>Listen to our latest sermon</h3>
                   </div>
@@ -129,13 +130,17 @@ title: Home
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-6 table-responsive">
+  <div class="col-lg-6">
     <h3>Ministry Groups</h3>
-    {% include ministry-groups.html classNames="table" %}
+    <div class="table-responsive">
+      {% include ministry-groups.html classNames="table" %}
+    </div>
   </div>
-  <div class="col-lg-6 table-responsive">
+  <div class="col-lg-6">
     <h3>Community Groups</h3>
-    {% include community-groups.html classNames="table" %}
+    <div class="table-responsive">
+      {% include community-groups.html classNames="table" %}
+    </div>
   </div>
 </div>
 
