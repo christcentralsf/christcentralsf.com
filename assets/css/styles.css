@@ -73,10 +73,6 @@ a:hover,
 }
 
 .row {
-  margin: 0;
-}
-
-.row-spacing {
   margin: 30px 0;
 }
 
@@ -154,12 +150,20 @@ a:hover,
   margin-bottom: 0;
 }
 
+.mb30 {
+  margin-bottom: 30px;
+}
+
 .mt0 {
   margin-top: 0;
 }
 
 .mt30 {
   margin-top: 30px;
+}
+
+.m60 {
+  margin: 60px 0;
 }
 
 .quote {
@@ -339,6 +343,10 @@ footer a:hover {
   #conference .nav {
     text-align: center;
   }
+
+  #conference  .nav li {
+    float: left;
+  }
 }
 
 @media (max-width: 414px) {
@@ -356,6 +364,7 @@ footer a:hover {
   padding: 20px;
 }
 
+.row .special,
 .navbar li .special {
   background: #704122;
   border-right: 5px solid #402312;
@@ -366,26 +375,21 @@ footer a:hover {
   transform: skew(0deg,-15deg);
 }
 
+.row .special:hover,
 .navbar li .special:hover {
   background: #FCB400;
   color: #FFFFFF;
 }
 
-.navbar li .special sup {
-  font-weight: normal;
-}
-
 .row .special {
-  background: #704122;
-  color: #FFFFFF;    
-  display: block;
-  font-size: 20px;
-  margin: 30px 0;
-  height: 30px;
+  border-right: 0;
+  font-family: 'GothamMedium', arial, sans-serif;
+  margin: 0;
   text-align: center;
+  text-transform: uppercase;
+  transform: none;
 }
 
 .row .special:hover {
-  background: #FCB400;
-  color: #FFFFFF;
+  text-decoration: none;
 }
