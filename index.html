@@ -11,15 +11,13 @@ title: Home
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img src="/assets/images/events/IMG_christcentral-easter-1170x600px-1.png" title="Good Friday and Easter Sunday"/>
-        </div>
-        <div class="item">
-          <a href="/faithandwork#schedule"><img src="/assets/images/events/IMG_christcentral-faithandwork-1170x600px-3.png" title="Christ Central Network conference: Faith and Work"/></a>
         </div>
         <div class="item">
           {% assign isFirstPostDisplayed = true %}
@@ -35,6 +33,12 @@ title: Home
               {% assign isFirstPostDisplayed = false %}
             {% endif %}
           {% endfor %}
+        </div>
+        <div class="item">
+          <a href="/faithandwork#schedule"><img src="/assets/images/events/IMG_christcentral-faithandwork-1170x600px-3.png" title="Christ Central Network conference: Faith and Work"/></a>
+        </div>
+        <div class="item">
+          <img src="/assets/images/events/IMG_christcentral-vbs-1170x600px-1.png" title="VBS 2018"/>
         </div>
       </div>
 
