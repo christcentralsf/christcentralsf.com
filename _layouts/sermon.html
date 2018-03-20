@@ -1,0 +1,15 @@
+{% include header.html %}
+
+  <div class="container"> 
+  	<div class="row">
+  		<div class="col-md-12">
+		    <h4>{{ page.date | date: '%B %d, %Y' }}</h4>
+		  	<p><strong>Sermon:</strong> {{ page.sermon }}</p>
+		    <p><strong>Series:</strong> {{ page.series }}</p>
+		    <p><strong>Scripture:</strong> {{ page.scripture }}</p>
+		    <p><strong>Speaker:</strong> {{ page.speaker }}</p>
+		    <p><a href="/files/sermons/{{ page.date | date: '%Y' }}/ccpc_{{ page.date | date: '%Y-%m-%d' }}{% if page.sermonNumber %}-{{ page.sermonNumber }}{% endif %}.mp3" target="_blank">Audio</a> | <a href="/files/programs/{{ page.date | date: '%Y' }}/ccpc_{{ page.date | date: '%Y-%m-%d' }}{% if page.sermonNumber %}-{{ page.sermonNumber }}{% endif %}.pdf" target="_blank">Program</a></p>
+	  	</div>
+	  </div>
+  </div>
+  {% include footer.html %}
