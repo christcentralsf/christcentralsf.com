@@ -1,7 +1,93 @@
 ---
-layout: resources
+layout: default
 title: Resources
 ---
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Resources</h2>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row" id="applications">
+  <div class="col-md-12">
+    <h2>Applications</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th class="col-sm-4">Form</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/rsvp/goals">Adult Ministry Retreat Registration</a></td>
+          <td>Register for the Adult Ministry retreat</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/lifemoves">LifeMoves Registration</a></td>
+          <td>Register to serve homeless families in San Mateo with LifeMoves</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/educate" target="_blank">Education Ministry Application</a></td>
+          <td>Apply to serve Nursery, Children's Ministry, or Youth Ministry</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/children" target="_blank">Children's Ministry Enrollment</a></td>
+          <td>Register your child(ren) into our 2017-18 Nursery and Children's Ministry</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/scholarship">Scholarship Application</a></td>
+          <td>Apply for a scholarship if you are a high school, college, or graduate student</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/missions">Summer Missions Application</a></td>
+          <td>Apply to participate in our short-term summer missions trip</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/cg">Community Groups Registration</a></td>
+          <td>Register to join a Community Group</td>
+        </tr>
+        <tr>
+          <td><a href="/rsvp/creative">Creative Content Request</a></td>
+          <td>Request new creative content</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row" id="news">
+  <div class="col-md-12">
+    <h2>News</h2>
+    <p>For the latest news, join us on <a href="https://onrealm.org/christcentral" target="_blank">Realm</a>. Email <a href="mailto:office@christcentralsf.com">office@christcentralsf.com</a> for an invitation.</p>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Sermons</h2>
+    <div class="table-responsive">
+      <table id="sermons" class="table table-hover">
+        <thead>
+          <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
+          <th class="hidden">SortDate</th>
+          <th class="col-md-4">Sermon</th>
+          <th class="col-md-2">Scripture</th>
+          <th class="col-md-2">Speaker</th>
+          <th class="col-md-2" data-dynatable-sorts="series">Series</th>
+          <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
 
 <script>
   var SERMON_FIXTURES = [
@@ -16,14 +102,12 @@ title: Resources
       series: "{{ post.series }}",
       mp3: "/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3",
       pdf: "/files/programs/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.pdf"
-    }{% unless forloop.last %},{% endunless %}
+    },
     {% endif %}
   {% endfor %}
+
+  {% include pre-jekyll-sermons.json %}
   ];
 </script>
 
-<div class="row">
-  <div class="col-sm-12">
-    <p><a href="/resources/archive.html?sorts[sortDate]=-1">Sermons before 2014 &raquo;</a></p>
-  </div>
-</div>
+<script src="/assets/js/sermons-json-to-table.js"></script>
