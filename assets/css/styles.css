@@ -141,9 +141,11 @@ a:hover,
   padding: 10px 20px; 
 }
 
+.btn-primary:active,
+.btn-primary:focus,
 .btn-primary:hover {
-  background: #FEDB48;
-  color: #000000;
+  background: #FEDB48 !important;
+  color: #000000 !important;
 }
 
 .mb0 {
