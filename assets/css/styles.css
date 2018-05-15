@@ -6,21 +6,22 @@ https://www.dropbox.com/s/8rrukcasfc5xumy/CCSF_StyleGuide_July2017.pdf?dl=0
 */
 
 @font-face {
-  font-family: 'GothamLight';
+  font-family: 'Gotham';
   src: url('/assets/fonts/Gotham-Light.otf');
 }
 
 @font-face {
-  font-family: 'GothamMedium';
+  font-family: 'Gotham';
   src: url('/assets/fonts/Gotham-Medium.otf');
+  font-weight: 700;
 }
 
 body {
-  font-family: 'GothamLight', arial, sans-serif;
+  font-family: 'Gotham', arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, th {
-  font-family: 'GothamMedium', arial, sans-serif;
+  font-weight: 700;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -56,10 +57,6 @@ ul {
   padding-left: 16px;
 }
 
-strong {
-  font-family: 'GothamMedium', arial, sans-serif;
-}
-
 a, 
 a:hover, 
 .pagination>li>a,
@@ -83,7 +80,7 @@ a:hover,
 .navbar-inner a {
   color: black;
   display: block;
-  font-family: 'GothamMedium', arial, sans-serif;
+  font-weight: 700
   margin: 0;
 }
 
@@ -107,7 +104,7 @@ a:hover,
 
 .navbar li a {
   color: #000000;
-  font-family: 'GothamMedium', arial, sans-serif;
+  font-weight: 700;
   font-size: 12px;
   line-height: 20px;
   margin: 0;
@@ -135,7 +132,7 @@ a:hover,
   background: #FCE854;
   border: 0;
   color: #000000;
-  font-family: 'GothamMedium', arial, sans-serif;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   padding: 10px 20px; 
@@ -178,7 +175,7 @@ a:hover,
 
 .quote {
   color: #AAAAAA;
-  font-family: 'GothamLight', arial, sans-serif;
+  font-weight: 400;
   font-size: 32px;
   padding: 60px 0;
   text-transform: none;
@@ -393,7 +390,7 @@ footer a:hover {
 
 .row .special {
   border-right: 0;
-  font-family: 'GothamMedium', arial, sans-serif;
+  font-weight: 700;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
