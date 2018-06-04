@@ -189,6 +189,10 @@ p.quote {
   margin-bottom: 0;
 }
 
+.pt0 {
+  padding-top: 0;
+}
+
 .carousel-control.left,
 .carousel-control.right {
   background: none;
