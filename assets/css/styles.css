@@ -340,39 +340,12 @@ footer a:hover {
     font-size: 28px;
     border-bottom-width: 10px;
   }
-
-  #conference p.quote {
-    font-size: 22px;
-    padding: 30px 0;
-  }
-
-  #conference h2.quote {
-    font-size: 22px;
-    padding: 30px 0 0 0;
-  }
-
-  #conference .nav {
-    text-align: center;
-  }
-
-  #conference  .nav li {
-    float: left;
-  }
 }
 
 @media (max-width: 414px) {
   #sermon .layover {
     padding: 30px;
   }
-}
-
-#conference .navbar-nav .register {
-  padding: 5px 0;
-}
-
-#conference-sessions {
-  border: 1px solid #EFEFEF;
-  padding: 20px;
 }
 
 .row .special,
