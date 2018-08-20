@@ -377,3 +377,19 @@ footer a:hover {
 .row .special:hover {
   text-decoration: none;
 }
+
+/*True North*/
+#page-TrueNorth hr {
+  border: 10px solid #6f9875;
+}
+
+#page-TrueNorth .btn-primary {
+  background-color: #fff;
+  border: 1px solid #6f9875;
+  color: #6f9875;
+}
+
+#page-TrueNorth .btn-primary:hover {
+  background-color: #6f9875 !important;
+  color: #fff !important;
+}
