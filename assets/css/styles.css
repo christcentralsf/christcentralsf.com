@@ -420,14 +420,8 @@ footer a:hover {
   text-transform: uppercase;
 }
 
-#page-Program footer {
-  display: none;
-}
-
-#page-Program .print-only {
-  display: none;
-}
-
+#page-Program footer,
+#page-Program .print-only,
 #page-Program.print .online,
 #page-Program.print #sunday-worship hr {
   display: none;
@@ -435,6 +429,22 @@ footer a:hover {
 
 #page-Program.print .print-only {
   display: inline;
+}
+
+#page-Program.print {
+  width: 4.25in;
+}
+
+#page-Program.print #connect {
+  page-break-after: always;
+}
+
+#page-Program.print .row {
+  margin: 20px 0;
+}
+
+#page-Program.print h2 {
+  margin: 20px 0;
 }
 
 
