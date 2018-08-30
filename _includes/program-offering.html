@@ -1,0 +1,29 @@
+      <div id="offering">
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="quote">Offering</h2>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Total Fiscal YTD Inflow</td>
+                  <td>{{ post.offeringYTD }}</td>
+                </tr>
+                <tr>
+                  <td>Total This Month</td>
+                  <td>{{ post.offeringMonth }}</td>
+                </tr>
+                <tr>
+                  <td>Total Fiscal Year Budget</td>
+                  <td>{{ post.offeringBudget }}</td>
+                </tr>
+                <tr>
+                  <td>Inflow Percent vs. Target</td>
+                  <td>{{ post.offeringPercent }} ({{ post.offeringPercentTarget }})</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><a class="online btn btn-primary" href="/give">Give</a><span class="print-only">Give online at christcentralsf.com/give.</span></p>
+          </div>
+        </div>
+      </div>

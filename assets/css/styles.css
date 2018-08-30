@@ -424,6 +424,19 @@ footer a:hover {
   display: none;
 }
 
+#page-Program .print-only {
+  display: none;
+}
+
+#page-Program.print .online,
+#page-Program.print #sunday-worship hr {
+  display: none;
+}
+
+#page-Program.print .print-only {
+  display: inline;
+}
+
 
 
 /* True North */

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: simple
 title: Program
 ---
 
@@ -9,7 +9,6 @@ title: Program
     {% if post.date <= site.time and isFirstPostDisplayed %}
       <div class="row">
         <div class="col-md-4">
-          <h2 class="quote">{{ post.intro }}</h2>
           <ol>
             <li>
               {{ post.date | date: '%B %-d, %Y'}} 
@@ -19,10 +18,6 @@ title: Program
                 Issue {{ post.issue }}
               </span>
             </li>
-            <li><a href="#sunday-worship">Sunday Worship</a></li>
-            <li><a href="#announcements">Announcements</a></li>
-            <li><a href="#offering">Offering</a></li>
-            <li><a href="#connect">Connect</a></li>
           </ol>
         </div>
       </div>
