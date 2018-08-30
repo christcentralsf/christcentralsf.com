@@ -1,0 +1,141 @@
+---
+layout: default
+title: Program
+---
+
+
+{% assign isFirstPostDisplayed = true %}
+  {% for post in site.posts %}
+    {% if post.date <= site.time and isFirstPostDisplayed %}
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="quote">Welcome</h2>
+          <ol>
+            <li>
+              {{ post.date | date: '%B %-d, %Y'}} 
+              <span class="subtext">
+                <span class="divider">&cir;</span> 
+                Volume {{ post.volume }},
+                Issue {{ post.issue }}
+              </span>
+            </li>
+            <li><a href="#sunday-worship">Sunday Worship</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#offering">Offering</a></li>
+            <li><a href="#connect">Connect</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="sunday-worship">
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="quote">Sunday Worship</h2>
+            <ol>
+              <li>Call to Worship</li>
+              <li>Songs of Wonder &amp; Praise</li>
+              <li>New City Catechism</li>
+              <li>Prayer of Repentance</li>
+              <li>Song of Gratitude &amp; Offering</li>
+              <li>
+                Offering Prayer
+                <span class="subtext">
+                  <span class="divider">&cir;</span>
+                  Ivy Lee
+                </span>
+              </li>
+              <li>Announcements</li>
+              <li>
+                Scripture Reading
+                <span class="subtext">
+                  <span class="divider">&cir;</span>
+                  <a href="https://www.biblegateway.com/passage/?search={{ post.scripture }}&version=ESV">{{ post.scripture }}</a>
+                </span>
+              </li>
+              <li>
+                Sermon
+                <span class="subtext">
+                  <span class="divider">&cir;</span>
+                  {{ post.sermon }}<br/>
+                  {{ post.series }} Series<br/>
+                  {{ post.speaker }}
+                </span>
+              </li>
+              <li>Song of Commitment</li>
+              <li>Benediction</li>
+              <li>
+                <span class="subtext">
+                  Lunch service <span class="divider">&cir;</span> Youth Group Boys<br/>
+                  Cleanup service <span class="divider">&cir;</span> Oakland CG
+                </span>
+              </li>
+            </ol>
+            <p class="mt30"><a href="https://open.spotify.com/user/sangkong/playlist/2d4TyIh8pAizSL4XdX3ouk?si=q59M773iQiqAU4pW-BhJ6Q">Listen to our worship set on Spotify</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="announcements">
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="quote">Announcements</h2>
+            {{ post.content }}
+          </div>
+        </div>
+      </div>
+
+      <div id="offering">
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="quote">Offering</h2>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Total Fiscal YTD Inflow</td>
+                  <td>{{ post.offeringYTD }}</td>
+                </tr>
+                <tr>
+                  <td>Total This Month</td>
+                  <td>{{ post.offeringMonth }}</td>
+                </tr>
+                <tr>
+                  <td>Total Fiscal Year Budget</td>
+                  <td>{{ post.offeringBudget }}</td>
+                </tr>
+                <tr>
+                  <td>Inflow Percent vs. Target</td>
+                  <td>{{ post.offeringPercent }} ({{ post.offeringPercentTarget }})</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><a class="btn btn-primary" href="/give">Give</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="connect">
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="quote">Connect</h2>
+            <p>Please <a href="mailto:office@christcentralsf.com">email us</a> if you are new, need a ride, need counseling, want to serve, want to join a life stage ministry or community group, or just have questions.</p>
+            <p class="mt30">
+              <a href="https://www.facebook.com/christcentralsf/" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/christcentralsf/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="http://twitter.com/christcentralsf" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="http://www.youtube.com/kcpcmultimedia" target="_blank"><i class="fab fa-youtube"></i></a>
+            </p>
+            <p class="subtext">
+              50 Northridge Drive, Daly City, CA 94015<br/>
+              Version 7.0.0 © 2014-2018 Christ Central. All rights reserved.
+          </p>
+          </div>
+        </div>
+      </div>
+
+    {% assign isFirstPostDisplayed = false %}
+  {% endif %}
+{% endfor %}
