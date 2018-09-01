@@ -451,6 +451,11 @@ footer a:hover {
   margin: 20px 0;
 }
 
+#page-Program.print img {
+  margin-bottom: 15px;
+  width: auto;
+}
+
 
 
 /* True North */
