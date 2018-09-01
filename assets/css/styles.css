@@ -198,6 +198,10 @@ p.quote {
   background: none;
 }
 
+.form-control {
+  height: 38px;
+}
+
 #sermon {
   display: block;
   position: relative;
