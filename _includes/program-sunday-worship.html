@@ -4,7 +4,14 @@
           <div class="col-md-4">
             <h2 class="quote">Sunday Worship</h2>
             <ol>
-              <li>Call to Worship</li>
+              <li>
+                Call to Worship
+                <span class="subtext">
+                  <span class="divider">&cir;</span>
+                  <a class="online" href="https://www.biblegateway.com/passage/?search={{ post.call }}&version=ESV">{{ post.call }}</a>
+                  <span class="print-only">{{ post.call }}</span>
+                </span>
+              </li>
               <li>Songs of Wonder &amp; Praise</li>
               <li>New City Catechism</li>
               <li>Prayer of Repentance</li>
@@ -13,7 +20,7 @@
                 Offering Prayer
                 <span class="subtext">
                   <span class="divider">&cir;</span>
-                  Ivy Lee
+                  {{ post.prayer }}
                 </span>
               </li>
               <li>Announcements</li>
@@ -38,8 +45,8 @@
               <li>Benediction</li>
               <li>
                 <span class="subtext">
-                  Lunch service <span class="divider">&cir;</span> Youth Group Boys<br/>
-                  Cleanup service <span class="divider">&cir;</span> Oakland CG
+                  Lunch service <span class="divider">&cir;</span> {{ post.service }}<br/>
+                  Cleanup service <span class="divider">&cir;</span> {{ post.cleanup }}
                 </span>
               </li>
             </ol>

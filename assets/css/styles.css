@@ -420,8 +420,13 @@ footer a:hover {
 }
 
 #page-Program td {
+  font-size: 12px;
   padding: 0;
   text-transform: uppercase;
+}
+
+#page-Program p {
+  font-size: 12.5px;
 }
 
 #page-Program footer,

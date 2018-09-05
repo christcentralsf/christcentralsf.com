@@ -4,31 +4,26 @@ title: Program
 ---
 
 
-{% assign isFirstPostDisplayed = true %}
-  {% for post in site.posts %}
-    {% if post.date <= site.time and isFirstPostDisplayed %}
-      <div class="row">
-        <div class="col-md-4">
-          <img src="/assets/images/logo-stacked.png" />
-          <ol>
-            <li>
-              {{ post.date | date: '%B %-d, %Y'}} 
-              <span class="subtext">
-                <span class="divider">&cir;</span> 
-                Volume {{ post.volume }},
-                Issue {{ post.issue }}
-              </span>
-            </li>
-          </ol>
-        </div>
-      </div>
+{% for post in site.posts limit:1 %}
+  <div class="row">
+    <div class="col-md-4">
+      <img src="/assets/images/logo-stacked.png" />
+      <ol>
+        <li>
+          {{ post.date | date: '%B %-d, %Y'}} 
+          <span class="subtext">
+            <span class="divider">&cir;</span> 
+            Volume {{ post.volume }},
+            Issue {{ post.issue }}
+          </span>
+        </li>
+      </ol>
+    </div>
+  </div>
 
-      {% include program-sunday-worship.html %}
-      {% include program-offering.html %}
-      {% include program-connect.html %}
+  {% include program-sunday-worship.html %}
+  {% include program-offering.html %}
+  {% include program-connect.html %}
 
-      {% include program-announcements.html %}
-
-    {% assign isFirstPostDisplayed = false %}
-  {% endif %}
+  {% include program-announcements.html %}
 {% endfor %}

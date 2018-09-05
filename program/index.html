@@ -4,34 +4,29 @@ title: Program
 ---
 
 
-{% assign isFirstPostDisplayed = true %}
-  {% for post in site.posts %}
-    {% if post.date <= site.time and isFirstPostDisplayed %}
-      <div class="row">
-        <div class="col-md-4">
-          <h2 class="quote">{{ post.intro }}</h2>
-          <ol>
-            <li>
-              {{ post.date | date: '%B %-d, %Y'}} 
-              <span class="subtext">
-                <span class="divider">&cir;</span> 
-                Volume {{ post.volume }},
-                Issue {{ post.issue }}
-              </span>
-            </li>
-            <li><a href="#sunday-worship">Sunday Worship</a></li>
-            <li><a href="#announcements">Announcements</a></li>
-            <li><a href="#offering">Offering</a></li>
-            <li><a href="#connect">Connect</a></li>
-          </ol>
-        </div>
-      </div>
+{% for post in site.posts limit:1 %}
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="quote">{{ post.intro }}</h2>
+      <ol>
+        <li>
+          {{ post.date | date: '%B %-d, %Y'}} 
+          <span class="subtext">
+            <span class="divider">&cir;</span> 
+            Volume {{ post.volume }},
+            Issue {{ post.issue }}
+          </span>
+        </li>
+        <li><a href="#sunday-worship">Sunday Worship</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#offering">Offering</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ol>
+    </div>
+  </div>
 
-      {% include program-sunday-worship.html %}
-      {% include program-announcements.html %}
-      {% include program-offering.html %}
-      {% include program-connect.html %}
-
-    {% assign isFirstPostDisplayed = false %}
-  {% endif %}
+  {% include program-sunday-worship.html %}
+  {% include program-announcements.html %}
+  {% include program-offering.html %}
+  {% include program-connect.html %}
 {% endfor %}

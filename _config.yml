@@ -2,3 +2,4 @@ safe: true
 lsi: false
 highlight: pygments
 exclude: ["upload_bulletin.sh"]
+future: true
