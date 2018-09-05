@@ -2,7 +2,7 @@
         <hr/>
         <div class="row">
           <div class="col-md-4">
-            <h2 class="quote">Sunday Worship</h2>
+            <h2 class="quote">{{ post.intro }}</h2>
             <ol>
               <li>
                 Call to Worship
@@ -37,7 +37,7 @@
                 <span class="subtext">
                   <span class="divider">&cir;</span>
                   {{ post.sermon }}<br/>
-                  {{ post.series }} Series<br/>
+                  {% if post.series %}{{ post.series }} Series<br/>{% endif %}
                   {{ post.speaker }}
                 </span>
               </li>

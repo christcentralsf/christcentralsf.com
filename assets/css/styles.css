@@ -413,10 +413,16 @@ footer a:hover {
 #page-Program .subtext {
   font-size: 11px;
   font-weight: normal;
+  white-space: nowrap;
 }
 
 #page-Program .divider {
   color: #FEDB48;
+}
+
+#page-Program .std {
+  display: inline-block;
+  width: 40px;
 }
 
 #page-Program td {

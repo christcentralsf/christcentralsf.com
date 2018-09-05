@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-4">
+    {% if page.logo %}<img src="/assets/images/logo-stacked.png" />{% endif %}
+    <ol>
+      <li>
+        {{ post.date | date: '%B %-d, %Y'}} 
+        <span class="subtext">
+          <span class="divider">&cir;</span> 
+          Volume {{ post.volume }},
+          Issue {{ post.issue }}
+        </span>
+      </li>
+    </ol>
+  </div>
+</div>
