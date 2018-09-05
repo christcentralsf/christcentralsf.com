@@ -450,12 +450,14 @@ footer a:hover {
   display: inline;
 }
 
-#page-Program.print {
-  width: 4.25in;
+#page-Program.print .page {
+  float: left;
+  width: 4.05in;
 }
 
-#page-Program.print #connect {
-  page-break-after: always;
+#page-Program.print .back.page {
+  float: right;
+  margin-left: .20in;
 }
 
 #page-Program.print .row {

@@ -6,9 +6,13 @@ logo: true
 
 
 {% for post in site.posts limit:1 %}
-  {% include program-header.html %}
-  {% include program-sunday-worship.html %}
-  {% include program-offering.html %}
-  {% include program-connect.html %}
-  {% include program-announcements.html %} <!-- Print announcements on back -->
+  <div class="front page">
+    {% include program-header.html %}
+    {% include program-sunday-worship.html %}
+    {% include program-offering.html %}
+    {% include program-connect.html %}
+  </div>
+  <div class="back page">
+    {% include program-announcements.html %} <!-- Print announcements on back -->
+  </div>
 {% endfor %}
