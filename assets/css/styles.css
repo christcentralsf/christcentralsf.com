@@ -473,6 +473,10 @@ footer a:hover {
   width: auto;
 }
 
+#page-Program.print #connect .version {
+  margin-bottom: 0;
+}
+
 
 
 /* True North */
