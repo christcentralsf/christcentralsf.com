@@ -10,12 +10,23 @@ title: Home
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
+          <a href="http://christcentralsf.com/files/sermons/2018/ccpc_2018-09-09.mp3" target="_blank">
+            <img src="/assets/images/carousel/IMG_christcentral-eachonereachone-1170x600px-1.png" title="Christ Central 2018-2019: Each One Reach One"/>
+          </a>
+        </div>
+        <div class="item">
+          <a href="/rsvp/missionsnight" target="_blank">
+            <img src="/assets/images/carousel/IMG_christcentral-missionnight2018-1170x600px-1.jpg" title="Missions Night 2018"/>
+          </a>
+        </div>
+        <div class="item">
           <a href="/truenorth" target="_blank">
             <img src="/assets/images/events/IMG_christcentral-truenorth-1170x600px-1.png" title="Christ Central Retreat 2018"/>
           </a>
@@ -25,23 +36,18 @@ title: Home
             {% for post in site.posts %}
               {% if post.date <= site.time and isFirstPostDisplayed %}
                 <a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3" target="_blank" id="sermon">
-                  <img src="/assets/images/bible.jpg" title="&ldquo;{{ post.sermon }}&rdquo;"/>
-                  <div class="layover">
+                  <div class="background">
+                    <img src="http://fpoimg.com/1170x600"/>
+                  </div>
+                  <div class="layer">
                     <h2>{{ post.sermon }}</h2>
-                    <h3>Listen to our latest sermon</h3>
+                    <p>Listen</p>
                   </div>
                 </a>
               {% assign isFirstPostDisplayed = false %}
             {% endif %}
           {% endfor %}
         </div>
-<!--         
-        <div class="item">
-          <a href="/rsvp/educate">
-            <img src="/assets/images/carousel/teacher_recruitment.png" title="Education Ministry Application"/>
-          </a>
-        </div>
- -->
       </div>
 
       <!-- Controls -->

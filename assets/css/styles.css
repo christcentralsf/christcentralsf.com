@@ -208,26 +208,43 @@ p.quote {
   text-decoration: none;
 }
 
-#sermon .layover {
+#sermon img {
+  visibility: hidden;
+}
+
+#sermon div {
+  height: 100%;
+  width: 100%;
+}
+
+#sermon .layer {
+  align-items: center;
   color: #FFFFFF;
-  padding: 60px;
+  display: flex;
+  justify-content: center;
   position: absolute;
+  text-align: center;
+  text-transform: uppercase;
   top: 0;
 }
 
-#sermon h2 {
-  border-bottom: 15px solid #FEDB48; 
-  color: #FFFFFF;
-  display: inline-block;
-  font-size: 90px;
-  line-height: normal;
-  margin: 0;
-  text-transform: capitalize;
+#sermon .background {
+  background: url(/assets/images/background.jpg);
+  background-size: cover;
+  opacity: .65;
 }
 
-#sermon h3 {
-  color: #FFFFFF;
+#sermon h2 {
+  font-size: 90px;
+  line-height: normal;
+  margin: 20px 0 0 0;
+  padding: 0 150px;
+}
+
+#sermon p {
   font-size: 14px;
+  position: absolute;
+  top: 30px;
 }
 
 #history h2 {
@@ -326,6 +343,7 @@ footer a:hover {
 @media (max-width: 992px) {
   #sermon h2 {
     font-size: 70px;
+    padding: 40px;
   }
 
   .two-column {
@@ -342,14 +360,10 @@ footer a:hover {
 @media (max-width: 768px) {
   #sermon h2 {
     font-size: 28px;
-    border-bottom-width: 10px;
   }
 }
 
 @media (max-width: 414px) {
-  #sermon .layover {
-    padding: 30px;
-  }
 }
 
 .row .special,
