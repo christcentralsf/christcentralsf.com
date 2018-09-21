@@ -491,11 +491,15 @@ footer a:hover {
   margin-bottom: 0;
 }
 
-#page-Program.print #qr-code img {
-  margin-left: -6px;
-  width: 15%;
+#page-Program.print #qr-code h2 {
+  display: inline-block;
 }
 
+#page-Program.print #qr-code img {
+  display: inline-block;
+  float: right;
+  width: 15%;
+}
 
 
 /* True North */

@@ -45,8 +45,8 @@
               <li>Benediction</li>
               <li>
                 <span class="subtext">
-                  Lunch service <span class="divider">&bull;</span> {{ post.service }}<br/>
-                  Cleanup service <span class="divider">&bull;</span> {{ post.cleanup }}
+                  {% if post.service %} Lunch service <span class="divider">&bull;</span> {{ post.service }}<br/>{% endif %}
+                  {% if post.cleanup %} Cleanup service <span class="divider">&bull;</span> {{ post.cleanup }}{% endif %}
                 </span>
               </li>
             </ol>
