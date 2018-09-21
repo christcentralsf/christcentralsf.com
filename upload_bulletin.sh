@@ -4,4 +4,4 @@ FILE=$1
 YEAR=${FILE%%-*}
 YEAR=${YEAR##*_}
 
-scp $FILE basile@christcentralsf.com:/sites/ccpc.com/files/programs/$YEAR/
+chmod 644 $FILE; scp $FILE basile@christcentralsf.com:/sites/ccpc.com/files/programs/$YEAR/
