@@ -24,6 +24,15 @@
                 </span>
               </li>
               <li>Announcements</li>
+              {% if post.testimony %}
+                <li>
+                  Testimony
+                  <span class="subtext">
+                    <span class="divider">&bull;</span>
+                    {{ post.testimony }}
+                  </span>
+                </li>
+              {% endif %}
               <li>
                 Scripture Reading
                 <span class="subtext">
