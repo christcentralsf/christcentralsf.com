@@ -399,8 +399,14 @@ footer a:hover {
 
 /* Program */
 
+#page-Groups hr,
 #page-Program hr {
   border-width: 7px;
+}
+
+#page-Groups h3 {
+  font-size: 14px;
+  margin: 0 0 20px 0;
 }
 
 #page-Program h3 {
@@ -408,6 +414,7 @@ footer a:hover {
   margin: 0;
 }
 
+#page-Groups .quote,
 #page-Program .quote {
   font-size: 18px;
   padding: 0;
@@ -439,6 +446,15 @@ footer a:hover {
   width: 40px;
 }
 
+#page-Groups .table {
+}
+
+#page-Groups th,
+#page-Groups td {
+  font-size: 11px;
+  padding: 2px 8px 2px 0;
+}
+
 #page-Program td {
   font-size: 12px;
   padding: 0;
@@ -453,6 +469,7 @@ footer a:hover {
   font-size: 24px;
 }
 
+#page-Groups.print .online,
 #page-Program footer,
 #page-Program .print-only,
 #page-Program.print .online,
@@ -474,12 +491,19 @@ footer a:hover {
   margin-left: .20in;
 }
 
+#page-Groups.print .row,
 #page-Program.print .row {
   margin: 20px 0;
 }
 
+#page-Groups.print h2,
 #page-Program.print h2 {
   margin: 15px 0 20px;
+}
+
+#page-Groups.print img {
+  margin-top: 20px;
+  width: 125px;
 }
 
 #page-Program.print img {
@@ -499,6 +523,20 @@ footer a:hover {
   display: inline-block;
   float: right;
   width: 15%;
+}
+
+#page-Groups a {
+  font-weight: 400;
+}
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+
+  .col-lg-6 {
+    float: left;
+  }
 }
 
 
