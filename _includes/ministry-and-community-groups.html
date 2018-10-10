@@ -1,0 +1,25 @@
+<hr/>
+
+<div class="row" id="ministries">
+  <div class="col-lg-12">
+    {% if page.logo %}<img src="/assets/images/logo.svg" />{% endif %}
+    <h2 class="quote">We exist to be a Christ-centered community</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <h3>Ministry Groups</h3>
+    <div class="table-responsive">
+      {% include ministry-groups.html classNames="table" %}
+      <p class="online"><a class="btn btn-primary" href="https://christcentralsf.churchcenter.com/groups/life-stage-ministries">Join a ministry</a></p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h3>Community Groups</h3>
+    <div class="table-responsive">
+      {% include community-groups.html classNames="table" %}
+      <p class="online"><a class="btn btn-primary" href="https://christcentralsf.churchcenter.com/groups/community-groups">Join a community</a></p>
+    </div>
+  </div>
+</div>
+
