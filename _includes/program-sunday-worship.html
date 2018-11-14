@@ -50,6 +50,14 @@
                   {{ post.speaker }}
                 </span>
               </li>
+              {% if post.confirmation %}
+                <li>
+                  Confirmation
+                  <span class="subtext">
+                    {{ post.confirmation }}
+                  </span>
+                </li>
+              {% endif %}
               {% if post.communion %}<li>Communion</li>{% endif %}
               <li>Song of Commitment</li>
               <li>Benediction</li>
