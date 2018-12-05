@@ -434,6 +434,9 @@ footer a:hover {
 #page-Program .subtext {
   font-size: 11px;
   font-weight: normal;
+}
+
+#page-Program span.subtext {
   white-space: nowrap;
 }
 
@@ -444,9 +447,6 @@ footer a:hover {
 #page-Program .std {
   display: inline-block;
   width: 45px;
-}
-
-#page-Groups .table {
 }
 
 #page-Groups th,

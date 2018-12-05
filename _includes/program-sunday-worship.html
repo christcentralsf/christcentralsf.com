@@ -58,6 +58,14 @@
                   </span>
                 </li>
               {% endif %}
+              {% if post.membership %}
+                <li>
+                  Membership Installation
+                  <p class="subtext">
+                    {{ post.membership }}
+                  </p>
+                </li>
+              {% endif %}
               {% if post.communion %}<li>Communion</li>{% endif %}
               <li>Song of Commitment</li>
               <li>Benediction</li>
