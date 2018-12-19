@@ -9,11 +9,21 @@ logo: true
   <div class="front page">
     {% include program-header.html %}
     {% include program-sunday-worship.html %}
-    {% include program-offering.html %}
-    {% include program-connect.html %}
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    {% include program-header.html %}
+    {% include program-sunday-worship.html %}
   </div>
   <div class="back page">
-    {% include program-announcements.html %} <!-- Print announcements on back -->
-    {% include program-qr-code.html %}
+    {% include program-header.html %}
+    {% include program-sunday-worship.html %}
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    {% include program-header.html %}
+    {% include program-sunday-worship.html %}
   </div>
 {% endfor %}
