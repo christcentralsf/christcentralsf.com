@@ -4,6 +4,10 @@
     <ol>
       <li>
         {{ post.date | date: '%B %-d, %Y'}} 
+        <span class="subtext">
+          <span class="divider">&bull;</span> 
+          Volume {{ post.volume }},
+          Issue {{ post.issue }}
         </span>
       </li>
     </ol>

@@ -12,8 +12,27 @@
                   <span class="print-only">{{ post.call }}</span>
                 </span>
               </li>
-              <li>Praise</li>
-              <li>Prayer</li>
+              <li>Songs of Wonder &amp; Praise</li>
+              <li>New City Catechism</li>
+              <li>Prayer of Repentance</li>
+              <li>Song of Gratitude &amp; Offering</li>
+              <li>
+                Offering Prayer
+                <span class="subtext">
+                  <span class="divider">&bull;</span>
+                  {{ post.prayer }}
+                </span>
+              </li>
+              <li>Announcements</li>
+              {% if post.testimony %}
+                <li>
+                  Stories of Grace
+                  <span class="subtext">
+                    <span class="divider">&bull;</span>
+                    {{ post.testimony }}
+                  </span>
+                </li>
+              {% endif %}
               <li>
                 Scripture Reading
                 <span class="subtext">
@@ -48,9 +67,16 @@
                 </li>
               {% endif %}
               {% if post.communion %}<li>Communion</li>{% endif %}
-              <li>Praise (Candle Lighting)</li>
+              <li>Song of Commitment</li>
               <li>Benediction</li>
-              <li>Announcements</li>
+              <li>
+                <span class="subtext">
+                  {% if post.service %} Lunch service <span class="divider">&bull;</span> {{ post.service }}<br/>{% endif %}
+                  {% if post.cleanup %} Cleanup service <span class="divider">&bull;</span> {{ post.cleanup }}{% endif %}
+                </span>
+              </li>
+            </ol>
+            <p class="mt30 mb15 online"><a href="https://open.spotify.com/user/sangkong/playlist/2d4TyIh8pAizSL4XdX3ouk?si=q59M773iQiqAU4pW-BhJ6Q">Listen to our worship set on Spotify</a>.</p>
           </div>
         </div>
       </div>
