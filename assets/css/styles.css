@@ -555,3 +555,19 @@ footer a:hover {
   background-color: #6f9875 !important;
   color: #fff !important;
 }
+
+/* Welcome */
+#page-Welcome .quote {
+  font-size: 18px;
+  margin: 15px 0 20px;
+  padding: 0;
+}
+
+#page-Welcome img {
+  width: 125px;
+}
+
+#page-Welcome ol {
+  list-style-type: upper-roman;
+  padding-left: 20px;
+}
