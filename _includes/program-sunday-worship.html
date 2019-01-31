@@ -13,8 +13,14 @@
                 </span>
               </li>
               <li>Songs of Wonder &amp; Praise</li>
-              <li>New City Catechism</li>
-              <li>Prayer of Repentance</li>
+              <li>
+                Prayer of Repentance
+                <span class="subtext">
+                  <span class="divider">&bull;</span>
+                  <a class="online" href="https://www.biblegateway.com/passage/?search={{ post.call }}&version=ESV">{{ post.repentance }}</a>
+                  <span class="print-only">{{ post.repentance }}</span>
+                </span>
+              </li>
               <li>Song of Gratitude &amp; Offering</li>
               <li>
                 Offering Prayer
@@ -69,12 +75,6 @@
               {% if post.communion %}<li>Communion</li>{% endif %}
               <li>Song of Commitment</li>
               <li>Benediction</li>
-              <li>
-                <span class="subtext">
-                  {% if post.service %} Lunch service <span class="divider">&bull;</span> {{ post.service }}<br/>{% endif %}
-                  {% if post.cleanup %} Cleanup service <span class="divider">&bull;</span> {{ post.cleanup }}{% endif %}
-                </span>
-              </li>
             </ol>
             <p class="mt30 mb15 online"><a href="https://open.spotify.com/user/sangkong/playlist/2d4TyIh8pAizSL4XdX3ouk?si=q59M773iQiqAU4pW-BhJ6Q">Listen to our worship set on Spotify</a>.</p>
           </div>
