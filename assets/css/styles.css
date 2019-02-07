@@ -471,7 +471,7 @@ footer a:hover {
 
 #page-Groups.print .online,
 #page-Program footer,
-#page-Program .print-only,
+.print-only,
 #page-Program.print .online,
 #page-Program.print #sunday-worship hr {
   display: none;
@@ -481,18 +481,21 @@ footer a:hover {
   display: inline;
 }
 
-#page-Program.print .page {
+#page-Program.print .page,
+#page-Welcome.print .page {
   float: left;
   width: 4.05in;
 }
 
-#page-Program.print .back.page {
+#page-Program.print .back.page,
+#page-Welcome.print .back.page {
   float: right;
   margin-left: .20in;
 }
 
 #page-Groups.print .row,
-#page-Program.print .row {
+#page-Program.print .row,
+#page-Welcome.print .row {
   margin: 20px 0;
 }
 
@@ -539,7 +542,6 @@ footer a:hover {
   }
 }
 
-
 /* True North */
 #page-TrueNorth hr {
   border: 10px solid #6f9875;
@@ -570,4 +572,14 @@ footer a:hover {
 #page-Welcome ol {
   list-style-type: upper-roman;
   padding-left: 20px;
+}
+
+#page-Welcome .street-address {
+  margin-bottom: 10px;
+}
+
+@media print {
+  #page-Welcome .print-hide {
+    display: none;
+  }
 }

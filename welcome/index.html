@@ -4,33 +4,134 @@ title: Welcome
 logo: true
 ---
 
-<div class="row">
-  <div class="col-md-6">
-    <hr/>
-    <div class="row">
-      <div class="col-lg-12">
-        {% if page.logo %}<img src="/assets/images/logo.svg" />{% endif %}
+<div class="front page">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr/>
+      <div class="row">
+        <div class="col-xs-12">
+          {% if page.logo %}<img src="/assets/images/logo.svg" />{% endif %}
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        {% include vision.html %}
+      <div class="row">
+        <div class="col-xs-12">
+          {% include vision.html %}
+        </div>
       </div>
-    </div>
-    <hr/>
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="quote">Core Values</h2>
-        <ol>
-          <li>God-glorifying worship</li>
-          <li>Gospel movement</li>
-          <li>Genuine personal community</li>
-          <li>Discipleship</li>
-          <li>Christian service</li>
-          <li>Active church planting</li>
-        </ol>
+      <hr/>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="quote">Core Values</h2>
+          <ol>
+            <li>God-glorifying worship</li>
+            <li>Gospel movement</li>
+            <li>Genuine personal community</li>
+            <li>Discipleship</li>
+            <li>Christian service</li>
+            <li>Active church planting</li>
+          </ol>
+        </div>
       </div>
+      {% include program-connect.html %}
     </div>
-    {% include program-connect.html %}
+  </div>
+</div>
+<div class="back page">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr/>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSfTJOaDX-e7jvbEJSZ1oX5TRVr9a6RcacDNhlznmplLJywTvQ/formResponse">
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Name</label>
+            <input class="form-control" type="text" name="entry.1252853719">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Email</label>
+            <input class="form-control" type="email" name="entry.1285090575">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12 street-address">
+            <label>Street address</label>
+            <input class="form-control" type="text" name="entry.737004483">
+          </div>
+          <div class="col-xs-6">
+            <label>City</label>
+            <input class="form-control" type="text" name="entry.189495052">
+          </div>
+          <div class="col-xs-6">
+            <label>Zip code</label>
+            <input class="form-control" type="tel" name="entry.1528534800">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Phone number</label>
+            <input class="form-control" type="tel" name="entry.508892220">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-4">
+            <label>Birth month</label>
+            <input class="form-control" type="tel" name="entry.1947505572">
+          </div>
+          <div class="col-xs-4">
+            <label>Birth date</label>
+            <input class="form-control" type="tel" name="entry.1212492002">
+          </div>
+          <div class="col-xs-4">
+            <label>Birth year</label>
+            <input class="form-control" type="tel" name="entry.648425963">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Life stage</label>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">College</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">Single Adult</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">Married w/o Children</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">Married w/ Children</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">Single w/ Children</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="entry.761414804">Other <input type="text" name="entry.761414804.other_option_response"></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Do you need a ride?</label>
+            <div class="checkbox">
+              <label><input type="checkbox" name="entry.761414804">Yes</label>
+            </div>
+            </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Comments and questions</label>
+            <textarea class="form-control" rows="3" name="entry.876723727"></textarea>
+          </div>
+        </div>
+        <div class="form-group row print-hide">
+          <div class="col-xs-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+      <hr/>
+    </div>
   </div>
 </div>
