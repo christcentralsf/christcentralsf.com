@@ -363,7 +363,10 @@ footer a:hover {
   }
 }
 
-@media (max-width: 414px) {
+@media (min-width: 415px) {
+  .mobile-only {
+    display: none;
+  }
 }
 
 .row .special,
