@@ -7,7 +7,6 @@ logo: true
 <div class="front page">
   <div class="row">
     <div class="col-xs-12">
-      <hr/>
       <div class="row">
         <div class="col-xs-12">
           {% if page.logo %}<img src="/assets/images/logo.svg" />{% endif %}
@@ -68,61 +67,78 @@ logo: true
           </div>
         </div>
         <div class="form-group row">
-          <div class="col-xs-12">
-            <label>Phone number</label>
+          <div class="col-xs-4">
+            <label>Area code</label> 
             <input class="form-control" type="tel" name="entry.508892220">
           </div>
+          <div class="col-xs-8">
+            <label>Phone number</label>
+            <input class="form-control" type="tel" name="entry.2119994981">
+          </div>  
         </div>
-        <div class="form-group row">
-          <div class="col-xs-4">
-            <label>Birth month</label>
-            <input class="form-control" type="tel" name="entry.1947505572">
-          </div>
-          <div class="col-xs-4">
-            <label>Birth date</label>
-            <input class="form-control" type="tel" name="entry.1212492002">
-          </div>
-          <div class="col-xs-4">
-            <label>Birth year</label>
-            <input class="form-control" type="tel" name="entry.648425963">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-xs-12">
-            <label>Life stage</label>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">College</label>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>Birthday</label>
             </div>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">Single Adult</label>
+            <div class="col-xs-4">
+              <label>Month</label>
+              <input class="form-control" type="tel" name="entry.1947505572">
             </div>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">Married w/o Children</label>
+            <div class="col-xs-4">
+              <label>Date</label>
+              <input class="form-control" type="tel" name="entry.1212492002">
             </div>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">Married w/ Children</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">Single w/ Children</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="entry.761414804">Other <input type="text" name="entry.761414804.other_option_response"></label>
+            <div class="col-xs-4">
+              <label>Year</label>
+              <input class="form-control" type="tel" name="entry.648425963">
             </div>
           </div>
         </div>
         <div class="form-group row">
           <div class="col-xs-12">
-            <label>Do you need a ride?</label>
-            <div class="checkbox">
-              <label><input type="checkbox" name="entry.761414804">Yes</label>
+            <label>Check all that apply:</label>
+            <div>
+              <input type="checkbox" name="entry.761414804_sentinel" /> I am in college
             </div>
-            </label>
+            <div>
+              <input type="checkbox" name="entry.761414804_sentinel" /> I am married
+            </div>
+            <div>
+              <input type="checkbox" name="entry.761414804_sentinel" /> I have children
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>Check all that apply: I would like...</label>
+            <div>
+              <input type="checkbox" name="entry.1286053849_sentinel"> to receive the weekly newsletter
+            </div>
+            <div>
+              <input type="checkbox" name="entry.1286053849_sentinel"> to join a community group
+            </div>
+            <div>
+              <input type="checkbox" name="entry.1286053849_sentinel"> to be contacted by a pastor
+            </div>
+            <div>
+              <input type="checkbox" name="entry.1286053849_sentinel"> to serve
+            </div>
+            <div>
+              <input type="checkbox" name="entry.1286053849_sentinel"> a ride
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            <label>How did you hear about us?</label>
+            <input type="text" class="form-control" name="entry.876723727" />
           </div>
         </div>
         <div class="form-group row">
           <div class="col-xs-12">
             <label>Comments and questions</label>
-            <textarea class="form-control" rows="3" name="entry.876723727"></textarea>
+            <textarea class="form-control" rows="5" name="entry.1578565088"></textarea>
           </div>
         </div>
         <div class="form-group row print-hide">
@@ -131,7 +147,6 @@ logo: true
           </div>
         </div>
       </form>
-      <hr/>
     </div>
   </div>
 </div>

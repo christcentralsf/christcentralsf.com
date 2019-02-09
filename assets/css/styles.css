@@ -198,10 +198,6 @@ p.quote {
   background: none;
 }
 
-.form-control {
-  height: 38px;
-}
-
 #sermon {
   display: block;
   position: relative;
@@ -403,7 +399,8 @@ footer a:hover {
 /* Program */
 
 #page-Groups hr,
-#page-Program hr {
+#page-Program hr,
+#page-Welcome hr {
   border-width: 7px;
 }
 
@@ -475,12 +472,12 @@ footer a:hover {
 #page-Groups.print .online,
 #page-Program footer,
 .print-only,
-#page-Program.print .online,
+.print .online,
 #page-Program.print #sunday-worship hr {
   display: none;
 }
 
-#page-Program.print .print-only {
+.print .print-only {
   display: inline;
 }
 
@@ -543,6 +540,10 @@ footer a:hover {
   .col-lg-6 {
     float: left;
   }
+
+  #page-Welcome .print-hide {
+    display: none;
+  }
 }
 
 /* True North */
@@ -562,6 +563,10 @@ footer a:hover {
 }
 
 /* Welcome */
+#page-Welcome {
+  font-size: 12.5px;
+}
+
 #page-Welcome .quote {
   font-size: 18px;
   margin: 15px 0 20px;
@@ -575,14 +580,13 @@ footer a:hover {
 #page-Welcome ol {
   list-style-type: upper-roman;
   padding-left: 20px;
+  text-transform: capitalize;
 }
 
 #page-Welcome .street-address {
   margin-bottom: 10px;
 }
 
-@media print {
-  #page-Welcome .print-hide {
-    display: none;
-  }
+#page-Welcome label {
+  text-transform: uppercase;
 }
