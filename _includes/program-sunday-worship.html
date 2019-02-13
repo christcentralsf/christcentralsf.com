@@ -56,6 +56,14 @@
                   {{ post.speaker }}
                 </span>
               </li>
+              {% if post.baptism %}
+                <li>
+                  Baptism
+                  <div class="subtext">
+                    {{ post.baptism }}
+                  </div>
+                </li>
+              {% endif %}
               {% if post.confirmation %}
                 <li>
                   Confirmation
