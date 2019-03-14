@@ -481,23 +481,8 @@ footer a:hover {
   display: inline;
 }
 
-@media print {
-  #page-Program.print .page,
-  #page-Welcome.print .page {
-    float: left;
-    width: 4.05in;
-  }
-
-  #page-Program.print .back.page,
-  #page-Welcome.print .back.page {
-    float: right;
-    margin-left: .20in;
-  }
-}
-
 #page-Groups.print .row,
-#page-Program.print .row,
-#page-Welcome.print .row {
+#page-Program.print .row {
   margin: 20px 0;
 }
 
@@ -542,10 +527,6 @@ footer a:hover {
   .col-lg-6 {
     float: left;
   }
-
-  #page-Welcome .print-hide {
-    display: none;
-  }
 }
 
 /* True North */
@@ -567,6 +548,10 @@ footer a:hover {
 /* Welcome */
 #page-Welcome {
   font-size: 12.5px;
+}
+
+#page-Welcome .navbar {
+  display: none;
 }
 
 #page-Welcome .quote {
