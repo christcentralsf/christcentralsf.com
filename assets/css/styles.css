@@ -481,6 +481,18 @@ footer a:hover {
   display: inline;
 }
 
+@media print {  
+  #page-Program.print .page { 
+    float: left;  
+    width: 4.05in;  
+  } 
+
+  #page-Program.print .back.page {  
+    float: right; 
+    margin-left: .20in; 
+  } 
+}
+
 #page-Groups.print .row,
 #page-Program.print .row {
   margin: 20px 0;
