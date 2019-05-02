@@ -589,3 +589,8 @@ footer a:hover {
 #page-Welcome label {
   text-transform: uppercase;
 }
+
+/* Deacons */
+#deacons h3 {
+  margin-top: 0;
+}
