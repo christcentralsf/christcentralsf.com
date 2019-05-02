@@ -591,6 +591,10 @@ footer a:hover {
 }
 
 /* Deacons */
-#deacons h3 {
+#page-Deacons h3 {
   margin-top: 0;
+}
+
+#page-Deacons hr {
+  margin: 40px 0;
 }
