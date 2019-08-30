@@ -261,6 +261,16 @@ p.quote {
   height: 200px;
 }
 
+.elders-list,
+.deacons-list {
+  list-style: none;
+}
+
+.deacons-list {
+  float: left;
+  margin-right: 100px;
+}
+
 .table-responsive {
   border: 0;
 }
