@@ -265,14 +265,8 @@ p.quote {
   height: 200px;
 }
 
-.elders-list,
-.deacons-list {
+.servants-list li {
   list-style: none;
-}
-
-.deacons-list {
-  float: left;
-  margin-right: 100px;
 }
 
 .table-responsive {
