@@ -406,6 +406,7 @@ footer a:hover {
 
 /* Program */
 
+#page-Education hr,
 #page-Groups hr,
 #page-Program hr,
 #page-Welcome hr {
@@ -489,7 +490,7 @@ footer a:hover {
   display: inline;
 }
 
-@media print {  
+@media print {
   #page-Program.print .page { 
     float: left;  
     width: 4.05in;  
@@ -565,29 +566,38 @@ footer a:hover {
   color: #fff !important;
 }
 
-/* Welcome */
+/* Education/Welcome */
+#page-Education,
 #page-Welcome {
   font-size: 12.5px;
 }
 
+#page-Education .navbar,
 #page-Welcome .navbar {
   display: none;
 }
 
+#page-Education .quote,
 #page-Welcome .quote {
   font-size: 18px;
   margin: 15px 0 20px;
   padding: 0;
 }
 
+#page-Education img,
 #page-Welcome img {
   width: 125px;
 }
 
+#page-Education ol,
 #page-Welcome ol {
   list-style-type: upper-roman;
   padding-left: 20px;
   text-transform: capitalize;
+}
+
+#page-Education ol {
+  text-transform: none;
 }
 
 #page-Welcome .street-address {
@@ -597,6 +607,7 @@ footer a:hover {
 #page-Welcome label {
   text-transform: uppercase;
 }
+
 
 /* Deacons */
 #page-Deacons h3 {
