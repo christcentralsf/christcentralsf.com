@@ -1,1 +1,6 @@
 /files/* http://files.christcentralsf.com/:splat 301!
+/connect https://christcentralsf.churchcenter.com/groups 301!
+/groups  https://christcentralsf.churchcenter.com/groups 301!
+/giving  https://christcentralsf.churchcenter.com/giving 301!
+/give    https://christcentralsf.churchcenter.com/giving 301!
+/prayer  https://christcentralsf.churchcenter.com/people/forms/32398 301!
