@@ -617,3 +617,9 @@ footer a:hover {
 #page-Deacons hr {
   margin: 40px 0;
 }
+
+#page-HarvestParty .full-page-img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
