@@ -50,22 +50,24 @@
                   {{ post.speaker }}
                 </span>
               </li>
-              {% if post.baptism %}
+              {% if post.baptism %}<li>Baptism</li>{% endif %}
+              <!-- {% if post.baptism %}
                 <li>
                   Baptism
                   <div class="subtext">
                     {{ post.baptism }}
                   </div>
                 </li>
-              {% endif %}
-              {% if post.confirmation %}
+              {% endif %} -->
+              {% if post.confirmation %}<li>Confirmation</li>{% endif %}
+              <!-- {% if post.confirmation %}
                 <li>
                   Confirmation
                   <span class="subtext">
                     {{ post.confirmation }}
                   </span>
                 </li>
-              {% endif %}
+              {% endif %} -->
               {% if post.membership %}
                 <li>
                   Membership Installation
