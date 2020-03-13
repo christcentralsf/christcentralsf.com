@@ -20,10 +20,15 @@ title: Home
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <a href="assets/doc/COVID-19_Letter.pdf" target="_blank">
+            <img src="/assets/images/carousel/c19_anoe.png" title="COVID-19 Letter"/>
+          </a>
+        </div>
         <div class="item">
           <img src="/assets/images/carousel/POSTER_christcentral-togetherness-1170x600px-2.png" title="Christ Central 2019-2020: Togetherness"/>
         </div>
-        <div class="item active">
+        <div class="item">
           {% assign isFirstPostDisplayed = true %}
             {% for post in site.posts %}
               {% if post.date <= site.time and isFirstPostDisplayed %}
