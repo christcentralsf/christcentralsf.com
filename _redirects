@@ -1,4 +1,4 @@
-/files/* http://files.christcentralsf.com/:splat 301!
+/files/* https://files.christcentralsf.com/:splat 301!
 /connect https://christcentralsf.churchcenter.com/groups 301!
 /groups  https://christcentralsf.churchcenter.com/groups 301!
 /giving  https://christcentralsf.churchcenter.com/giving 301!
