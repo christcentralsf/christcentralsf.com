@@ -1,3 +1,5 @@
+# Documentation on how to use this file: https://docs.netlify.com/routing/redirects/redirect-options/
+
 # Legacy redirect /files/ to new subdomain for s3 bucket at files.christcentralsf.com
 /files/* https://files.christcentralsf.com/:splat 301!
 
@@ -7,6 +9,9 @@
 /giving  https://christcentralsf.churchcenter.com/giving 301!
 /give    https://christcentralsf.churchcenter.com/giving 301!
 /prayer  https://christcentralsf.churchcenter.com/people/forms/32398 301!
+
+# Google Docs redirects
+/expense https://docs.google.com/document/d/1IOO6dui-DnRv6NHhjPWMT-1ZgzCdlSjSx2xsGRMv7yg/edit?usp=sharing 301
 
 # Social Media redirects
 # /stream is a 302 instead of a 301 since we could switch from using Twitch
