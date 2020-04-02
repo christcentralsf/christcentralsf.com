@@ -1,9 +1,17 @@
+# Legacy redirect /files/ to new subdomain for s3 bucket at files.christcentralsf.com
 /files/* https://files.christcentralsf.com/:splat 301!
+
+# Churchcenter redirects
 /connect https://christcentralsf.churchcenter.com/groups 301!
 /groups  https://christcentralsf.churchcenter.com/groups 301!
 /giving  https://christcentralsf.churchcenter.com/giving 301!
 /give    https://christcentralsf.churchcenter.com/giving 301!
 /prayer  https://christcentralsf.churchcenter.com/people/forms/32398 301!
+
+# Social Media redirects
+# /stream is a 302 instead of a 301 since we could switch from using Twitch
+/stream  https://www.twitch.tv/christcentralsf 302
+/podcast https://christcentralsf.simplecast.com 301
 
 # Redirect default Netlify subdomain to primary domain
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
