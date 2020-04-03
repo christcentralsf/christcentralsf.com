@@ -1,6 +1,5 @@
 safe: true
 lsi: false
 highlight: pygments
-exclude: ["upload_bulletin.sh"]
 include: ["_redirects"]
 future: true
