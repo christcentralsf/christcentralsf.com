@@ -20,3 +20,7 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
+
+# RSVP redirects
+/rsvp/educate https://docs.google.com/forms/d/e/1FAIpQLSe7w-TxEsxLRx6qwLUvawoQ2T099HJs8OOSq0fy1K9hhFvusw/viewform 301
+
