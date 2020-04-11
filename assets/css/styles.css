@@ -637,3 +637,7 @@ footer a:hover {
 .hr-gray {
   border: 2px solid #FEDB48; 
 }
+
+.ml30 {
+  margin-left: 30px;
+}
