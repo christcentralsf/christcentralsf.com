@@ -29,7 +29,21 @@ title: Home
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="/assets/images/carousel/easter.jpg" title="Easter"/>
+          {% assign isFirstPostDisplayed = true %}
+            {% for post in site.posts %}
+              {% if post.date <= site.time and isFirstPostDisplayed %}
+                <a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3" target="_blank" id="sermon">
+                  <div class="background">
+                    <img src="https://fpoimg.com/1170x600"/>
+                  </div>
+                  <div class="layer">
+                    <h2>{{ post.sermon }}</h2>
+                    <p>Listen</p>
+                  </div>
+                </a>
+              {% assign isFirstPostDisplayed = false %}
+            {% endif %}
+          {% endfor %}
         </div>
         <div class="item">
           <a href="/files/docs/COVID-19_Letter.pdf" target="_blank">
