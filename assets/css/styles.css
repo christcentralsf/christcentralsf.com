@@ -177,6 +177,10 @@ a:hover,
   margin-bottom: 30px;
 }
 
+.mb60 {
+  margin-bottom: 60px;
+}
+
 .mt0 {
   margin-top: 0;
 }
@@ -642,5 +646,10 @@ footer a:hover {
 
 
 /* Weekly */
-.hr-gray {
+#page-Weekly h2 {
+  margin-bottom: 0;
+}
+
+.hr-thin {
   border: 2px solid #FEDB48; 
+}

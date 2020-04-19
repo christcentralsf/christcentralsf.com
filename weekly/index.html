@@ -2,6 +2,7 @@
 layout: default
 title: Weekly
 ---
+<script src="/assets/js/weekly-filter.js"></script>
 
 <div class="row">
   <div class="col-md-12">
@@ -9,11 +10,20 @@ title: Weekly
   </div>
 </div>
 
-<hr/>
+<!-- <hr/> -->
 
 <div class="row">
   <div class="col-md-12">
-    <h3>The Olive Leaf - April 18, 2020</h3>
+    <button class="btn-primary" type="button" onclick="filterSelection('olive')">The Olive Leaf</button>
+    <button class="btn-primary" type="button" onclick="filterSelection('five')">Tight Five</button>
+    <button class="btn-primary" type="button" onclick="filterSelection('other')">Other</button>
+    <button class="btn-primary" type="button" onclick="removeFilter()">Clear Filter</button>
+  </div>
+</div>
+
+<div class="row weekly olive">
+  <div class="col-md-12 mb60">
+    <h3>Solitude - April 18, 2020</h3>
     <div>
       <p>By Pastor Jason</p>
       <p>I have found a sweet refuge in books in these trying times. I find the bosoms of book bindings to be more comforting than the white noise of a TV show or baking a loaf of sourdough bread. One of the books that I had the fortune of rereading was Henri Nouwen’s Out of Solitude: Three Meditations on the Christian Life. At the risk of sounding like LeVar Burton on an episode of Reading Rainbow, this is a book that I highly recommend, especially at a time like this. But you don’t have to take my word for it.    </p>
@@ -24,16 +34,55 @@ title: Weekly
       <p>I want to tread carefully here: I don’t think that this current pandemic is a good thing.  But if I am called to adhere to God’s gracious and loving character, I must ask myself, where do I see grace and love in all of this?  I have to see all things through that lens or else I will really lose my mind.  </p>
       <p>And this is where I am thankful for Nouwen’s thoughts on solitude; I am grateful that God has not just halted construction but He graciously razed all my towers that I had been building.  I had been in a season where I was tactifully building up an ethos for the sole purpose of garnering the accolades of people, all the while neglecting the opinion and delight of the One that matters to most.  I was trying to find love from others even though I was intentionally ignoring the magnanimous love of the Father. And in my haste and insecurity, I have futilely built up a hollow vessel that might look ornate on the outside but without substance on the inside.  And I had lost my way.  </p>
       <p>Ultimately, I want to rebuild and relearn the discipline of solitude.  To take pause.  To ponder. To reconnect. There will be a day when the cloud of this horrible pandemic will pass and the obstacles will be no more. But I don’t want us to woefully look back at said inconveniences and see it as a wasted luxury in which we could have spent more time with the Lord. Appropriately, I want to lean on Nouwen’s words on solitude: </p>
-      <p>In solitude, we can slowly unmask the illusion of our possessiveness and discover in the center of our own self that we are not what we can conquer, but what is given to us. In solitude we can listen to the voice of him who spoke to us before we could speak a word, who healed us before we could make any gesture to help, who set us free long before we could free others, and who loved us long before we could give love to anyone. It is in this solitude that we discover that being is more important than having, and that we are worth more than the result of our efforts. (25-26)</p>
+      <p class="ml60">In solitude, we can slowly unmask the illusion of our possessiveness and discover in the center of our own self that we are not what we can conquer, but what is given to us. In solitude we can listen to the voice of him who spoke to us before we could speak a word, who healed us before we could make any gesture to help, who set us free long before we could free others, and who loved us long before we could give love to anyone. It is in this solitude that we discover that being is more important than having, and that we are worth more than the result of our efforts. (25-26)</p>
 
     </div>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>The ABC's of Prayer - April 17, 2020</h3>
+    <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/b7ec3f83-a6e7-4ff3-ad08-6ee1067e82b4?dark=false"></iframe>
+  </div>
+  <hr class="hr-thin"/>
+</div>
 
-<div class="row">
-  <div class="col-md-12">
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>My Story of Grace - April 16, 2020</h3>
+    <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/94b7ee08-8cf0-401e-970d-4ad62df025ad?dark=false"></iframe>
+  </div>
+  <hr class="hr-thin"/>
+</div>
+
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>What every family needs right now - April 15, 2020</h3>
+    <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/786da355-4faa-4b79-83e1-3a8e16707220?dark=false"></iframe>
+  </div>
+  <hr class="hr-thin"/>
+</div>
+
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>How I prep for Sermons - April 14, 2020</h3>
+    <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/7b89f255-601c-4251-acdc-f519a0f32999?dark=false"></iframe>
+  </div>
+  <hr class="hr-thin"/>
+</div>
+
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>My Call to Ministry - April 13, 2020</h3>
+    <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/f301f2a9-0ccd-4187-9c30-90f878346db6?dark=false"></iframe>
+  </div>
+  <hr class="hr-thin"/>
+</div>
+
+<div class="row weekly olive">
+  <div class="col-md-12 mb60">
     <h3>The Morning After - April 11, 2020</h3>
     <div>
       <p>By Pastor Jason</p>
@@ -58,48 +107,43 @@ title: Weekly
       but has heard, when he cried to him. Psalm 22:22–24 (ESV)</p>
     </div>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 10, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Good Friday - April 10, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/88b645bc-b42f-4030-81d2-2afb3135e061?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 9, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Maudy Thursday - April 9, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/636b8a8f-fdbb-4b7f-915d-bc95254530de?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 8, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Spy Wednesday - April 8, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/b9cf5826-7c1f-4ce9-a3a9-12d8320f908e?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 7, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Passion Week Tuesday - April 7, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/e52fbd8a-40fd-4dff-b857-0f791e5fcecd?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
+<div class="row weekly other">
+  <div class="col-md-12 mb60">
     <h3>April 6, 2020</h3>
     <div>
       <p>Hello Christ Central Family,</p>
@@ -114,21 +158,19 @@ title: Weekly
       <a href="https://open.spotify.com/playlist/03zrbSajiwWwvXGNpXvuC4?si=QK4js3FZQxyy3RIARwsxhA" target="_blank">Praise Playlist</a>
     </div>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 6, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Passion Week Monday - April 6, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/cb8cf202-336d-4c1c-a234-8c6dbdad0aa5?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
+<div class="row weekly olive">
+  <div class="col-md-12 mb60">
     <h3>The Olive Leaf - April 4, 2020</h3>
     <div>
       <p>By Pastor Jason</p>
@@ -141,57 +183,51 @@ title: Weekly
       <p>And I hope that this, along with the podcasts and daily prayer challenges, can do just that for you. We are inundated with tragedy. We ingest the morsels of bad news on the daily.  However, in the deluge of said bad news, we want to offer up even better news: Christ has died and rose and we are forgiven and redeemed! There is nothing better.  No bad news can expel the light of the Gospel.  There will be a day when the waters will be completely subsided. Even when the eye of this particular storm passes (and it will), we are providentially comforted by the reminder that this too shall pass and that we look forward to the day when all things will be made new.</p>  
     </div>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 3, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Abiding with Jesus - April 3, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/546528fa-2c22-46c4-9749-43d2ee8c6938?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 2, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Singleness - April 2, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/4361300f-18ff-47eb-8285-7484a9922b0b?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - April 1, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Asian American Mental Heath - April 1, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/3c41c8b0-1c73-41ca-9e16-ed2a74bb1fd3?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - March 31, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Anxiety - March 31, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/3ff8e2de-786a-4562-bf3d-b5a3072f3c71?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - March 30, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Time - March 30, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/36411b8d-062d-4d52-bbfa-bbe68d95b737?dark=false"></iframe>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
+<div class="row weekly olive">
+  <div class="col-md-12 mb60">
     <h3>A Silver Lining - March 28, 2020</h3>
     <div>
       <p>By Pastor Jason</p>
@@ -208,13 +244,12 @@ title: Weekly
       <p>In the practice of using this framework to jot down these reflections, it has helped me to pay closer attention to each day and how God has worked in them.  I have been surprised by how much there is to celebrate but on the days when my spiritual needle hasn’t moved much, I can still be content in Christ and Christ alone.</p>
     </div>
   </div>
+  <hr class="hr-thin"/>
 </div>
 
-<hr class="hr-gray"/>
-
-<div class="row">
-  <div class="col-md-12">
-    <h3>ChristCentralSF's Tight Five - March 26, 2020</h3>
+<div class="row weekly five">
+  <div class="col-md-12 mb60">
+    <h3>Tight Five Introduction - March 26, 2020</h3>
     <iframe height="120px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/a3f5380c-77c8-41be-965a-d7fcc2a82138?dark=false"></iframe>
   </div>
 </div>
