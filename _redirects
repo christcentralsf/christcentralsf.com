@@ -23,4 +23,5 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 
 # RSVP redirects
 /rsvp/educate https://docs.google.com/forms/d/e/1FAIpQLSe7w-TxEsxLRx6qwLUvawoQ2T099HJs8OOSq0fy1K9hhFvusw/viewform 301
+/rsvp/vbs     https://christcentralsf.churchcenter.com/registrations/events/449602 301
 
