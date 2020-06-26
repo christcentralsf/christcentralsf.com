@@ -157,6 +157,10 @@ a:hover,
   color: #000000 !important;
 }
 
+.mr30 {
+  margin-right: 30px;
+}
+
 .ml30 {
   margin-left: 30px;
 }
@@ -652,4 +656,9 @@ footer a:hover {
 
 .hr-thin {
   border: 2px solid #FEDB48; 
+}
+
+/* Why Give */
+#page-WhyGive span {
+  white-space: nowrap;
 }
