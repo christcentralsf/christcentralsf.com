@@ -662,3 +662,7 @@ footer a:hover {
 #page-WhyGive span {
   white-space: nowrap;
 }
+
+#song p {
+  font-size: 11px;
+}
