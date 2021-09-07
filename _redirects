@@ -22,6 +22,6 @@
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
 
 # RSVP redirects
-/rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
-/rsvp/vbs     https://christcentralsf.churchcenter.com/registrations/events/449602 301
+# /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
+# /rsvp/vbs     https://christcentralsf.churchcenter.com/registrations/events/449602 301
 
