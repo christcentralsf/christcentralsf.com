@@ -246,6 +246,7 @@ p.quote {
   border: 0;
 }
 
+.table>thead>tr>th,
 .table>tbody>tr>td {
   border: 0;
 }
