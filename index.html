@@ -3,17 +3,81 @@ layout: default
 title: Home 
 ---
 
-<div class="row mb60">
-  <div class="col-md-12">
-    <img src="/assets/images/smallerstitch.gif" />
-  </div>  
+<hr/>
+
+<div class="row">
+  {% include stream.html %}
 </div>
 
-{% include join-us.html %}
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <a class="btn btn-primary btn-block mobile-only" href="/program">View the Sunday Program</a>
+  </div>
+</div> -->
 
 <hr/>
 
-{% include vision.html %}
+<div class="row">
+  <div class="col-sm-12">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          {% assign isFirstPostDisplayed = true %}
+            {% for post in site.posts %}
+              {% if post.date <= site.time and isFirstPostDisplayed %}
+                <a href="/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3" target="_blank" id="sermon">
+                  <div class="background">
+                    <img src="https://fpoimg.com/1170x600"/>
+                  </div>
+                  <div class="layer">
+                    <h2>{{ post.sermon }}</h2>
+                    <p>Listen</p>
+                  </div>
+                </a>
+              {% assign isFirstPostDisplayed = false %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="item">
+          <img src="/assets/images/carousel/SermonSeries_1170.png" title="Sermon Theme"/>
+        </div>
+        <div class="item">
+          <a href="https://files.christcentralsf.com/docs/2021_plan.pdf" target="_blank">
+            <img src="/assets/images/carousel/2021_plan.png" title="2021 Bible Reading Plan"/>
+          </a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row" id="vision">
+  <div class="col-sm-12">
+    {% include vision.html %}
+  </div>
+</div>
+
+<hr/>
 
 <div class="row" id="core-values">
   <div class="col-md-4">
@@ -54,49 +118,136 @@ title: Home
 
 <div class="row">
   <div class="col-md-12" id="pastors">
-    <h2>Meet our staff</h2>
+    <h2 class="quote">We exist to proclaim the gospel of Jesus Christ</h2>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/ben.jpg" />
-    <p><strong>Benjamin Kim</strong><br/>Senior Pastor</p>
+    <img src="/assets/images/bio/ben.jpg" />
+    <h3>Benjamin Kim, Senior Pastor</h3>
   </div>
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/in.jpg" />
-    <p><strong>In Kim</strong><br/>Community Group andCounseling Pastor</p>
+    <img src="/assets/images/bio/in.jpg" />
+    <h3>In Kim, Community Group and Counseling Pastor</h3>
   </div>
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/simon.jpg" />
-    <p><strong>Simon Yang</strong><br/>Family Life Ministry and Missions Pastor</p>
+    <img src="/assets/images/bio/simon.jpg" />
+    <h3>Simon Yang, Family Life Ministry and Missions Pastor</h3>
   </div>
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/jason.jpg" />
-    <p><strong>Jason Lim</strong><br/>Adult Ministry and College Pastor</p>
+    <img src="/assets/images/bio/jason.jpg" />
+    <h3>Jason Lim, Adult Ministry and College Pastor</h3>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/tony.jpg" />
-    <p><strong>Tony Chang</strong><br/>Youth Director and Church Administrator</p>
+    <img src="/assets/images/bio/tony.jpg" />
+    <h3>Tony Chang, Youth Director and Church Administrator</h3>
   </div>
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/grace.jpg" />
-    <p><strong>Grace Chang</strong><br/>Nursery Director</p>
+    <img src="/assets/images/bio/grace.jpg" />
+    <h3>Grace Chang, Nursery Director</h3>
   </div>
   <div class="col-sm-6 col-md-3">
-    <img class="mb15" src="/assets/images/bio/joyce.jpg" />
-    <p><strong>Joyce Kim</strong><br/>Children's Director</p>
+    <img src="/assets/images/bio/joyce.jpg" />
+    <h3>Joyce Kim, Children's Director</h3>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-4 col-xs-6">
-    <p><strong>Elders</strong></p>
+    <h3>Elders</h3>
     <ul class="servants-list">
       <li>Billy Kim</li>
       <li>George Chong</li>
       <li>Sang Kong</li>
       <li>Steve Chang</li>
     </ul>
+  </div>
+  <div class="col-sm-4 col-xs-6">
+    <h3>Ordained Deacons</h3>
+    <ul class="servants-list">
+      <li>Mark Hur</li>
+      <li>Min Park</li>
+      <li>Nolan Ku</li>
+      <li>Sam Min</li>
+      <li>Tommy Lee</li>
+    </ul>
+  </div>
+  <div class="col-sm-4 col-xs-12">
+    <h3>Deacons</h3>
+    <ul class="servants-list">
+      <li>Aryun Kim</li>
+      <li>Brian Kim</li>
+      <li>Christy Kim</li>
+      <li>Esther Baek</li>
+      <li>Hyunmin Hong</li>
+      <li>James Won</li>
+      <li>Jayne Cho</li>
+      <li>Jessica Park</li>
+      <li>Jiho Kim</li>
+      <li>Karolyne Kim</li>
+      <li>Nancy Ku</li>
+      <li>Ping Sui</li>
+      <li>Rob Hoang</li>
+    </ul>
+  </div>
+</div>
+
+{% include ministry-and-community-groups.html %}
+
+<hr/>
+
+<div class="row" id="missions">
+  <div class="col-md-12">
+    <h2 class="quote">We exist to fulfill the Great Commission</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Short Term Missions</h3>
+    <p>Every summer, we send a team to Cambodia and Paraguay for overseas missions. <a href="/missions2019">Click here</a> to read the testimonies of our team members who went in 2019.</p>
+  </div>
+  <div class="col-md-6">
+    <h3>Long Term Missionaries</h3>
+    <ul>
+      <li>Mark &amp; Megumi Bocanegra in Japan</li>
+      <li>B &amp; A in Indonesia</li>
+      <li>Paul &amp; Susan Lee in Cambodia</li>
+      <li>Tim &amp; Moon Sook Lim in Cambodia</li>
+      <li>David &amp; Susanna Nam in Taiwan</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h3>LifeMoves</h3>
+    <p><a href="https://lifemoves.org/" target="_blank">LifeMoves</a> is dedicated to providing interim housing and supportive services that create opportunities for homeless families and individuals to rapidly return to stable housing and long-term self-sufficiency.</p>
+  </div>
+  <div class="col-md-6">
+    <h3>Open Door</h3>
+    <p><a href="https://todm.org/" target="_blank">Open Door</a> is a Gospel Rescue Mission committed to breaking the cycle of homelessness and poverty.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h3>City Impact</h3>
+    <p><a href="https://www.sfcityimpact.com/" target="_blank">City Impact</a> is a faith based organization that exists to intervene on behalf of the people of the Tenderloin.</p>
+  </div>
+  <div class="col-md-6">
+    <h3>Help One Child</h3>
+    <p><a href="https://helponechild.org/" target="_blank">Help One Child</a> is a non profit organization that seeks to strengthen foster, adoptive, and at-risk families.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p><a class="btn btn-primary" href="https://christcentralsf.churchcenter.com/groups/service">Serve with us</a></p>
+  </div>
+</div>
+
+<hr/>
+
+<div class="row">
+  <div class="col-md-12">
+    <p><a href="/history">Learn more</a> about how we got here.</p>
   </div>
 </div>
