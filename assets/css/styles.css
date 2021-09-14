@@ -141,7 +141,7 @@ a:hover,
 }
 
 .navbar-toggle .icon-bar {
-  border: 1px solid #FCE854;
+  border: 1px solid #faaf42;
 }
 
 .btn-primary {
@@ -166,6 +166,10 @@ a:hover,
 
 .mr30 {
   margin-right: 30px;
+}
+
+.ml15 {
+  margin-left: 15px;
 }
 
 .ml30 {
@@ -212,11 +216,6 @@ a:hover,
   display: flex;
 }
 
-.section {
-  margin: 100px auto;
-  width: 60%;
-}
-
 .quote {
   color: #aaa;
   font-weight: 400;
@@ -226,7 +225,7 @@ a:hover,
 }
 
 h2.quote {
-  color: #e9c42c;
+  color: #faaf42;
   padding: 0;
 }
 
@@ -320,6 +319,11 @@ footer li {
   .navbar-nav {
     float: right !important;
   }
+
+  .section {
+    margin: 100px auto;
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -333,37 +337,6 @@ footer li {
     display: none;
   }
 }
-
-.row .special,
-.navbar li .special {
-  background: #704122;
-  border-right: 5px solid #402312;
-  color: #FFFFFF;
-  font-size: 20px;
-  margin: 15px 30px 0 0;
-  padding: 10px 15px;
-  transform: skew(0deg,-15deg);
-}
-
-.row .special:hover,
-.navbar li .special:hover {
-  background: #FCB400;
-  color: #FFFFFF;
-}
-
-.row .special {
-  border-right: 0;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  transform: none;
-}
-
-.row .special:hover {
-  text-decoration: none;
-}
-
 
 /* Program */
 
@@ -479,6 +452,16 @@ footer li {
 /* Counseling */
 #counseling ul {
   padding-left: 16px;
+}
+
+/* Join Us */
+.text-muted {
+  font-size: 13px;
+}
+
+.time {
+  font-size: 18px;
+  line-height: 1.1;
 }
 
 /* Safety */
