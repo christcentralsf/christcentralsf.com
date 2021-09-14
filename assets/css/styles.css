@@ -22,17 +22,17 @@ body {
 
 h1, h2, h3, h4, h5, h6, th {
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 30px;
-  text-transform: uppercase;
 }
 
 h1 {
-  margin-top: 30px;
+  font-size: 46px;
   color: black;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h3 {
@@ -50,7 +50,9 @@ p {
 }
 
 hr {
-  border: 10px solid #FEDB48;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 img {
@@ -58,15 +60,16 @@ img {
 }
 
 ul {
-  padding-left: 16px;
+  padding-left: 0;
 }
 
 a, 
 a:hover, 
 .pagination>li>a,
 .pagination>li>a:hover {
-  color: #0E89B1;
+  color: #000;
   font-weight: 700;
+  text-decoration: underline;
 }
 
 .hide {
@@ -121,6 +124,7 @@ a:hover,
   line-height: 20px;
   margin: 0;
   padding: 15px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -141,20 +145,23 @@ a:hover,
 }
 
 .btn-primary {
-  background: #FCE854;
+  background: #000;
   border: 0;
-  color: #000000;
+  border-radius: 50px;
+  color: #fff;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
   padding: 10px 20px; 
+  text-decoration: none;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background: #FEDB48 !important;
-  color: #000000 !important;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 50px;
+  color: #000000;
+  padding: 9px 20px; 
 }
 
 .mr30 {
@@ -201,8 +208,17 @@ a:hover,
   margin: 60px 0;
 }
 
+.flex {
+  display: flex;
+}
+
+.section {
+  margin: 100px auto;
+  width: 60%;
+}
+
 .quote {
-  color: #AAAAAA;
+  color: #aaa;
   font-weight: 400;
   font-size: 32px;
   padding: 60px 0;
@@ -210,6 +226,7 @@ a:hover,
 }
 
 h2.quote {
+  color: #e9c42c;
   padding: 0;
 }
 
@@ -219,74 +236,6 @@ p.quote {
 
 .pt0 {
   padding-top: 0;
-}
-
-.carousel-control.left,
-.carousel-control.right {
-  background: none;
-}
-
-#sermon {
-  display: block;
-  position: relative;
-  text-decoration: none;
-}
-
-#sermon img {
-  visibility: hidden;
-}
-
-#sermon div {
-  height: 100%;
-  width: 100%;
-}
-
-#sermon .layer {
-  align-items: center;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  top: 0;
-}
-
-#sermon .background {
-  background: url(/assets/images/bible.jpg);
-  background-size: cover;
-  opacity: .65;
-}
-
-#sermon h2 {
-  font-size: 90px;
-  line-height: normal;
-  margin: 20px 0 0 0;
-  padding: 0 150px;
-}
-
-#sermon p {
-  font-size: 14px;
-  position: absolute;
-  top: 30px;
-}
-
-#history h2 {
-  font-size: 14px;
-}
-
-#history .col-md-2,
-#history .col-md-4,
-#history .col-md-6,
-#history .col-md-8,
-#history .col-md-10 {
-  border: 1px solid #DEDEDE;
-  border-width: 1px 0 0 1px;
-} 
-
-#history .gray {
-  background: #EFEFEF;
-  height: 200px;
 }
 
 .servants-list li {
@@ -329,14 +278,13 @@ label {
 }
 
 footer {
-  background: #444444;
-  border-top: 5px solid #FEDB48;
+  background: #000;
   color: #FFFFFF;
   margin-top: 90px;
   padding: 60px 30px;
 }
 
-footer h3 {
+footer h3, footer a, footer a:hover {
   color: #FFFFFF;
 }
 
@@ -350,18 +298,6 @@ footer li {
   line-height: 21px;
   list-style: none;
   margin-right: 10px;
-}
-
-footer a {
-  color: #FEDB48;
-}
-
-footer li a {
-  color: #FFFFFF;
-}
-
-footer a:hover {
-  color: #FCE854;
 }
 
 .two-column {
@@ -430,16 +366,10 @@ footer a:hover {
 
 /* Program */
 
-#page-Education hr,
-#page-Groups hr,
-#page-Program hr,
-#page-Welcome hr {
+#page-Program hr {
+  border-color: #FEDB48;
   border-width: 7px;
-}
-
-#page-Groups h3 {
-  font-size: 14px;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
 
 #page-Program h3 {
@@ -447,10 +377,9 @@ footer a:hover {
   margin: 0;
 }
 
-#page-Groups .quote,
 #page-Program .quote {
+  color: #aaa;
   font-size: 18px;
-  padding: 0;
 }
 
 #page-Program ol {
@@ -482,12 +411,6 @@ footer a:hover {
   width: 60px;
 }
 
-#page-Groups th,
-#page-Groups td {
-  font-size: 11px;
-  padding: 2px 8px 2px 0;
-}
-
 #page-Program td {
   font-size: 12px;
   padding: 0;
@@ -502,7 +425,6 @@ footer a:hover {
   font-size: 24px;
 }
 
-#page-Groups.print .online,
 #page-Program footer,
 .print-only,
 .print .online,
@@ -526,19 +448,12 @@ footer a:hover {
   } 
 }
 
-#page-Groups.print .row,
 #page-Program.print .row {
   margin: 20px 0;
 }
 
-#page-Groups.print h2,
 #page-Program.print h2 {
   margin: 15px 0 20px;
-}
-
-#page-Groups.print img {
-  margin-top: 20px;
-  width: 125px;
 }
 
 #page-Program.print img {
@@ -548,20 +463,6 @@ footer a:hover {
 
 #page-Program.print #connect .version {
   margin-bottom: 0;
-}
-
-#page-Program.print #qr-code h2 {
-  display: inline-block;
-}
-
-#page-Program.print #qr-code img {
-  display: inline-block;
-  float: right;
-  width: 15%;
-}
-
-#page-Groups a {
-  font-weight: 400;
 }
 
 @media print {
@@ -574,88 +475,16 @@ footer a:hover {
   }
 }
 
-/* True North */
-#page-TrueNorth hr {
-  border: 10px solid #6f9875;
+/* Counseling */
+#counseling ul {
+  padding-left: 16px;
 }
 
-#page-TrueNorth .btn-primary {
-  background-color: #fff;
-  border: 1px solid #6f9875;
-  color: #6f9875;
-}
-
-#page-TrueNorth .btn-primary:hover {
-  background-color: #6f9875 !important;
-  color: #fff !important;
-}
-
-/* Education/Welcome */
-#page-Education,
-#page-Welcome {
-  font-size: 12.5px;
-}
-
-#page-Education .navbar,
-#page-Welcome .navbar {
-  display: none;
-}
-
-#page-Education .quote,
-#page-Welcome .quote {
-  font-size: 18px;
-  margin: 15px 0 20px;
-  padding: 0;
-}
-
-#page-Education img,
-#page-Welcome img {
-  width: 125px;
-}
-
-#page-Education ol,
-#page-Welcome ol {
-  list-style-type: upper-roman;
-  padding-left: 20px;
-  text-transform: capitalize;
-}
-
-#page-Education ol {
-  text-transform: none;
-}
-
-#page-Welcome .street-address {
-  margin-bottom: 10px;
-}
-
-#page-Welcome label {
-  text-transform: uppercase;
-}
-
-
-/* Deacons */
-#page-Deacons h3 {
-  margin-top: 0;
-}
-
-#page-Deacons hr {
-  margin: 40px 0;
-}
-
-#page-HarvestParty .full-page-img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-}
-
-
-/* Weekly */
-#page-Weekly h2 {
-  margin-bottom: 0;
-}
-
-.hr-thin {
-  border: 2px solid #FEDB48; 
+/* Safety */
+.safety {
+  background: #fffbec;
+  border-radius: 25px;
+  padding: 30px;
 }
 
 /* Why Give */
