@@ -24,6 +24,10 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 # East Bay VBS
 /eb_vbs https://christcentralsf.churchcenter.com/registrations/events/1243816 302
 
+# Virtual Cambodia Missions Registration
+/cambodia https://christcentralsf.churchcenter.com/registrations/events/1275147 302
+
+
 # RSVP redirects
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
 # /rsvp/vbs     https://christcentralsf.churchcenter.com/registrations/events/449602 301
