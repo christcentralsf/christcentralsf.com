@@ -536,13 +536,6 @@ footer li {
   line-height: 1.1;
 }
 
-/* Safety */
-.safety {
-  background: #fffbec;
-  border-radius: 25px;
-  padding: 30px;
-}
-
 /* Why Give */
 #page-WhyGive span {
   white-space: nowrap;
