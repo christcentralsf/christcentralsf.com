@@ -72,6 +72,14 @@ a:hover,
   text-decoration: underline;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .hide {
   display: none;
 }
@@ -539,4 +547,32 @@ footer li {
 /* Why Give */
 #page-WhyGive span {
   white-space: nowrap;
+}
+
+/* Discipeship */
+.discipleship-hero-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 60px 0 0 60px;
+  width: 25%;
+}
+
+@media (max-width: 992px) {
+  .discipleship-hero-inner {
+    margin: 30px 0 0 30px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .discipleship-hero-inner {
+    position: relative;
+    margin: 60px 0 0 0;
+    width: 100%;
+  }
+}
+
+.discipleship-icon {
+  width: 50px;
 }
