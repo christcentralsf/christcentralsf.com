@@ -21,12 +21,8 @@
 # Redirect default Netlify subdomain to primary domain
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
 
-# East Bay VBS
-/eb_vbs https://christcentralsf.churchcenter.com/registrations/events/1243816 302
-
-# Virtual Cambodia Missions Registration
-/cambodia https://christcentralsf.churchcenter.com/registrations/events/1275147 302
-
+# CG
+/cg https://christcentralsf.churchcenter.com/groups/christ-central-community-groups 302
 
 # RSVP redirects
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
