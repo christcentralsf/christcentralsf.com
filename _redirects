@@ -21,8 +21,9 @@
 # Redirect default Netlify subdomain to primary domain
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
 
-# CG
+# CG & fellowship
 /cg https://christcentralsf.churchcenter.com/groups/christ-central-community-groups 302
+/fellowship https://christcentralsf.churchcenter.com/groups/christ-central-fellowship-groups 302
 
 # RSVP redirects
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
