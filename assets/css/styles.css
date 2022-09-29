@@ -229,6 +229,10 @@ a:hover,
   margin-bottom: 60px;
 }
 
+.mb120 {
+  margin-bottom: 120px;
+}
+
 .mt0 {
   margin-top: 0;
 }
@@ -243,6 +247,10 @@ a:hover,
 
 .mt60 {
   margin-top: 60px;
+}
+
+.mt120 {
+  margin-top: 120px;
 }
 
 .mv60 {
@@ -574,5 +582,46 @@ footer li {
 }
 
 .discipleship-icon {
+  width: 50px;
+}
+
+/* FiCB */
+.ficb-banner-inner {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  margin: 60px 0 0 60px;
+  width: 30%;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .ficb-banner-inner {
+    margin: 30px 0 0 30px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .ficb-banner-inner {
+    position: relative;
+    margin: 60px 0 0 0;
+    width: 100%;
+    color: black;
+  }
+}
+
+.ficb-banner-button {
+  background: #000;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 45px; 
+  text-decoration: none;
+}
+
+.ficb-icon {
   width: 50px;
 }
