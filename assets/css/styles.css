@@ -51,8 +51,8 @@ p {
 
 hr {
   border: 1px solid #e4e4e4;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 90px;
+  margin-top: 90px;
 }
 
 img {
@@ -229,8 +229,12 @@ a:hover,
   margin-bottom: 60px;
 }
 
+.mb90 {
+  margin-bottom: 90px;
+}
+
 .mb120 {
-  margin-bottom: 120px;
+  margin-bottom: 90px;
 }
 
 .mt0 {
@@ -249,10 +253,6 @@ a:hover,
   margin-top: 60px;
 }
 
-.mt120 {
-  margin-top: 120px;
-}
-
 .mv60 {
   margin: 60px 0;
 }
@@ -261,8 +261,16 @@ a:hover,
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .flex__align-self--center {
   align-self: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
 }
 
 .quote {
@@ -330,6 +338,35 @@ footer {
   background: #000;
   color: #FFFFFF;
   margin-top: 90px;
+}
+
+footer .huge-link-container {
+  height: 200px;
+}
+
+@media (max-width: 767px) {
+  footer .huge-link-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+footer .huge-link {
+  flex: 1;
+  text-decoration: none;
+}
+
+footer .link-content {
+  justify-content: center;
+  margin-top: 50px;
+}
+
+footer .link-content img {
+  width: 64px;
+  height: 64px;
+}
+
+footer .container {
   padding: 60px 30px;
 }
 
@@ -370,7 +407,7 @@ footer li {
   }
 
   .section {
-    margin: 100px auto;
+    margin: 90px auto;
     width: 60%;
   }
 }
@@ -498,6 +535,24 @@ footer li {
   }
 }
 
+.worship-item {
+  height: 600px;
+}
+
+.header-banner-title {
+  color: white;
+  top: 130px;
+  left: 100px;
+}
+
+@media (max-width: 767px) {
+  .header-banner-title {
+    font-size: 16px;
+    top: 30px;
+    left: 30px;
+  }
+}
+
 /* Counseling */
 #page-Counseling ul {
   padding-left: 16px;
@@ -542,22 +597,14 @@ footer li {
   margin-right: 0;
 }
 
-/* Join Us */
-.text-muted {
-  font-size: 13px;
-}
-
-.time {
-  font-size: 18px;
-  line-height: 1.1;
-}
-
 /* Why Give */
 #page-WhyGive span {
   white-space: nowrap;
 }
 
 /* Discipeship */
+/* FiCB */
+.ficb-banner-inner,
 .discipleship-hero-inner {
   position: absolute;
   top: 0;
@@ -567,6 +614,7 @@ footer li {
 }
 
 @media (max-width: 992px) {
+  .ficb-banner-inner,
   .discipleship-hero-inner {
     margin: 30px 0 0 30px;
     width: 40%;
@@ -574,6 +622,7 @@ footer li {
 }
 
 @media (max-width: 767px) {
+  .ficb-banner-inner,
   .discipleship-hero-inner {
     position: relative;
     margin: 60px 0 0 0;
@@ -581,47 +630,17 @@ footer li {
   }
 }
 
+.ficb-icon,
 .discipleship-icon {
   width: 50px;
 }
 
-/* FiCB */
 .ficb-banner-inner {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  margin: 60px 0 0 60px;
-  width: 30%;
   color: #fff;
-  font-weight: bold;
-}
-
-@media (max-width: 992px) {
-  .ficb-banner-inner {
-    margin: 30px 0 0 30px;
-    width: 40%;
-  }
 }
 
 @media (max-width: 767px) {
   .ficb-banner-inner {
-    position: relative;
-    margin: 60px 0 0 0;
-    width: 100%;
     color: black;
   }
-}
-
-.ficb-banner-button {
-  background: #000;
-  border: 0;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 700;
-  padding: 10px 45px; 
-  text-decoration: none;
-}
-
-.ficb-icon {
-  width: 50px;
 }
