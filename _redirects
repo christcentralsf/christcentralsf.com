@@ -25,9 +25,6 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 /cg https://christcentralsf.churchcenter.com/groups/christ-central-community-groups 302
 /fellowship https://christcentralsf.churchcenter.com/groups/christ-central-fellowship-groups 302
 
-# Temp Zoom
-/zoom https://us02web.zoom.us/j/88080111637?pwd=NVV6aitQbFkxQWNReFhZUmx2UlNvZz09 302
-
 # RSVP redirects
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
 # /rsvp/vbs     https://christcentralsf.churchcenter.com/registrations/events/449602 301
