@@ -97,17 +97,12 @@ a:hover,
 }
 
 .announcement {
-  display: inline-block;
-  height: 100%;
   text-align: center;
   width: 100%;
   background: #FAAE4E;
   color: white;
-  margin: 0;
-  padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  vertical-align: middle;
 }
 
 .navbar {
