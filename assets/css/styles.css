@@ -96,6 +96,15 @@ a:hover,
   margin: 30px 0;
 }
 
+.announcement {
+  text-align: center;
+  width: 100%;
+  background: #FAAE4E;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .navbar {
   margin-bottom: 0;
 }
