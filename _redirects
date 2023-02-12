@@ -24,9 +24,6 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 # Nursery event registration
 /play https://christcentralsf.churchcenter.com/registrations/events/1590174 302
 
-# Givings
-/give http://christcentralsf.churchcenter.com/giving 302
-
 # CG & fellowship
 /cg https://christcentralsf.churchcenter.com/groups/christ-central-community-groups 302
 /fellowship https://christcentralsf.churchcenter.com/groups/christ-central-fellowship-groups 302
