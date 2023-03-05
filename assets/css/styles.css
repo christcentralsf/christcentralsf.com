@@ -112,7 +112,7 @@ a:hover,
 .navbar-inner a {
   color: black;
   display: block;
-  font-weight: 700
+  font-weight: 700;
   margin: 0;
 }
 
@@ -546,6 +546,13 @@ footer li {
 
 .worship-item {
   height: 600px;
+}
+
+.header-banner-title-center {
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header-banner-title {

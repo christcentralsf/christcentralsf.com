@@ -3,97 +3,62 @@ layout: default
 title: Resources
 ---
 
-<div class="row">
-  <div class="col-md-12">
-    <h2>Resources</h2>
+<div class="row mb90">
+  <div class="col-md-12 relative">
+    <img src="/assets/images/header_banner.png" />
+    <h1 class="header-banner-title-center absolute">
+      Resources
+    </h1>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <h3>Counseling & Care</h3>
+<div class="row mb90 two-columns">
+  <div class="col-md-4 flex__align-self--center mb60">
+    <h2>Counseling & Care</h2>
     <p>God is in the business of caring for his people. Some people need more care than others. As a church we provide pastoral Christian counseling, references to professional Christian counselors in the Bay Area, and Gospel resources for your own personal growth.</p>
     <a href="/counseling">Learn more</a>
   </div>
+  <div class="col-md-8">
+    <img src="/assets/images/grow.png" />
+  </div>
 </div>
 
-<hr/>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h2><strong>Sermons</strong></h2>
+    <iframe width="1110" height="630" src="https://www.youtube.com/embed/videoseries?list=PL3XSVcGEDJK1xD_LpffsXXyZevddt0KuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-12">
-    <h3>Recordings</h3>
-    <div class="table-responsive">
-      <table id="sermons" class="table table-hover">
-        <thead>
-          <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
-          <th class="hidden">SortDate</th>
-          <th class="col-md-4">Sermon</th>
-          <th class="col-md-2">Scripture</th>
-          <th class="col-md-2">Speaker</th>
-          <th class="col-md-2" data-dynatable-sorts="series">Series</th>
-          <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
-        </thead>
-      </table>
-    </div>
+    <h2><strong>Resources</strong></h2>
   </div>
 </div>
 
-<script>
-  var SERMON_FIXTURES = [
-  {% for post in site.posts %}
-    {% if post.date <= site.time %}
-    {
-      date: "{{ post.date | date: '%Y.%m.%d' }}",
-      sortDate: "{{ post.date | date: '%Y.%m.%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}",
-      sermon: "{{ post.sermon }}", 
-      scripture: "{{ post.scripture }}", 
-      speaker: "{{ post.speaker }}", 
-      series: "{{ post.series }}",
-      mp3: "/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3",
-      pdf: "/files/programs/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.pdf"
-    },
-    {% endif %}
-  {% endfor %}
-
-  {% include pre-jekyll-sermons.json %}
-  ];
-</script>
-
-<script src="/assets/js/sermons-json-to-table.js"></script>
-
-<hr/>
-
-<div class="row" id="applications">
-  <div class="col-md-12">
-    <h3>Applications</h3>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th class="col-sm-4">Form</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="/assets/pdf/52+Weeks+in+the+Word+-Reading+Plan+.pdf" target="_blank">Bible Reading Plan 2023</a></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="/assets/pdf/30 Days of Prayer 2023.pdf" target="_blank">31 Days of Prayer 2023</a></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="https://christcentralsf.churchcenter.com/registrations/events/276250" target="_blank">Education Ministry Application 2022-23</a></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="https://forms.gle/qeYeVsndiXabYyt69" target="_blank">Expense Reimbursement Form</a> (<a href="/expense" target="_blank">PDF</a>)</td>
-          <td>Complete to file expense reimbursement</td>
-        </tr>
-      </tbody>
-    </table>
+<div class="row">
+  <div class="col-md-3">
+    <a href="/assets/pdf/52+Weeks+in+the+Word+-Reading+Plan+.pdf">
+      <img src="/assets/images/discipleship/dg_3_big.png" />
+      <p style="padding-top: 10px"><strong>Bible Reading Plan 2023</strong></p>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a href="/assets/pdf/30 Days of Prayer 2023.pdf">
+      <img src="/assets/images/discipleship/dg_3_big.png" />
+      <p><strong>31 Days of Prayer 2023</strong></p>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a href="https://christcentralsf.churchcenter.com/registrations/events/276250">
+      <img src="/assets/images/discipleship/dg_3_big.png" />
+      <p><strong>Education Ministry Application 2022-23</strong></p>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a href="https://forms.gle/qeYeVsndiXabYyt69">
+      <img src="/assets/images/discipleship/dg_3_big.png" />
+      <p><strong>Expense Reimbursement Google Form</strong></p>
+    </a>
   </div>
 </div>
-
-<hr/>
-
