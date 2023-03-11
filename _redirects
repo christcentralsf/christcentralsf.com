@@ -21,8 +21,8 @@
 # Redirect default Netlify subdomain to primary domain
 https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat 301!
 
-# Nursery event registration
-/play https://christcentralsf.churchcenter.com/registrations/events/1590174 302
+# FLM event registration
+/family https://christcentralsf.churchcenter.com/registrations/events/1596029 302
 
 # CG & fellowship
 /cg https://christcentralsf.churchcenter.com/groups/christ-central-community-groups 302
