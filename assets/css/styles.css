@@ -214,6 +214,10 @@ a:hover,
   margin-left: 15px;
 }
 
+.mlm15 {
+  margin-left: -15px;
+}
+
 .ml30 {
   margin-left: 30px;
 }
