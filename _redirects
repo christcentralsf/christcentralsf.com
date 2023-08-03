@@ -29,4 +29,5 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 /support https://christcentralsf.churchcenter.com/groups/christ-central-serving/help-one-child 302
 
 # RSVP redirects
+/rsvp https://christcentralsf.churchcenter.com/registrations 302
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
