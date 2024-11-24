@@ -31,3 +31,6 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 # RSVP redirects
 /rsvp https://christcentralsf.churchcenter.com/registrations 302
 # /rsvp/educate https://christcentralsf.churchcenter.com/registrations/events/276250 301
+
+# Scholarship committee redirects
+/scholarship https://docs.google.com/forms/d/e/1FAIpQLScYmZ_DbGEzurnqIA7d54snijbnDTLWpWTyEX46tMPGlMgUkQ/viewform 302
