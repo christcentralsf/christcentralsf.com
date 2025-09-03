@@ -26,7 +26,9 @@ https://christcentralsf-com.netlify.com/* https://www.christcentralsf.com/:splat
 /fellowship https://christcentralsf.churchcenter.com/groups/christ-central-fellowship-groups 302
 
 # Upcoming Events
-/support https://christcentralsf.churchcenter.com/groups/christ-central-serving/help-one-child 302
+# /support https://christcentralsf.churchcenter.com/groups/christ-central-serving/help-one-child 302
+/support https://christcentralsf.churchcenter.com/registrations/events/2949003 302
+/helponechild https://christcentralsf.churchcenter.com/registrations/events/2949003 302
 
 # RSVP redirects
 /rsvp https://christcentralsf.churchcenter.com/registrations 302
