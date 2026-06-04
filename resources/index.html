@@ -23,54 +23,25 @@ title: Resources
   </div>
 </div>
 
-<div class="col-md-12 text-center">
-  <h2><strong>Sermons</strong></h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLjVhWVlb7j740BD8oI-7ZNoYL0Xx18nSI" frameborder="0" allowfullscreen class="video"></iframe>
+<div class="row mb90">
+  <div class="col-md-12 text-center">
+    <h2><strong>Sermons</strong></h2>
+    <p>Watch our most recent Sunday services. View the full library on our
+      <a href="https://www.youtube.com/@ChristCentralSFMedia" target="_blank">YouTube channel</a>.</p>
   </div>
-</div>
-
-<br>
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table id="sermons" class="table table-hover">
-        <thead>
-          <th class="col-md-1" data-dynatable-sorts="sortDate">Date</th>
-          <th class="hidden">SortDate</th>
-          <th class="col-md-4">Sermon</th>
-          <th class="col-md-2">Scripture</th>
-          <th class="col-md-2">Speaker</th>
-          <th class="col-md-2" data-dynatable-sorts="series">Series</th>
-          <th class="col-md-1" data-dynatable-no-sort="true">Program</th>
-        </thead>
-      </table>
-    </div>
+  {% assign services = site.data.sunday_services | slice: 0, 12 %}
+  {% for video in services %}
+  <div class="col-md-4 col-sm-6 mb60">
+    <a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank">
+      <div class="video-container">
+        <img class="video" src="{{ video.thumbnail }}" alt="{{ video.title | escape }}" loading="lazy" />
+      </div>
+      <p style="padding-top: 10px"><strong>{{ video.title | escape }}</strong></p>
+    </a>
+    <p>{{ video.published | date: "%B %-d, %Y" }}</p>
   </div>
-</div>
-
-<script>
-  var SERMON_FIXTURES = [
-  {% for post in site.posts %}
-    {% if post.date <= site.time %}
-    {
-      date: "{{ post.date | date: '%Y.%m.%d' }}",
-      sortDate: "{{ post.date | date: '%Y.%m.%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}",
-      sermon: "{{ post.sermon }}", 
-      scripture: "{{ post.scripture }}", 
-      speaker: "{{ post.speaker }}", 
-      series: "{{ post.series }}",
-      mp3: "/files/sermons/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.mp3",
-      pdf: "/files/programs/{{ post.date | date: '%Y' }}/ccpc_{{ post.date | date: '%Y-%m-%d' }}{% if post.sermonNumber %}-{{ post.sermonNumber }}{% endif %}.pdf"
-    },
-    {% endif %}
   {% endfor %}
-
-  {% include pre-jekyll-sermons.json %}
-  ];
-</script>
-
-<script src="/assets/js/sermons-json-to-table.js"></script>
+</div>
 
 <div class="row">
   <div class="col-md-12">

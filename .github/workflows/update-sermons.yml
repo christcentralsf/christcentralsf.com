@@ -1,0 +1,39 @@
+name: Update Sunday services
+
+# Refreshes _data/sunday_services.json from the YouTube channel's latest uploads.
+# The API key is read from the YOUTUBE_API_KEY repository secret and never exposed.
+
+on:
+  schedule:
+    - cron: "0 16 * * 1"   # Mondays 16:00 UTC (~8-9am Pacific)
+  workflow_dispatch: {}      # allow manual runs from the Actions tab
+
+permissions:
+  contents: write            # needed to commit the refreshed data file
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch latest Sunday services
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 scripts/fetch_sunday_services.py
+
+      - name: Commit changes if any
+        run: |
+          if [[ -n "$(git status --porcelain _data/sunday_services.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add _data/sunday_services.json
+            git commit -m "Update Sunday services from YouTube"
+            git push
+          else
+            echo "No changes to commit."
+          fi
