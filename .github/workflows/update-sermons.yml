@@ -9,7 +9,8 @@ on:
   workflow_dispatch: {}      # allow manual runs from the Actions tab
 
 permissions:
-  contents: write            # needed to commit the refreshed data file
+  contents: write            # push the update branch
+  pull-requests: write       # open / auto-merge the PR
 
 jobs:
   update:
@@ -26,14 +27,34 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 scripts/fetch_sunday_services.py
 
-      - name: Commit changes if any
+      # master is a protected branch, so direct pushes are rejected. Instead we
+      # push the refreshed data to a branch and open (or update) a PR, then turn
+      # on auto-merge so it lands without manual steps when checks allow.
+      - name: Open or update PR with refreshed data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [[ -n "$(git status --porcelain _data/sunday_services.json)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add _data/sunday_services.json
-            git commit -m "Update Sunday services from YouTube"
-            git push
-          else
+          if [[ -z "$(git status --porcelain _data/sunday_services.json)" ]]; then
             echo "No changes to commit."
+            exit 0
           fi
+
+          BRANCH="auto/update-sermons"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add _data/sunday_services.json
+          git commit -m "Update Sunday services from YouTube"
+          git push -f origin "$BRANCH"
+
+          # Create a PR only if there isn't already an open one for this branch.
+          if [[ "$(gh pr list --head "$BRANCH" --state open --json number --jq 'length')" == "0" ]]; then
+            gh pr create --base master --head "$BRANCH" \
+              --title "Update Sunday services from YouTube" \
+              --body "Automated weekly refresh of \`_data/sunday_services.json\` from the church YouTube channel."
+          fi
+
+          # Enable auto-merge. If the repo doesn't allow it (or rules require a
+          # human review), leave the PR open rather than failing the run.
+          gh pr merge "$BRANCH" --auto --merge \
+            || echo "::warning::Could not enable auto-merge; PR left open for manual merge."
