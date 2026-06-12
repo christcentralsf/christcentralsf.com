@@ -690,3 +690,86 @@ footer li {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* ===== Mobile optimizations ===== */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .worship-item {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .ficb-banner-inner .btn-primary,
+  .ficb-banner-button {
+    display: block;
+    text-align: center;
+  }
+
+  footer .link-content {
+    margin-top: 30px;
+  }
+
+  footer .link-content h1 {
+    font-size: 24px;
+  }
+
+  footer .flex {
+    flex-wrap: wrap;
+  }
+
+  footer .ml30 {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .three-steps {
+    padding: 30px 15px 0 15px;
+  }
+
+  .three-steps .step {
+    height: auto;
+    margin: 0 0 30px 0;
+  }
+
+  .three-steps .col-md-12.three-columns {
+    display: block;
+  }
+
+  .header-banner-title-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .mb90 {
+    margin-bottom: 40px;
+  }
+
+  .mb120 {
+    margin-bottom: 40px;
+  }
+
+  .mb60 {
+    margin-bottom: 30px;
+  }
+
+  hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .quote {
+    font-size: 24px;
+    padding: 30px 0;
+  }
+}
