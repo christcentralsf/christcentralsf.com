@@ -28,8 +28,9 @@ jobs:
         run: python3 scripts/fetch_sunday_services.py
 
       # master is a protected branch, so direct pushes are rejected. Instead we
-      # push the refreshed data to a branch and open (or update) a PR, then turn
-      # on auto-merge so it lands without manual steps when checks allow.
+      # push the refreshed data to a branch, open (or update) a PR, and merge it
+      # ourselves. The repo has auto-merge disabled, so `gh pr merge --auto` is
+      # not an option; we retry a plain merge while the deploy checks settle.
       - name: Open or update PR with refreshed data
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,7 +55,18 @@ jobs:
               --body "Automated weekly refresh of \`_data/sunday_services.json\` from the church YouTube channel."
           fi
 
-          # Enable auto-merge. If the repo doesn't allow it (or rules require a
-          # human review), leave the PR open rather than failing the run.
-          gh pr merge "$BRANCH" --auto --merge \
-            || echo "::warning::Could not enable auto-merge; PR left open for manual merge."
+          # Merge the PR. Branch protection requires a PR but not a human review,
+          # so a green PR can be merged immediately. Checks (Netlify, Cloudflare)
+          # take a couple of minutes to report, so retry for up to ~5 minutes.
+          for attempt in $(seq 1 10); do
+            if gh pr merge "$BRANCH" --merge; then
+              echo "Merged on attempt $attempt."
+              exit 0
+            fi
+            echo "Merge attempt $attempt failed; waiting for checks to settle..."
+            sleep 30
+          done
+
+          # Fail loudly rather than leaving a stale PR open unnoticed.
+          echo "::error::Could not merge $BRANCH after 10 attempts; PR left open for manual merge."
+          exit 1
